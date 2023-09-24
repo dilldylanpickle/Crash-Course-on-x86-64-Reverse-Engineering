@@ -7,7 +7,7 @@ int main(int argc, char *argv[])
     int i = 69;
     
     if (i == 69) {
-        printf("The integer is %d!\n", i);
+        printf("The integer value is %d!\n", i);
     }
 
     return 0;
