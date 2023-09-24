@@ -1,4 +1,5 @@
 // Write a C program to create, initialize and demonstrate the use of pointers.
+// gcc -fno-stack-protector -z execstack -no-pie -g -Wall problem1.c -o problem1
 
 #include <stdio.h>
 
