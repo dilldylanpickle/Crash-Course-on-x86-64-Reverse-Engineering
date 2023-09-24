@@ -25,7 +25,7 @@ int main(int argc, char *argv[])
   ***** ALLOCATE ROOM ON THE STACK
   4004eb:       48 83 ec 20             sub    rsp,0x20
 
-
+  ***** STORE FUNCTION PARAMETERS ON THE STACK
   4004ef:       89 7d ec                mov    DWORD PTR [rbp-0x14],edi
   4004f2:       48 89 75 e0             mov    QWORD PTR [rbp-0x20],rsi
 
@@ -56,7 +56,7 @@ int main(int argc, char *argv[])
   400536:       c9                      leave
   400537:       c3                      ret
 
-  ***** NO-OPERATION (probably for code alignment)
+  ***** NO-OPERATION (probably for alignment)
   400538:       0f 1f 84 00 00 00 00    nop    DWORD PTR [rax+rax*1+0x0]
   40053f:       00
   */
