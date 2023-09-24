@@ -9,23 +9,23 @@
   400501:       48 89 45 f8             mov    QWORD PTR [rbp-0x8],rax
   400505:       8b 45 f4                mov    eax,DWORD PTR [rbp-0xc]
   400508:       89 c6                   mov    esi,eax
-  40050a:       48 8d 3d e7 00 00 00    lea    rdi,[rip+0xe7]        # 4005f8 <_IO_stdin_used+0x8>
+  40050a:       48 8d 3d e7 00 00 00    lea    rdi,[rip+0xe7]
   400511:       b8 00 00 00 00          mov    eax,0x0
   400516:       e8 d5 fe ff ff          call   4003f0 <printf@plt>
   40051b:       48 8d 45 f4             lea    rax,[rbp-0xc]
   40051f:       48 89 c6                mov    rsi,rax
-  400522:       48 8d 3d ef 00 00 00    lea    rdi,[rip+0xef]        # 400618 <_IO_stdin_used+0x28>
+  400522:       48 8d 3d ef 00 00 00    lea    rdi,[rip+0xef]
   400529:       b8 00 00 00 00          mov    eax,0x0
   40052e:       e8 bd fe ff ff          call   4003f0 <printf@plt>
   400533:       48 8b 45 f8             mov    rax,QWORD PTR [rbp-0x8]
   400537:       48 89 c6                mov    rsi,rax
-  40053a:       48 8d 3d ff 00 00 00    lea    rdi,[rip+0xff]        # 400640 <_IO_stdin_used+0x50>
+  40053a:       48 8d 3d ff 00 00 00    lea    rdi,[rip+0xff]
   400541:       b8 00 00 00 00          mov    eax,0x0
   400546:       e8 a5 fe ff ff          call   4003f0 <printf@plt>
   40054b:       48 8b 45 f8             mov    rax,QWORD PTR [rbp-0x8]
   40054f:       8b 00                   mov    eax,DWORD PTR [rax]
   400551:       89 c6                   mov    esi,eax
-  400553:       48 8d 3d 06 01 00 00    lea    rdi,[rip+0x106]        # 400660 <_IO_stdin_used+0x70>
+  400553:       48 8d 3d 06 01 00 00    lea    rdi,[rip+0x106]
   40055a:       b8 00 00 00 00          mov    eax,0x0
   40055f:       e8 8c fe ff ff          call   4003f0 <printf@plt>
   400564:       b8 00 00 00 00          mov    eax,0x0
