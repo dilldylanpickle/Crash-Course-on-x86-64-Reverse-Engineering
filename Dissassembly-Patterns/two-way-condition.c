@@ -29,10 +29,10 @@ int main(int argc, char *argv[])
   4004ef:       89 7d ec                mov    DWORD PTR [rbp-0x14],edi
   4004f2:       48 89 75 e0             mov    QWORD PTR [rbp-0x20],rsi
 
-  ***** SET LOCAL VARIABLE "i" TO 69:
+  ***** SET LOCAL VARIABLE "i" TO "69":
   4004f6:       c7 45 fc 45 00 00 00    mov    DWORD PTR [rbp-0x4],0x45
 
-  ***** CONDITIONAL TO SEE IF "i" IS NOT EQUAL TO 69:
+  ***** CONDITIONAL TO SEE IF "i" IS NOT EQUAL TO "69":
   4004fd:       83 7d fc 45             cmp    DWORD PTR [rbp-0x4],0x45
   400501:       74 18                   je     40051b <main+0x34>
 
