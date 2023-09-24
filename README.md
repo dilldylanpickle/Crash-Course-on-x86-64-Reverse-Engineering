@@ -4,6 +4,7 @@ A repo where I write completely random C code to practice
 Example [https://github.com/dilldylanpickle/Low-Level-Interview-Practice/blob/main/Dissassembly-Patterns/two-way-condition.c](two-way-condition.c):
 // gcc -fno-stack-protector -z execstack -no-pie -g -Wall two-way-condition.c -o two-way-condition
 
+```c
 #include <stdio.h>
 
 int main(int argc, char *argv[])
@@ -70,3 +71,4 @@ int main(int argc, char *argv[])
   400538:       0f 1f 84 00 00 00 00    nop    DWORD PTR [rax+rax*1+0x0]
   40053f:       00
   */
+```
