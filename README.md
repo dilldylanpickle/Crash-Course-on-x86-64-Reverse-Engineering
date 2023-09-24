@@ -1,7 +1,7 @@
 # Low-Level-Interview-Practice
 A repo where I write completely random C code and dissassemble it in GDB for practice :)
 
-Example [two-way-condition.c](https://github.com/dilldylanpickle/Low-Level-Interview-Practice/blob/main/Dissassembly-Patterns/two-way-condition.c):
+Here is an example( [two-way-condition.c](https://github.com/dilldylanpickle/Low-Level-Interview-Practice/blob/main/Dissassembly-Patterns/two-way-condition.c)):
 ```c
 // gcc -fno-stack-protector -z execstack -no-pie -g -Wall two-way-condition.c -o two-way-condition
 
