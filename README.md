@@ -19,6 +19,7 @@ int *ptr;
 ```
 
 #### The "*" dereference opeartor
-The ***'*' dereference operator*** is
+The `**"*" dereference operator**` is used in programming to...
+
 
 #### The “&” address-of operator
