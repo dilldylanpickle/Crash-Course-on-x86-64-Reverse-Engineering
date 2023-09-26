@@ -236,7 +236,7 @@ Hello, World!
 ```
 
 #### Coding in a world where #include <string.h> doesn't exist
-Let's pretend the `#include string.h` library does not exist. I bet we can use pointers to recreate string operations.
+Let's pretend the `#include string.h` library does not exist. I bet we can use pointers to recreate string operations!
 
 In this section, don't be doing this lol:
 ```c
@@ -249,7 +249,7 @@ int main(int argc, char *argv[])
 ```
 
 ##### Calculate the string length using pointers
-Honestly, I think `strlen();` ain't valid. We can still calculate the length of a string using pointers :)
+Honestly, I think `strlen();` is overrated af. We can still calculate the length of a string using pointers :)
 
 Here is how you can calculate the length of a string using pointers:
 ```c
