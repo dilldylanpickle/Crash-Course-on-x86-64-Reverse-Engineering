@@ -94,7 +94,7 @@ dilldylanpickle@archlinux:~/Cracking-the-Low-Level-Coding-Interview$ ./a.out
 ---
 
 ### Pointers and Functions
-Remember how C allows us to manipulate the data in a computer's memory? That honestly something a nerd would say lol. Let me show you why pointers are crucial, especially when working with functions.
+Remember how C allows us to manipulate the data in a computer's memory? Let me show you why pointers are crucial, especially when working with functions.
 
 #### Pointers as function arguments (pass by reference)
 When I say pass by reference, I'm basically saying  "Hey function! Please take the address of this value please?" 
@@ -198,3 +198,45 @@ printf("\n");
 dilldylanpickle@archlinux:~/Cracking-the-Low-Level-Coding-Interview$ ./a.out
 69 420 9 10 21
 ```
+
+---
+
+### Pointers and Strings
+In C programming, a string is represented as an array of characters terminated by a null character `\0`. Since these characters are stored at an address, you can use pointers to manipulate and access strings.
+
+Here is how you can declare a string and initialize it using a pointer:
+```c
+char *str = "Hello, World!";
+```
+
+#### Accessing characters using pointers
+You can access individual characters in a string using pointer arithmetics. Once you get the hang of arrays in C, you can transfer this knowledge to strings.
+
+Here is how you can use a pointer to access characters in a string:
+```c
+char *str = "Hello, World!";
+char *ptr = str;
+
+while (*ptr != '\0') {
+  printf("%c", *ptr);
+  *ptr++;
+}
+
+printf("\n");
+```
+
+***Terminal:***
+```bash
+dilldylanpickle@archlinux:~/Cracking-the-Low-Level-Coding-Interview$ ./a.out
+Hello, World!
+```
+
+
+
+
+
+
+
+
+
+---
