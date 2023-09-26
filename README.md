@@ -249,11 +249,11 @@ int main(int argc, char *argv[])
 ```
 
 ##### Calculate the string length using pointers
-You can still calculate the length of a string using pointers :)
+Honestly, I think `strlen();` ain't valid. We can still calculate the length of a string using pointers :)
 
 Here is how you can calculate the length of a string using pointers:
 ```c
-  char *str = "Find the length of this character array and I promise it will benice";
+  char *str = "Find the length of this character array and I promise it will be nice";
   char *ptr = str;
   int length = 0;
 
