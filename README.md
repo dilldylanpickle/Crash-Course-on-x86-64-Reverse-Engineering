@@ -19,7 +19,7 @@ int *ptr;
 ```
 
 #### The "*" dereference opeartor
-The <strong>"*" dereference operator"<strong> is used in programming to...
+The <strong>"*" dereference operator"</strong> is used in programming to...
 
 
 #### The “&” address-of operator
