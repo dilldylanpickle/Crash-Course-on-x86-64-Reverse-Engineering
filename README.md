@@ -102,7 +102,7 @@ int main(int argc, char *argv[])
 {
     int num1 = 69, num2 = 420, sum;
     
-    sum = func_add(&num1, &num2);   // we pass the address of num1 and num2 rather than the variable itself
+    sum = func_add(&num1, &num2);   // we pass the address of num1 and num2
 
     printf("%d + %d = %d uh nice?\n", num1, num2, sum);
 
