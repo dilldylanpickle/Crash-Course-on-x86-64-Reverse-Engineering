@@ -69,4 +69,4 @@ int *ptr = &number;
 printf("%d nice!\n", number);
 ```
 
-> Remember, `(*ptr)++`` will actually dereference the pointer and increment the value. If you were to use `ptr++`, that will increment the pointer itself (this will be useful later).
+> Remember, `(*ptr)++` will actually dereference the pointer and increment the value. If you were to use `ptr++`, that will increment the pointer itself (this will be useful later).
