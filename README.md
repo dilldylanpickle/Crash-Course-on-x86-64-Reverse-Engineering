@@ -29,7 +29,7 @@ printf("The value at address %p is %d", &x, *ptr);
 ```
 
 ```bash
-$dilldylanpickle@archlinux:~/Cracking-the-Low-Level-Coding-Interview$ ./a.out
+dilldylanpickle@archlinux:~/Cracking-the-Low-Level-Coding-Interview$ ./a.out
 The value at address 0x7fff4e71a8cc is 69
 ```
 #### The “&” address-of operator
