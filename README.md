@@ -75,6 +75,7 @@ printf("%d nice!\n", number);
 ***Terminal:***
 ```bash
 dilldylanpickle@archlinux:~/Cracking-the-Low-Level-Coding-Interview$ ./a.out
+70 lame tbh...
 69 nice!
 ```
 
