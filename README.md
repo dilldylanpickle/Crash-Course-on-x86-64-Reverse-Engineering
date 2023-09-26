@@ -1,16 +1,20 @@
 # Cracking the Low Level Coding Interview
 
 ## Table of Contents
-- Whiteboard C Programming
+- [Whiteboard C Programming](#whiteboard-c-programming)
   - [Pointer Fundamental Concepts](#pointer-fundamental-concepts)
     - [Pointer Basics](#pointer-basics)
     - [The “&” address-of operator](#the--address-of-operator)
     - [The "*" dereference opeartor](#the--dereference-opeartor)
 
-## Pointer Fundamental Concepts
+# Whiteboard C Programming
 
-### Pointer Basics
+Coding in C is fun!
 
-### The "*" dereference opeartor
+### Pointer Fundamental Concepts
 
-### The “&” address-of operator
+#### Pointer Basics
+
+#### The "*" dereference opeartor
+
+#### The “&” address-of operator
