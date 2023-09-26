@@ -11,7 +11,7 @@
 Coding in C is fun!
 
 ### Pointer Fundamental Concepts
-A **pointer** is a varaible that holds the address of another varaiable. Pointers are significant they allow programmers to manipulate the data in the computer's memory.
+A `pointer`` is a varaible that holds the address of another varaiable. Pointers are significant they allow programmers to manipulate the data in the computer's memory.
 
 Here is how you declare a pointer in C:
 ```c
@@ -19,7 +19,7 @@ int *ptr;
 ```
 
 #### The "*" dereference opeartor
-The <strong>"*" dereference operator"</strong> is used to access the value at the addres stored in the pointer variable.
+The `*` dereference operator is used to access the value at the addres stored in the pointer variable.
 
 Here is how you can retrieve a value using the `*` opeartor:
 ```c
