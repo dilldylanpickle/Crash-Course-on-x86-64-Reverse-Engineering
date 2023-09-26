@@ -81,3 +81,37 @@ dilldylanpickle@archlinux:~/Cracking-the-Low-Level-Coding-Interview$ ./a.out
 ```
 
 > Remember, `(*ptr)++` and `(*ptr)--` will actually dereference the pointer and increment/decrement the value. If you were to use `ptr++` and `ptr--`, that will increment/decrement the pointer itself (this will be useful later).
+
+---
+
+### Pointers and Functions
+Remember how C allows us to manipulate the data in a computer's memory? That honestly something a nerd would say lol. Let me show you why pointers are crucial, especially when working with functions.
+
+#### Pointers as function arguments (pass by reference)
+When I say pass by reference, I'm basically saying  "Hey function! Please take the address of this value please?" 
+
+Here is an example of passing the address of a variable rather than a variable itself:
+
+```c
+int func_add(int *ptr1, int *ptr2)
+{
+    return *ptr1 + *ptr2;
+}
+
+int main(int argc, char *argv[])
+{
+    int num1 = 69, num2 = 420, sum;
+    
+    sum = func_add(&num1, &num2);
+
+    printf("%d + %d = %d uh nice?\n", num1, num2, sum);
+
+    return 0;
+}
+```
+
+***Terminal:***
+```bash
+dilldylanpickle@archlinux:~/Cracking-the-Low-Level-Coding-Interview$ ./a.out
+69 + 420 = 489 uh nice?
+```
