@@ -15,7 +15,7 @@
     - [Using pointers to access array elements](#using-pointers-to-access-array-elements)
   - [Pointers and Strings](#pointers-and-strings)
     - [Accessing characters using pointers](#accessing-characters-using-pointers)
-      - [Coding in a world where #include <string.h> doesn't exist :(](#coding-in-a-world-where-include-stringh-doesnt-exist)
+      - [Coding in a world where #include <string.h> doesn't exist](#coding-in-a-world-where-include-stringh-doesnt-exist)
         - [Calculate the string length using pointers](#calculate-the-string-length-using-pointers)
 
 # Whiteboard C Programming
@@ -235,7 +235,7 @@ dilldylanpickle@archlinux:~/Cracking-the-Low-Level-Coding-Interview$ ./a.out
 Hello, World!
 ```
 
-#### Coding in a world where "#include <string.h>" doesn't exist :(
+#### Coding in a world where #include <string.h> doesn't exist
 
 ##### Calculate the string length using pointers
 Let's pretend the `#include string.h` library does not exist. You can still calculate the length of a string using pointers :)
