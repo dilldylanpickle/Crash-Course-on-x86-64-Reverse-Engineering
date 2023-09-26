@@ -78,4 +78,4 @@ dilldylanpickle@archlinux:~/Cracking-the-Low-Level-Coding-Interview$ ./a.out
 69 nice!
 ```
 
-> Remember, `(*ptr)++` will actually dereference the pointer and increment the value. If you were to use `ptr++`, that will increment the pointer itself (this will be useful later).
+> Remember, `(*ptr)++` and `(*ptr)--` will actually dereference the pointer and increment/decrement the value. If you were to use `ptr++` and `ptr--`, that will increment/decrement the pointer itself (this will be useful later).
