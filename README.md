@@ -13,6 +13,7 @@ Are you considering job roles like software reverse engineer, embedded software 
 ![Alt Text](https://github.com/dilldylanpickle/dilldylanpickle.github.io/raw/main/GIFs/who-knew-this-guy.gif)
 
 > I think this meme is a pretty good "reference" to pointers if I say so myself :)
+---
 
 ### Pointer Fundamental Concepts
 A `pointer` is a variable that holds the address of another variable. Pointers are significant they allow programmers to manipulate the data in the computer's memory.
@@ -52,3 +53,4 @@ printf("The value at address %p is %d", &x, *ptr);
 dilldylanpickle@archlinux:~/Cracking-the-Low-Level-Coding-Interview$ ./a.out
 The value at address 0x7fff4e71a8cc is 69
 ```
+---
