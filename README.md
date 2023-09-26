@@ -6,6 +6,7 @@
     - [Pointer Basics](#pointer-basics)
     - [The “&” address-of operator](#the--address-of-operator)
     - [The "*" dereference operator](#the--dereference-opeartor)
+    - [Pointer Arithmetics](#pointer-arithmetics)
 
 # Whiteboard C Programming
 Are you considering job roles like software reverse engineer, embedded software developer, or vulnerability researcher? Well, chances are they'll expect you to be comfortable in C programming. Nobody wants extra variables in their codebase, so let's talk about pointers!
