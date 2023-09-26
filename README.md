@@ -11,15 +11,14 @@
 Coding in C is fun!
 
 ### Pointer Fundamental Concepts
-A ***pointer*** is a varaible that holds the address of another varaiable. They are inportant in C, because they allow programmers to manipulate the data in the computer's memory.
+A ***pointer*** is a varaible that holds the address of another varaiable. Pointers are significant they allow programmers to manipulate the data in the computer's memory.
 
-Here is a way you can declare a pointer in C:
+Here is how you declare a pointer in C:
 ```c
 int *ptr;
 ```
 
-#### Pointer Basics
-
 #### The "*" dereference opeartor
+The ***'*' dereference operator*** is
 
 #### The “&” address-of operator
