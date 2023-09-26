@@ -1,17 +1,17 @@
 # Cracking the Low Level Coding Interview
 
-# Table of Contents
-1. Whiteboard C Programming
-    a. [Pointer Fundamental Concepts](#pointer-fundamental-concepts)
-    b. [Pointer Arithmetics](#pointer-arithmetics)
-    c. [Pointers and Functions](#pointers-and-functions)
-    d. [Pointers and Arrays](#pointers-and-arrays)
-    e. [Pointers and Strings](#pointers-and-strings)
-    f. [Pointers and Structures](#pointers-and-structures)
-    g. [Dynamic Memory Allocation](#dynamic-memory-allocation)
-    h. [Pointers and Linked List](#pointers-and-linked-list)
-    i. [Pointers to Pointers](#pointers-to-pointers)
-    j. [Systems Programming with Pointers](#systems-programming-with-pointers)
+## Table of Contents
+- Whiteboard C Programming
+  - [Pointer Fundamental Concepts](#pointer-fundamental-concepts)
+  - [Pointer Arithmetics](#pointer-arithmetics)
+  - [Pointers and Functions](#pointers-and-functions)
+  - [Pointers and Arrays](#pointers-and-arrays)
+  - [Pointers and Strings](#pointers-and-strings)
+  - [Pointers and Structures](#pointers-and-structures)
+  - [Dynamic Memory Allocation](#dynamic-memory-allocation)
+  - [Pointers and Linked List](#pointers-and-linked-list)
+  - [Pointers to Pointers](#pointers-to-pointers)
+  - [Systems Programming with Pointers](#systems-programming-with-pointers)
 
 ## Pointer Fundamental Concepts
 - Pointer basics
