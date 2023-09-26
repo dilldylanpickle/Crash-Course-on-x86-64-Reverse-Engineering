@@ -27,7 +27,7 @@ int x = 69;
 printf("The address of the value is stored at %p\n", &x);
 ```
 
-***Bourne Shell:***
+***Terminal:***
 ```bash
 dilldylanpickle@archlinux:~/Cracking-the-Low-Level-Coding-Interview$ ./a.out
 The address of the value is stored at 69
@@ -43,7 +43,7 @@ int *ptr = &x;
 printf("The value at address %p is %d", &x, *ptr);
 ```
 
-***Bourne Shell:***
+***Terminal:***
 ```bash
 dilldylanpickle@archlinux:~/Cracking-the-Low-Level-Coding-Interview$ ./a.out
 The value at address 0x7fff4e71a8cc is 69
