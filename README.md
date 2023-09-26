@@ -19,7 +19,14 @@ int *ptr;
 ```
 
 #### The "*" dereference opeartor
-The <strong>"*" dereference operator"</strong> is used in programming to...
+The <strong>"*" dereference operator"</strong> is used to access the value at the addres stored in the pointer variable.
+
+Here is how you can retrieve a value using the `*` opeartor:
+```c
+int x = 69;
+int *ptr = &x;
+printf("The value at address %p is %d", &x, *ptr);
+```
 
 
 #### The “&” address-of operator
