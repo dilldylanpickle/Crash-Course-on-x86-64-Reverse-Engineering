@@ -91,7 +91,6 @@ Remember how C allows us to manipulate the data in a computer's memory? That hon
 When I say pass by reference, I'm basically saying  "Hey function! Please take the address of this value please?" 
 
 Here is an example of passing the address of a variable rather than a variable itself:
-
 ```c
 int func_add(int *ptr1, int *ptr2)
 {
@@ -115,3 +114,24 @@ int main(int argc, char *argv[])
 dilldylanpickle@archlinux:~/Cracking-the-Low-Level-Coding-Interview$ ./a.out
 69 + 420 = 489 uh nice?
 ```
+
+#### Function Pointers
+Wanna know something pretty cool? We can use pointers to execute functions!
+
+Here is a pretty simple example:
+```c
+void helloworld()
+{
+    printf("Hello, World!\n");
+}
+
+int main(int argc, char *argv[])
+{
+    void (*printhello)() = helloworld;
+    printhello();
+
+    return 0;
+}
+```
+
+---
