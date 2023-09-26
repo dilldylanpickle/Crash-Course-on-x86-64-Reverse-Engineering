@@ -11,6 +11,7 @@
   - [Pointers and Functions](#pointers-and-functions)
     - [Pointers as function arguments (pass by reference)](#pointers-as-function-arguments-pass-by-reference)
     - [Function Pointers](#function-pointers)
+    - [Pointers and Arrays]
 
 # Whiteboard C Programming
 Are you considering job roles like software reverse engineer, embedded software developer, or vulnerability researcher? Well, chances are they'll expect you to be comfortable in C programming. Nobody wants extra variables in their codebase, so let's talk about pointers!
@@ -148,3 +149,32 @@ Hello, World!
 ```
 
 ---
+
+#### Pointers and Arrays
+You wanna know what's cooler than an array of integers? What about an array of pointers to integers!
+
+Here is some based syntax of an array pointer:
+```c
+int *array[3];
+```
+
+##### Using pointers to access array elements
+We know that each element in an array data structure holds an address right? Well, that means we can point to those addresses with pointers!
+
+Here is how we can dereference array elements using pointers:
+```c
+int array[5] = {69, 420, 9, 10, 21};
+int *ptr;
+
+for (int i = 0; i < sizeof(array) / 4; i++) {
+  printf("%d ", *(array + i));
+}
+
+printf("\n");
+```
+
+***Terminal:***
+```bash
+dilldylanpickle@archlinux:~/Cracking-the-Low-Level-Coding-Interview$ ./a.out
+69 420 9 10 21
+```
