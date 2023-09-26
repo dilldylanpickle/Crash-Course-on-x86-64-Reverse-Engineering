@@ -236,6 +236,18 @@ Hello, World!
 ```
 
 #### Coding in a world where #include <string.h> doesn't exist
+Let's pretend the `#include string.h` library does not exist. I bet we can use pointers to recreate string operations like `strrev();`!
+
+We have all done this at least once in our lives:
+```c
+#include <string.h>
+...
+
+int main(int argc, char *argv[])
+{
+
+  ...
+```
 
 ##### Calculate the string length using pointers
 Let's pretend the `#include string.h` library does not exist. You can still calculate the length of a string using pointers :)
