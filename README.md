@@ -12,7 +12,7 @@ Are you considering job roles like software reverse engineer, embedded software 
 
 ![Alt Text](https://github.com/dilldylanpickle/dilldylanpickle.github.io/raw/main/GIFs/who-knew-this-guy.gif)
 
-> (If you don't understand this meme in "reference" to pointers, come back to this after you go through the markdown)
+> If you don't understand this meme in "reference" to pointers, go through this markdown file lol.
 
 ### Pointer Fundamental Concepts
 A `pointer` is a variable that holds the address of another variable. Pointers are significant they allow programmers to manipulate the data in the computer's memory.
