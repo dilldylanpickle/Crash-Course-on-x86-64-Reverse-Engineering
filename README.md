@@ -15,6 +15,7 @@
     - [Using pointers to access array elements](#using-pointers-to-access-array-elements)
   - [Pointers and Strings](#pointers-and-strings)
     - [Accessing characters using pointers](#accessing-characters-using-pointers)
+    - [Calculate the string length using pointers](#calculate-the-string-length-using-pointers)
 
 # Whiteboard C Programming
 Are you considering job roles like software reverse engineer, embedded software developer, or vulnerability researcher? Well, chances are they'll expect you to be comfortable in C programming. Nobody wants extra variables in their codebase, so let's talk about pointers!
@@ -221,7 +222,7 @@ char *ptr = str;
 
 while (*ptr != '\0') {
   printf("%c", *ptr);
-  *ptr++;
+  ptr++;
 }
 
 printf("\n");
@@ -231,6 +232,29 @@ printf("\n");
 ```bash
 dilldylanpickle@archlinux:~/Cracking-the-Low-Level-Coding-Interview$ ./a.out
 Hello, World!
+```
+
+#### Calculate the string length using pointers
+Let's pretend the `#include string.h` library does not exist. There is a way you can still calculate the length of a string using pointers?
+
+Here is how you can calculate the length of a string using pointers:
+```c
+  char *str = "Find the length of this character array and I promise it will benice";
+  char *ptr = str;
+  int length = 0;
+
+  while (*ptr != '\0') {
+      length++;
+      ptr++;
+  }
+  
+  printf("The length of the string is %d characters nice!", length);
+```
+
+***Terminal:***
+```bash
+dilldylanpickle@archlinux:~/Cracking-the-Low-Level-Coding-Interview$ ./a.out
+The length of the string is 69 characters nice!
 ```
 
 ---

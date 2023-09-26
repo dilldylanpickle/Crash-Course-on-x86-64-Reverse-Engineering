@@ -6,10 +6,11 @@
 
 int main(int argc, char *argv[])
 {
-    char str[] = "Reverse this string!";
-    char rev[sizeof(str)];
+    char *str = "Reverse this string!";
+    int length = strlen(str);
+    char rev[length + 1];
 
-    char *end = &str[strlen(str) - 1];
+    char *end = str + length - 1;
     char *start = rev;
 
     while  (end >= str) {
