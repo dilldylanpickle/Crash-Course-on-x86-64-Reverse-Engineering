@@ -7,6 +7,7 @@
     - [The “&” address-of operator](#the--address-of-operator)
     - [The "*" dereference operator](#the--dereference-opeartor)
   - [Pointer Arithmetics](#pointer-arithmetics)
+    - [Using pointers to increment/decrement](#using-pointers-to-incrementdecrement)
   - [Pointers and Functions](#pointers-and-functions)
     - [Pointers as function arguments (pass by reference)](#pointers-as-function-arguments-pass-by-reference)
     - [Function Pointers](#function-pointers)
