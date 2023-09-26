@@ -159,6 +159,25 @@ Here is some based syntax of an array pointer:
 int *array[3];
 ```
 
+You can even assign values to a pointer array!:
+```c
+int *array[2];
+int number1 = 69, number2 = 420;
+
+array[0] = &number1;
+array[1] = &number2;
+
+printf("Value at address %p is now %d\n", array[0], *(array[0]));
+printf("Value at address %p is now %d\n", array[1], *(array[1]));
+```
+
+***Terminal:***
+```bash
+dilldylanpickle@archlinux:~/Cracking-the-Low-Level-Coding-Interview$ ./a.out
+Value at address 0x7ffdecc22e88 is now 69
+Value at address 0x7ffdecc22e8c is now 420
+```
+
 ##### Using pointers to access array elements
 We know that each element in an array data structure holds an address right? Well, that means we can point to those addresses with pointers!
 
