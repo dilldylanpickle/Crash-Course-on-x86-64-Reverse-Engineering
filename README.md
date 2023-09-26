@@ -236,7 +236,7 @@ Hello, World!
 ```
 
 #### Coding in a world where #include <string.h> doesn't exist
-Let's pretend the `#include string.h` library does not exist. I bet we can use pointers to recreate string operations like `strrev();`!
+Let's pretend the `#include string.h` library does not exist. I bet we can use pointers to recreate string operations.
 
 In this section, don't be doing this lol:
 ```c
