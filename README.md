@@ -9,6 +9,7 @@
 
 # Whiteboard C Programming
 Coding in C is fun!
+
 ### Pointer Fundamental Concepts
 
 #### Pointer Basics
