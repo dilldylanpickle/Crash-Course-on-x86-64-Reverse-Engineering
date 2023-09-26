@@ -134,4 +134,10 @@ int main(int argc, char *argv[])
 }
 ```
 
+***Terminal:***
+```bash
+dilldylanpickle@archlinux:~/Cracking-the-Low-Level-Coding-Interview$ ./a.out
+Hello, World!
+```
+
 ---
