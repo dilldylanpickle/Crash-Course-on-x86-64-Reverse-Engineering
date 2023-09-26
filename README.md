@@ -11,7 +11,8 @@
   - [Pointers and Functions](#pointers-and-functions)
     - [Pointers as function arguments (pass by reference)](#pointers-as-function-arguments-pass-by-reference)
     - [Function Pointers](#function-pointers)
-    - [Pointers and Arrays]
+  - [Pointers and Arrays](#pointers-and-arrays)
+    - [Using pointers to access array elements](#using-pointers-to-access-array-elements)  
 
 # Whiteboard C Programming
 Are you considering job roles like software reverse engineer, embedded software developer, or vulnerability researcher? Well, chances are they'll expect you to be comfortable in C programming. Nobody wants extra variables in their codebase, so let's talk about pointers!
