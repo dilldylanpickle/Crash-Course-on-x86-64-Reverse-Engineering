@@ -11,6 +11,7 @@
 Coding in C is fun!
 
 ### Pointer Fundamental Concepts
+A ***pointer*** is a varaible that holds the address of another varaiable.
 
 #### Pointer Basics
 
