@@ -1,5 +1,7 @@
 # Cracking the Low Level Coding Interview
 
+# Table of Contents
+1. C Programming
 - [Pointer Fundamental Concepts](#pointer-fundamental-concepts)
 - [Pointer Arithmetics](#pointer-arithmetics)
 - [Pointers and Functions](#pointers-and-functions)
