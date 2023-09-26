@@ -64,6 +64,9 @@ The value at address 0x7fff4e71a8cc is 69
 ### Pointer Arithmetics
 A pointer in C can basically hold an address right? Since an address is a numeric value, you can perform arithmetic operations on a pointer.
 
+##### Using pointers to increment/decrement
+One of the most common things you will see in programming is that annoying `i++` or `i--`. There is nothing like forgetting those at the end of a while loop lol.
+
 Here is how you can increment/decrement values using pointers:
 ```c
 int number = 69;
