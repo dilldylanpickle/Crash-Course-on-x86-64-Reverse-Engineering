@@ -8,7 +8,10 @@
     - [The "*" dereference operator](#the--dereference-opeartor)
 
 # Whiteboard C Programming
-Coding in C is fun!
+Are you considering job roles like software reverse engineer, embedded software developer, or vulnerability researcher? Well, chances are they'll expect you to be comfortable in C programming. Nobody wants extra variables in their codebase, so let's talk about pointers.
+
+![Alt Text](https://github.com/dilldylanpickle/dilldylanpickle.github.io/raw/main/GIFs/who-knew-this-guy.gif)
+
 
 ### Pointer Fundamental Concepts
 A `pointer` is a variable that holds the address of another variable. Pointers are significant they allow programmers to manipulate the data in the computer's memory.
