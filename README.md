@@ -12,7 +12,9 @@
     - [Pointers as function arguments (pass by reference)](#pointers-as-function-arguments-pass-by-reference)
     - [Function Pointers](#function-pointers)
   - [Pointers and Arrays](#pointers-and-arrays)
-    - [Using pointers to access array elements](#using-pointers-to-access-array-elements)  
+    - [Using pointers to access array elements](#using-pointers-to-access-array-elements)
+  - [Pointers and Strings](#pointers-and-strings)
+    - [Accessing characters using pointers](#accessing-characters-using-pointers)
 
 # Whiteboard C Programming
 Are you considering job roles like software reverse engineer, embedded software developer, or vulnerability researcher? Well, chances are they'll expect you to be comfortable in C programming. Nobody wants extra variables in their codebase, so let's talk about pointers!
@@ -230,13 +232,5 @@ printf("\n");
 dilldylanpickle@archlinux:~/Cracking-the-Low-Level-Coding-Interview$ ./a.out
 Hello, World!
 ```
-
-
-
-
-
-
-
-
 
 ---
