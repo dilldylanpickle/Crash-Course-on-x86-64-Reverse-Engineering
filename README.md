@@ -245,9 +245,10 @@ We have all done this at least once in our lives:
 
 int main(int argc, char *argv[])
 {
-
   ...
 ```
+
+Only for interview purposes, let's take away this library header!
 
 ##### Calculate the string length using pointers
 Let's pretend the `#include string.h` library does not exist. You can still calculate the length of a string using pointers :)
