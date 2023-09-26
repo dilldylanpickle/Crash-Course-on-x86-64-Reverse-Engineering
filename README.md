@@ -249,7 +249,7 @@ int main(int argc, char *argv[])
 ```
 
 ##### Calculate the string length using pointers
-Let's pretend the `#include string.h` library does not exist. You can still calculate the length of a string using pointers :)
+You can still calculate the length of a string using pointers :)
 
 Here is how you can calculate the length of a string using pointers:
 ```c
