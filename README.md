@@ -325,7 +325,7 @@ int strlen(char *str)
 
     while (*str != '\0') {
         length++;
-        str--;
+        str++;
     }
 
     return length;
@@ -357,6 +357,43 @@ int main(int argc, char *argv[])
     printf("%s\n", str);
 
     return 0;
+}
+```
+
+##### Reverse strings using pointers
+I have been asked this interview question multiple times lol. While I was working as a intern, I had to reverse engineer a lot of string library functions. This question is usually a freebie but I still like answering it!
+
+Here is how you reverse a string using pointers:
+```c
+int strlen(char *str)
+{
+    int length = 0;
+
+    while (*str != '\0') {
+        length++;
+        str++;
+    }
+
+    return length;
+}
+
+int main(int argc, char *argv[])
+{
+  char *str = "Reverse this string!";
+  char rev[256];
+
+  char *end = str + strlen(str) - 1;
+  char *start = rev;
+
+  while (end >= str) {
+    *start = *end;
+    end--;
+    start++;
+  }
+
+  printf("%s\n", rev);
+
+  return 0;
 }
 ```
 
