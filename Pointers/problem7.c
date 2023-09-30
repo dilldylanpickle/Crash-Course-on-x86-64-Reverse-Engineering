@@ -1,7 +1,18 @@
 // gcc -fno-stack-protector -z execstack -no-pie -g -Wall problem7.c -o problem7
 
 #include <stdio.h>
-#include <string.h>
+
+int strlen(char *str)
+{
+    int length = 0;
+
+    while (*str != '\0') {
+        length++;
+        str--;
+    }
+
+    return length;
+}
 
 int main(int argc, char *argv[])
 {

@@ -18,7 +18,8 @@
       - [Coding in a world where #include <string.h> doesn't exist](#coding-in-a-world-where-include-stringh-doesnt-exist)
         - [Calculate the string length using pointers](#calculate-the-string-length-using-pointers)
         - [Copy a string using pointers](#copy-a-string-using-pointers)
-        - [Compare two strings using pointers]()
+        - [Compare two strings using pointers](#compare-two-strings-using-pointers)
+        - [Combine two strings using pointers](#combine-two-strings-using-pointers)
 
 # Whiteboard C Programming
 Are you considering job roles like software reverse engineer, embedded software developer, or vulnerability researcher? Well, chances are they'll expect you to be comfortable in C programming. Nobody wants extra variables in their codebase, so let's talk about pointers!
@@ -310,6 +311,52 @@ while (*ptr1 != '\0' && *ptr2 != '\0') {
     }
     ptr1++;
     ptr2++;
+}
+```
+
+##### Combine two strings using pointers
+Now, let's replace one of my least favorite functions called `strcat();`. I really hate this function so let's do string concatenation manually. Let's go ahead and use a custom function for calculating the length of the string!
+
+Here is how you can combine two strings using pointers:
+```c
+int strlen(char *str)
+{
+    int length = 0;
+
+    while (*str != '\0') {
+        length++;
+        str--;
+    }
+
+    return length;
+}
+
+int main(int argc, char *argv[])
+{
+    char str[256];
+    char *str1 = "Concatenate ";
+    char *str2 = "this string!";
+
+    // We need to have our pointer point to the end of our string buffer!
+    char *ptr = str + strlen(str);
+
+    while (*str1 != '\0') {
+        *ptr = *str1;
+        ptr++;
+        str1++;
+    }
+
+    while (*str2 != '\0') {
+        *ptr = *str2;
+        ptr++;
+        str2++;
+    }
+
+    *ptr = '\0';
+
+    printf("%s\n", str);
+
+    return 0;
 }
 ```
 
