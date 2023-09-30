@@ -313,7 +313,7 @@ char *ptr2 = str2;
 
 while (*ptr1 != '\0' && *ptr2 != '\0') {
     if (*ptr1 != *ptr2) {
-        printf("These strings aren't the same!\n");
+        printf("These strings are not the same!\n");
         return 1;
     }
     ptr1++;
@@ -324,7 +324,7 @@ while (*ptr1 != '\0' && *ptr2 != '\0') {
 ***Terminal:***
 ```bash
 dilldylanpickle@archlinux:~/Cracking-the-Low-Level-Coding-Interview$ ./a.out
-These strings aren't the same!
+These strings are not the same!
 ```
 
 ##### Combine two strings using pointers
