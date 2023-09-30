@@ -17,6 +17,8 @@
     - [Accessing characters using pointers](#accessing-characters-using-pointers)
       - [Coding in a world where #include <string.h> doesn't exist](#coding-in-a-world-where-include-stringh-doesnt-exist)
         - [Calculate the string length using pointers](#calculate-the-string-length-using-pointers)
+        - [Copy a string using pointers](#copy-a-string-using-pointers)
+        - [Compare two strings using pointers]()
 
 # Whiteboard C Programming
 Are you considering job roles like software reverse engineer, embedded software developer, or vulnerability researcher? Well, chances are they'll expect you to be comfortable in C programming. Nobody wants extra variables in their codebase, so let's talk about pointers!
@@ -253,22 +255,62 @@ Honestly, I think `strlen();` is overrated af. We can still calculate the length
 
 Here is how you can calculate the length of a string using pointers:
 ```c
-  char *str = "Find the length of this character array and I promise it will be nice";
-  char *ptr = str;
-  int length = 0;
+char *str = "Find the length of this character array and I promise it will benice";
+char *ptr = str;
+int length = 0;
+while (*ptr != '\0') {
+    length++;
+    ptr++;
+}
 
-  while (*ptr != '\0') {
-      length++;
-      ptr++;
-  }
-  
-  printf("The length of the string is %d characters nice!", length);
+printf("The length of the string is %d characters nice!", length);
 ```
 
 ***Terminal:***
 ```bash
 dilldylanpickle@archlinux:~/Cracking-the-Low-Level-Coding-Interview$ ./a.out
 The length of the string is 69 characters nice!
+```
+
+##### Copy a string using pointers
+Let's keep the `#include <string.h>` slander going on! Imagine using `strcpy;` in 2023, couldn't be me lol.
+
+Here is how you can copy a string using pointers:
+```c
+char src[] = "Copy this string!";
+char dest[sizeof(src)];
+
+char *srcPtr = src;
+char *destPtr = dest;
+
+while (*srcPtr != '\0') {
+  *destPtr = *srcPtr;
+  srcPtr++;
+  destPtr++;
+}
+
+printf("%s\n", dest);
+```
+
+##### Compare two strings using pointers
+I've seen a lot of those `strcmp();` functions in those reverse engineering CTF challenges. I hardly use that evil function but let's recreate it.
+
+Here is how you can compare two strings using pointers:
+```c
+char str1[] = "This is a string!";
+char str2[] = "This is still a string!";
+
+char *ptr1 = str1;
+char *ptr2 = str2;
+
+while (*ptr1 != '\0' && *ptr2 != '\0') {
+    if (*ptr1 != *ptr2) {
+        printf("These strings aren't the same!\n");
+        return 1;
+    }
+    ptr1++;
+    ptr2++;
+}
 ```
 
 ---
