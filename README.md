@@ -20,6 +20,7 @@
         - [Copy a string using pointers](#copy-a-string-using-pointers)
         - [Compare two strings using pointers](#compare-two-strings-using-pointers)
         - [Combine two strings using pointers](#combine-two-strings-using-pointers)
+        - [Reverse strings using pointers](#reverse-strings-using-pointers)
 
 # Whiteboard C Programming
 Are you considering job roles like software reverse engineer, embedded software developer, or vulnerability researcher? Well, chances are they'll expect you to be comfortable in C programming. Nobody wants extra variables in their codebase, so let's talk about pointers!
@@ -293,6 +294,12 @@ while (*srcPtr != '\0') {
 printf("%s\n", dest);
 ```
 
+***Terminal:***
+```bash
+dilldylanpickle@archlinux:~/Cracking-the-Low-Level-Coding-Interview$ ./a.out
+Copy this string!
+```
+
 ##### Compare two strings using pointers
 I've seen a lot of those `strcmp();` functions in those reverse engineering CTF challenges. I hardly use that evil function but let's recreate it.
 
@@ -312,6 +319,12 @@ while (*ptr1 != '\0' && *ptr2 != '\0') {
     ptr1++;
     ptr2++;
 }
+```
+
+***Terminal:***
+```bash
+dilldylanpickle@archlinux:~/Cracking-the-Low-Level-Coding-Interview$ ./a.out
+These strings aren't the same!
 ```
 
 ##### Combine two strings using pointers
@@ -360,6 +373,12 @@ int main(int argc, char *argv[])
 }
 ```
 
+***Terminal:***
+```bash
+dilldylanpickle@archlinux:~/Cracking-the-Low-Level-Coding-Interview$ ./a.out
+Concatenate this string!
+```
+
 ##### Reverse strings using pointers
 I have been asked this interview question multiple times lol. While I was working as a intern, I had to reverse engineer a lot of string library functions. This question is usually a freebie but I still like answering it!
 
@@ -395,6 +414,12 @@ int main(int argc, char *argv[])
 
   return 0;
 }
+```
+
+***Terminal:***
+```bash
+dilldylanpickle@archlinux:~/Cracking-the-Low-Level-Coding-Interview$ ./a.out
+!gnirts siht esreveR
 ```
 
 ---
