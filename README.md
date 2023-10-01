@@ -22,7 +22,8 @@
         - [Combine two strings using pointers](#combine-two-strings-using-pointers)
         - [Reverse strings using pointers](#reverse-strings-using-pointers)
   - [Pointers and Structures](#pointers-and-structures)
-    - [Using pointers to access struct members]
+    - [Using pointers to access struct members](#using-pointers-to-access-struct-members)
+
 # Whiteboard C Programming
 Are you considering job roles like software reverse engineer, embedded software developer, or vulnerability researcher? Well, chances are they'll expect you to be comfortable in C programming. Nobody wants extra variables in their codebase, so let's talk about pointers!
 
