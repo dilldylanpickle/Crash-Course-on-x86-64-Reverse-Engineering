@@ -426,11 +426,11 @@ dilldylanpickle@archlinux:~/Cracking-the-Low-Level-Coding-Interview$ ./a.out
 
 ---
 
-### Pointer and Structures
+### Pointers and Structures
 
 I think it's an L that arrays in C can only contain similar data elements. I think struct data structures are pushin P because they can hold different data types.
 
-Here is an example of my inner conscious telling me I'm hungry:
+Here is an example of my inner conscious telling you I'm hungry:
 ```c
 struct cheeseburger
 {
