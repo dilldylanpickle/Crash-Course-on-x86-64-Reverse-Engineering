@@ -21,7 +21,8 @@
         - [Compare two strings using pointers](#compare-two-strings-using-pointers)
         - [Combine two strings using pointers](#combine-two-strings-using-pointers)
         - [Reverse strings using pointers](#reverse-strings-using-pointers)
-
+  - [Pointers and Structures](#pointers-and-structures)
+    - [Using pointers to access struct members]
 # Whiteboard C Programming
 Are you considering job roles like software reverse engineer, embedded software developer, or vulnerability researcher? Well, chances are they'll expect you to be comfortable in C programming. Nobody wants extra variables in their codebase, so let's talk about pointers!
 
@@ -420,6 +421,75 @@ int main(int argc, char *argv[])
 ```bash
 dilldylanpickle@archlinux:~/Cracking-the-Low-Level-Coding-Interview$ ./a.out
 !gnirts siht esreveR
+```
+
+---
+
+### Pointer and Structures
+
+I think it's an L that arrays in C can only contain similar data elements. I think struct data structures are pushin P because they can hold different data types.
+
+Here is an example of my inner conscious telling me I'm hungry:
+```c
+struct cheeseburger
+{
+    char *name;
+    int patties;
+    int cheese;
+};
+
+int main() {
+
+    struct cheeseburger burger;
+    struct cheeseburger *ptr = &burger;
+    
+    printf("The size of the struct is %zu bytes\n", sizeof(burger));
+
+    return 0;
+}
+```
+
+***Terminal:***
+```bash
+dilldylanpickle@archlinux:~/Cracking-the-Low-Level-Coding-Interview$ ./a.out
+The size of the struct is 16 bytes
+```
+
+##### Using pointers to access struct members
+We know that each member in an array data structure holds an address right? You can use the `->` operator to access a member of a structure through a pointer!
+
+Here is how we can dereference struct members using pointers:
+```c
+struct cheeseburger
+{
+    char *name;
+    int patties;
+    int cheese;
+};
+
+int main() {
+
+    struct cheeseburger burger;
+    struct cheeseburger *ptr = &burger;
+    
+    ptr->name = "Patty melt";
+    ptr->patties = 2;
+    ptr->cheese = 2;
+
+    printf("Name of Whataburger burger: %s\n", ptr->name);
+    printf("Number of beef patties: %d\n", ptr->patties);
+    printf("Number of cheese slices: %d\n", ptr->cheese);
+
+    return 0;
+}
+```
+
+***Terminal:***
+```bash
+dilldylanpickle@archlinux:~/Cracking-the-Low-Level-Coding-Interview$ ./a.out
+Name of Whataburger burger: Patty melt
+Number of beef patties: 2
+Number of cheese slices: 2
 ```
 
 ---
