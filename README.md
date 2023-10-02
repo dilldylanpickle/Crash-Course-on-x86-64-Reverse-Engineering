@@ -1,6 +1,8 @@
 # Cracking the Low Level Coding Interview
 
----
+Let me guess? You received an email scheduling an interview? Been there too! Forgot the specific order of registers in a calling convention after shifting from x86-64 Linux because your last role had you dealing with a different architecture and OS? Me too! I haven't been reversing for that long actually. I started learning C programming and x86-64 assembly in 2021. Two years is not that long but its a long time to forget something you've read in a manpage. In this repository, I'm going to review some low-level concepts and help refresh your memory.
+
+> P.S. try not to memorize :)
 
 ## Table of Contents
 - [Whiteboard C Programming](#whiteboard-c-programming)
@@ -26,8 +28,6 @@
   - [Pointers and Structures](#pointers-and-structures)
     - [Using pointers to access struct members](#using-pointers-to-access-struct-members)
 - [x86-64 Assembly: Technical Phone Screening Edition](#x86-64-assembly-technical-phone-screening-edition)
-
----
 
 # Whiteboard C Programming
 Are you considering job roles like software reverse engineer, embedded software developer, or vulnerability researcher? Well, chances are they'll expect you to be comfortable in C programming. Nobody wants to use extra memory, so let's talk about pointers!
