@@ -1,8 +1,8 @@
 # Cracking the Low Level Coding Interview
 
-Let me guess? You received an email scheduling an interview? Been there too! Forgot the specific order of registers in a calling convention after shifting from x86-64 Linux because your last role had you dealing with a different architecture and OS? Me too! I haven't been reversing for that long actually. I started learning C programming and x86-64 assembly in 2021. Two years is not that long but its a long time to forget something you've read in a manpage. In this repository, I'm going to review some low-level concepts and help refresh your memory.
+Let me guess? You received an email scheduling an interview? Been there too! Don't remember those calling conventions on Windows because your last job had you reversing on Linux? Me too! I started learning C programming and x86-64 assembly in 2021. Two years is not that long but its a long time to forget something you've read in a manpage. In this repository, I'm going to review some low-level concepts and help refresh your memory.
 
-> P.S. try not to memorize :)
+> P.S. this repo will target x86-64 Linux and try not to memorize concepts :)
 
 ## Table of Contents
 - [Whiteboard C Programming](#whiteboard-c-programming)
