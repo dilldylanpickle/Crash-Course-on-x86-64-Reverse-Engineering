@@ -556,7 +556,7 @@ The function prologue is inserted by the compiler to 'allocate' a stack frame fo
 The first instruction of the function prologue is a push. This is a special instruction used to save data to the top of the stack.
 
 ```asm
-push rbp
+push  rbp
 ```
 
 You can interpret the push instruction as two separation operations (push is an alias):
@@ -569,6 +569,20 @@ mov   qword [rsp],rbp   ; 2. store rbp to stack
 ---
 
 ###### Base Pointer (EBP)
+
+The x86 register rbp is dedicated to holding the base pointer of the current stack frame. The base pointer is simply a bookend used in assembly to tell where the current stack frame ends.
+
+Since the function prologue is used to create a new stack frame, it first must save the old base pointer held by rbp. The quickest way to do this is by pushing the value onto the stack.
+
+```asm
+push  rbp				; save old base pointer
+```
+
+By saving the value in rbp onto the stack, the prologue is now free to overwrite the register with a new base pointer.
+
+```asm
+mov   rbp,rsp		; set a new base pointer
+```
 
 ---
 
