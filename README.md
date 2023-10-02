@@ -31,6 +31,9 @@ Let me guess? You received an email scheduling an interview? Been there too! Don
     - [Using pointers to access struct members](#using-pointers-to-access-struct-members)
 - [Remembering Memory in x86-64 Linux: Technical Phone Screening Edition](#remembering-memory-in-x86-64-linux-technical-phone-screening-edition)
   - [The Stack]
+    - [Push]
+    - [Pop]
+    - [Special Registers]
     - [Stack Frames]
       - [Function Prologue]
       - [Function Epilogue]
