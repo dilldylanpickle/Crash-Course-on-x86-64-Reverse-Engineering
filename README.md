@@ -588,6 +588,16 @@ mov   rbp,rsp		; set a new base pointer
 
 ###### Allocating a Stack Frame
 
+Allocating memory on the stack is incredibly fast because it can be done in a single instruction. To allocate a new stack frame, the program simply subtracts from the stack pointer.
+
+```asm
+sub    rsp,0x30		; 1. allocate 30 bytes on the stack
+```
+
+This is possible because the memory directly above the stack pointer (lower in memory) is guaranteed to be unallocated.
+
+As the last instruction of the main() function prologue, stepping over this sub instruction will complete the allocation of its designated stack frame allocation process.
+
 ---
 
 #### Function Epilogue
