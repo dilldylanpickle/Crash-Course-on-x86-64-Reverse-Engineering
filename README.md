@@ -40,9 +40,7 @@ Let me guess? You received an email scheduling an interview? Been there too! Don
         - [Allocating a Stack Frame](#allocating-a-stack-frame)
       - [Function Epilogue](#function-epilogue)
         - [Releasing a Stack Frame](#releasing-a-stack-frame)
-        - [Leave Instruction](#leave-instruction0)
-        - [Return Instruction](#return-instruction)
-
+        - [Popping Off The Stack](#popping-off-the-stack)
 
 # Whiteboard C Programming
 Are you considering job roles like software reverse engineer, embedded software developer, or vulnerability researcher? Well, chances are they'll expect you to be comfortable in C programming. Nobody wants to use extra memory, so let's talk about pointers!
@@ -562,8 +560,8 @@ push  rbp
 You can interpret the push instruction as two separation operations (push is an alias):
 
 ```asm
-sub   rsp,0x8           ; 1. allocate 8 bytes
-mov   qword [rsp],rbp   ; 2. store rbp to stack
+sub   rsp, 0x8           ; 1. allocate 8 bytes
+mov   qword [rsp], rbp   ; 2. store rbp to stack
 ```
 
 ---
@@ -581,7 +579,7 @@ push  rbp		; save old base pointer
 By saving the value in rbp onto the stack, the prologue is now free to overwrite the register with a new base pointer.
 
 ```asm
-mov   rbp,rsp		; set a new base pointer
+mov   rbp, rsp		; set a new base pointer
 ```
 
 ---
@@ -591,7 +589,7 @@ mov   rbp,rsp		; set a new base pointer
 Allocating memory on the stack is incredibly fast because it can be done in a single instruction. To allocate a new stack frame, the program simply subtracts from the stack pointer.
 
 ```asm
-sub    rsp,0x30		; 1. allocate 30 bytes on the stack
+sub    rsp, 0x30		; 1. allocate 30 bytes on the stack
 ```
 
 This is possible because the memory directly above the stack pointer (lower in memory) is guaranteed to be unallocated.
@@ -602,14 +600,63 @@ As the last instruction of the main() function prologue, stepping over this sub 
 
 #### Function Epilogue
 
+At the end of every function, the compiler will insert a few instructions which make up the function epilogue.
+
+As an example, this is the epilogue from the main() function:
+```asm
+leave
+ret
+```
+
+Opposite to the function prologue, the role of the epilogue is to release the current stack frame and return execution to the caller.
+
 ---
 
 ##### Releasing a Stack Frame
 
+The leave instruction is used almost exclusively by function epilogues to release the current stack frame.
+
+```asm
+leave
+```
+
+This instruction is an alias for the following sequence:
+```asm
+mov   rsp,rbp
+push  rbp
+```
+
+Remember, rbp points at the “bottom” of the current stack frame. By setting the stack pointer to the current base pointer, the first step will effectively collapse the stack frame into nothing.
+
 ---
 
-##### Leave Instruction
+##### Popping Off The Stack
+
+Where the push instruction is normally used to add an element to the top of the stack, the pop instruction will remove the top most element, placing it into the given operand.
+
+```asm
+pop   rbp
+```
+
+This instruction is an alias for the following sequence:
+```asm
+mov   rbp, qword [rsp]
+add   rsp, 0x8
+```
+
+In this case, the function epilogue is restoring the base pointer to its previous value as saved by the function prologue.
 
 ---
 
 ##### Return Instruction
+
+At this point, the main() function has completed cleaning up its stack frame. The last step is to return program execution to the calling function using the ret instruction.
+
+```asm
+ret
+```
+
+This instruction is an alisa for the following sequence:
+```asm
+pop rip
+```
