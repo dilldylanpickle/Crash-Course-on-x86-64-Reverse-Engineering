@@ -2,7 +2,7 @@
 
 Let me guess? You received an email scheduling an interview? Been there too! Don't remember those calling conventions on Windows because your last job had you reversing on Linux? Me too! I started learning C programming and x86-64 assembly in 2021. Two years is not that long but its a long time to forget something you've read in a manpage. In this repository, I'm going to review some low-level concepts and help refresh your memory.
 
-> P.S. this repo will target x86-64 Linux and try not to memorize concepts :)
+> P.S. don't memorize things but try to understand things :)
 
 ## Table of Contents
 - [Whiteboard C Programming](#whiteboard-c-programming)
