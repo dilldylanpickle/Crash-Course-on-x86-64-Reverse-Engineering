@@ -23,7 +23,7 @@
         - [Reverse strings using pointers](#reverse-strings-using-pointers)
   - [Pointers and Structures](#pointers-and-structures)
     - [Using pointers to access struct members](#using-pointers-to-access-struct-members)
-- [Whiteboard x64/64 Assembly](#whiteboard-c-programming)
+- [x86-64 Assembly: Phone Screening Interview Edition](#x86-64-assembly-phone-screening-interview-edition)
 
 # Whiteboard C Programming
 Are you considering job roles like software reverse engineer, embedded software developer, or vulnerability researcher? Well, chances are they'll expect you to be comfortable in C programming. Nobody wants to use extra memory, so let's talk about pointers!
