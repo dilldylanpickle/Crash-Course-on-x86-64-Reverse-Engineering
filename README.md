@@ -562,8 +562,8 @@ push rbp
 You can interpret the push instruction as two separation operations (push is an alias):
 
 ```asm
-sub    rsp,0x8			      ; 1. allocate 8 bytes
-mov    qword [rsp],rbp	  ; 2. store rbp to stack
+sub   rsp,0x8           ; 1. allocate 8 bytes
+mov   qword [rsp],rbp   ; 2. store rbp to stack
 ```
 
 ---
