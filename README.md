@@ -30,18 +30,18 @@ Let me guess? You received an email scheduling an interview? Been there too! Don
   - [Pointers and Structures](#pointers-and-structures)
     - [Using pointers to access struct members](#using-pointers-to-access-struct-members)
 - [Remembering Memory: Technical Phone Screening Edition](#remembering-memory-technical-phone-screening-edition)
-  - [The Stack]
-    - [Push Instruction]
-    - [Pop Instruction]
-    - [Stack Frames]
-      - [Function Prologue]
-        - [Stack Pointer (RSP)]
-        - [Base Pointer (RBP)]
-        - [Allocating a Stack Frame]
-      - [Function Epilogue]
-        - [Releasing a Stack Frame]
-        - [Leave Instruction]
-        - [Return Instruction]
+  - [The Stack](#the-stack)
+    - [Push Instruction](#push-instruction)
+    - [Pop Instruction](#pop-instruction)
+    - [Stack Frames](#stack-frames)
+      - [Function Prologue](#function-prologue)
+        - [Stack Pointer (RSP)](#stack-pointer-rsp)
+        - [Base Pointer (RBP)](#base-pointer-ebp)
+        - [Allocating a Stack Frame](#allocating-a-stack-frame)
+      - [Function Epilogue](#function-epilogue)
+        - [Releasing a Stack Frame](#releasing-a-stack-frame)
+        - [Leave Instruction](#leave-instruction0)
+        - [Return Instruction](#return-instruction)
 
 
 # Whiteboard C Programming
@@ -528,11 +528,11 @@ You wanna know what could be worse than a technical coding interview? A technica
 
 ---
 
-#### Push
+#### Push Instruction
 
 ---
 
-#### Pop
+#### Pop Instruction
 
 ---
 
