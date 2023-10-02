@@ -29,7 +29,7 @@ Let me guess? You received an email scheduling an interview? Been there too! Don
         - [Reverse strings using pointers](#reverse-strings-using-pointers)
   - [Pointers and Structures](#pointers-and-structures)
     - [Using pointers to access struct members](#using-pointers-to-access-struct-members)
-- [Remembering Memory in x86-64 Linux: Technical Phone Screening Edition](#remembering-memory-in-x86-64-linux-technical-phone-screening-edition)
+- [Remembering Memory: Technical Phone Screening Edition](#remembering-memory-technical-phone-screening-edition)
   - [The Stack]
     - [Push]
     - [Pop]
@@ -509,7 +509,7 @@ Number of cheese slices: 2
 
 ---
 
-# Remembering Memory in x86-64 Linux: Technical Phone Screening Edition
+# Remembering Memory: Technical Phone Screening Edition
 You wanna know what could be worse than a technical coding interview? A technical phone screen interview! In my experience, they gotta make sure you ain't capping on your resume. If you put "x86-64 assembly" or "C/C++" on your resume, be prepared to talk the talk before you walk the walk!
 
 ![Alt Text](https://github.com/dilldylanpickle/dilldylanpickle.github.io/raw/main/GIFs/phone-interview.gif)
