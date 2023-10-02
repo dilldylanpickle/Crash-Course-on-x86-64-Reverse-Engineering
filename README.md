@@ -547,9 +547,24 @@ push  rbp
 mov   rbp, rsp
 ```
 
+The function prologue is inserted by the compiler to 'allocate' a stack frame for the function body to use. When necessary, the prologue will also save any volatile caller state to the stack.
+
 ---
 
 ###### Stack Pointer (RSP)
+
+The first instruction of the function prologue is a push. This is a special instruction used to save data to the top of the stack.
+
+```asm
+push rbp
+```
+
+You can interpret the push instruction as two separation operations (push is an alias):
+
+```asm
+sub    rsp,0x8			    ; 1. allocate 8 bytes
+mov    qword [rsp],rbp	; 2. store rbp to stack
+```
 
 ---
 
