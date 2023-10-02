@@ -23,6 +23,7 @@
         - [Reverse strings using pointers](#reverse-strings-using-pointers)
   - [Pointers and Structures](#pointers-and-structures)
     - [Using pointers to access struct members](#using-pointers-to-access-struct-members)
+- [Whiteboard x64/64 Assembly](#whiteboard-c-programming)
 
 # Whiteboard C Programming
 Are you considering job roles like software reverse engineer, embedded software developer, or vulnerability researcher? Well, chances are they'll expect you to be comfortable in C programming. Nobody wants to use extra memory, so let's talk about pointers!
@@ -494,3 +495,10 @@ Number of cheese slices: 2
 ```
 
 ---
+
+# x86-64 Assembly: Phone Screening Interview Edition
+You wanna know what's cooler than a technical coding interview? A technical phone screen interview! In my experience, they gotta make sure you ain't capping on your resume. If you put "x86-64 assembly" on your resume, be prepared to talk the talk before you walk the walk!
+
+![Alt Text](https://github.com/dilldylanpickle/dilldylanpickle.github.io/raw/main/GIFs/who-knew-this-guy.gif)
+
+> Things get real if the company uses a zoom link and your phone camera turns on LMAO
