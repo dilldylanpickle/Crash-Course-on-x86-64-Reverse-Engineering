@@ -575,7 +575,7 @@ The x86 register rbp is dedicated to holding the base pointer of the current sta
 Since the function prologue is used to create a new stack frame, it first must save the old base pointer held by rbp. The quickest way to do this is by pushing the value onto the stack.
 
 ```asm
-push  rbp		   ; save old base pointer
+push  rbp		  ; save old base pointer
 ```
 
 By saving the value in rbp onto the stack, the prologue is now free to overwrite the register with a new base pointer.
