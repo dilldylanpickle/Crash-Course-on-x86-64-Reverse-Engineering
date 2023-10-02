@@ -526,21 +526,26 @@ You wanna know what could be worse than a technical coding interview? A technica
 
 ### The Stack
 
----
-
-#### Push Instruction
-
----
-
-#### Pop Instruction
+The stack is simply an area in RAM that stores function arguments, local variables, etc. The stack is a “Last in First Out” data structure. The stack grows down to the lower memory address.
 
 ---
 
 #### Stack Frames
 
+The stack is typically structured as a linear sequence of memory allocations known as stack frames. Each time a function is called, the stack will automatically allocate a new stack frame.
+
+As the function executes, it will use the given stack frame to store and operate upon its local variables. Once the function returns, this memory will automatically get released back to the stack.
+
 ---
 
 ##### Function Prologue
+
+The first few assembly instructions found at the start of any function are known as the function prologue.
+
+```asm
+push  rbp
+mov   rbp, rsp
+```
 
 ---
 
