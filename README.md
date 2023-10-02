@@ -389,7 +389,7 @@ Concatenate this string!
 ```
 
 ##### Reverse strings using pointers
-I have been asked this interview question multiple times lol. While I was working as a intern, I had to reverse engineer a lot of string library functions. This question is usually a freebie but I still like answering it!
+Usually you would throw a string into a string reversing function right? Well, `string.h` doesn't exist so let's write our own reversing function!
 
 Here is how you reverse a string using pointers:
 ```c
