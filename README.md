@@ -1,5 +1,7 @@
 # Cracking the Low Level Coding Interview
 
+---
+
 ## Table of Contents
 - [Whiteboard C Programming](#whiteboard-c-programming)
   - [Pointer Fundamental Concepts](#pointer-fundamental-concepts)
@@ -24,6 +26,8 @@
   - [Pointers and Structures](#pointers-and-structures)
     - [Using pointers to access struct members](#using-pointers-to-access-struct-members)
 - [x86-64 Assembly: Technical Phone Screening Edition](#x86-64-assembly-technical-phone-screening-edition)
+
+---
 
 # Whiteboard C Programming
 Are you considering job roles like software reverse engineer, embedded software developer, or vulnerability researcher? Well, chances are they'll expect you to be comfortable in C programming. Nobody wants to use extra memory, so let's talk about pointers!
