@@ -31,6 +31,18 @@ Let me guess? You received an email scheduling an interview? Been there too! Don
     - [Using pointers to access struct members](#using-pointers-to-access-struct-members)
 - [Remembering Memory: Technical Phone Screening Edition](#remembering-memory-technical-phone-screening-edition)
   - [The Stack]
+    - [Push Instruction]
+    - [Pop Instruction]
+    - [Stack Frames]
+      - [Function Prologue]
+        - [Stack Pointer (RSP)]
+        - [Base Pointer (RBP)]
+        - [Allocating a Stack Frame]
+      - [Function Epilogue]
+        - [Releasing a Stack Frame]
+        - [Leave Instruction]
+        - [Return Instruction]
+
 
 # Whiteboard C Programming
 Are you considering job roles like software reverse engineer, embedded software developer, or vulnerability researcher? Well, chances are they'll expect you to be comfortable in C programming. Nobody wants to use extra memory, so let's talk about pointers!
