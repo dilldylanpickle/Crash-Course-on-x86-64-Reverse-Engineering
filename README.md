@@ -31,12 +31,6 @@ Let me guess? You received an email scheduling an interview? Been there too! Don
     - [Using pointers to access struct members](#using-pointers-to-access-struct-members)
 - [Remembering Memory: Technical Phone Screening Edition](#remembering-memory-technical-phone-screening-edition)
   - [The Stack]
-    - [Push]
-    - [Pop]
-    - [Special Registers]
-    - [Stack Frames]
-      - [Function Prologue]
-      - [Function Epilogue]
 
 # Whiteboard C Programming
 Are you considering job roles like software reverse engineer, embedded software developer, or vulnerability researcher? Well, chances are they'll expect you to be comfortable in C programming. Nobody wants to use extra memory, so let's talk about pointers!
@@ -515,3 +509,51 @@ You wanna know what could be worse than a technical coding interview? A technica
 ![Alt Text](https://github.com/dilldylanpickle/dilldylanpickle.github.io/raw/main/GIFs/phone-interview.gif)
 
 > Things get real if the company uses a zoom link and your phone camera turns on LMAO
+
+---
+
+### The Stack
+
+---
+
+#### Push
+
+---
+
+#### Pop
+
+---
+
+#### Stack Frames
+
+---
+
+##### Function Prologue
+
+---
+
+###### Stack Pointer (RSP)
+
+---
+
+###### Base Pointer (EBP)
+
+---
+
+###### Allocating a Stack Frame
+
+---
+
+#### Function Epilogue
+
+---
+
+##### Releasing a Stack Frame
+
+---
+
+##### Leave Instruction
+
+---
+
+##### Return Instruction
