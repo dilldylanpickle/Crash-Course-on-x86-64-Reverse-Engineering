@@ -1,6 +1,6 @@
-# Cracking the Low Level Coding Interview
+# Crash Course on x86-64 Reverse Engineering
 
-Let me guess? You received an email scheduling an interview? Been there too! Don't remember those calling conventions on Windows because your last job had you reversing on Linux? Me too! I started learning C programming and x86-64 assembly in 2021. Two years is not that long but its a long time to forget something you've read in a manpage. In this repository, I'm going to review some low-level concepts and help refresh your memory.
+I started learning C programming and x86-64 assembly in 2021. Two years is not that long but its a long time to forget something you've read in a manpage. In this repository, I'm going to review some low-level concepts and help refresh your memory.
 
 ![Alt Text](https://github.com/dilldylanpickle/dilldylanpickle.github.io/raw/main/GIFs/we-have-tecnology.gif)
 
@@ -70,7 +70,7 @@ printf("The address of the value is stored at %p\n", &x);
 
 ***Terminal:***
 ```bash
-dilldylanpickle@archlinux:~/Cracking-the-Low-Level-Coding-Interview$ ./a.out
+dilldylanpickle@archlinux:~/Crash-Course-on-x86-64-Reverse-Engineering$ ./a.out
 The address of the value is stored at 69
 ```
 
@@ -86,7 +86,7 @@ printf("The value at address %p is %d", &x, *ptr);
 
 ***Terminal:***
 ```bash
-dilldylanpickle@archlinux:~/Cracking-the-Low-Level-Coding-Interview$ ./a.out
+dilldylanpickle@archlinux:~/Crash-Course-on-x86-64-Reverse-Engineering$ ./a.out
 The value at address 0x7fff4e71a8cc is 69
 ```
 
@@ -112,7 +112,7 @@ printf("%d nice!\n", number);
 
 ***Terminal:***
 ```bash
-dilldylanpickle@archlinux:~/Cracking-the-Low-Level-Coding-Interview$ ./a.out
+dilldylanpickle@archlinux:~/Crash-Course-on-x86-64-Reverse-Engineering$ ./a.out
 70 lame tbh...
 69 nice!
 ```
@@ -148,7 +148,7 @@ int main(int argc, char *argv[])
 
 ***Terminal:***
 ```bash
-dilldylanpickle@archlinux:~/Cracking-the-Low-Level-Coding-Interview$ ./a.out
+dilldylanpickle@archlinux:~/Crash-Course-on-x86-64-Reverse-Engineering$ ./a.out
 69 + 420 = 489 uh nice?
 ```
 
@@ -173,7 +173,7 @@ int main(int argc, char *argv[])
 
 ***Terminal:***
 ```bash
-dilldylanpickle@archlinux:~/Cracking-the-Low-Level-Coding-Interview$ ./a.out
+dilldylanpickle@archlinux:~/Crash-Course-on-x86-64-Reverse-Engineering$ ./a.out
 Hello, World!
 ```
 
@@ -201,7 +201,7 @@ printf("Value at address %p is now %d\n", array[1], *(array[1]));
 
 ***Terminal:***
 ```bash
-dilldylanpickle@archlinux:~/Cracking-the-Low-Level-Coding-Interview$ ./a.out
+dilldylanpickle@archlinux:~/Crash-Course-on-x86-64-Reverse-Engineering$ ./a.out
 Value at address 0x7ffdecc22e88 is now 69
 Value at address 0x7ffdecc22e8c is now 420
 ```
@@ -223,7 +223,7 @@ printf("\n");
 
 ***Terminal:***
 ```bash
-dilldylanpickle@archlinux:~/Cracking-the-Low-Level-Coding-Interview$ ./a.out
+dilldylanpickle@archlinux:~/Crash-Course-on-x86-64-Reverse-Engineering$ ./a.out
 69 420 9 10 21
 ```
 
@@ -255,7 +255,7 @@ printf("\n");
 
 ***Terminal:***
 ```bash
-dilldylanpickle@archlinux:~/Cracking-the-Low-Level-Coding-Interview$ ./a.out
+dilldylanpickle@archlinux:~/Crash-Course-on-x86-64-Reverse-Engineering$ ./a.out
 Hello, World!
 ```
 
@@ -290,7 +290,7 @@ printf("The length of the string is %d characters nice!", length);
 
 ***Terminal:***
 ```bash
-dilldylanpickle@archlinux:~/Cracking-the-Low-Level-Coding-Interview$ ./a.out
+dilldylanpickle@archlinux:~/Crash-Course-on-x86-64-Reverse-Engineering$ ./a.out
 The length of the string is 69 characters nice!
 ```
 
@@ -316,7 +316,7 @@ printf("%s\n", dest);
 
 ***Terminal:***
 ```bash
-dilldylanpickle@archlinux:~/Cracking-the-Low-Level-Coding-Interview$ ./a.out
+dilldylanpickle@archlinux:~/Crash-Course-on-x86-64-Reverse-Engineering$ ./a.out
 Copy this string!
 ```
 
@@ -343,7 +343,7 @@ while (*ptr1 != '\0' && *ptr2 != '\0') {
 
 ***Terminal:***
 ```bash
-dilldylanpickle@archlinux:~/Cracking-the-Low-Level-Coding-Interview$ ./a.out
+dilldylanpickle@archlinux:~/Crash-Course-on-x86-64-Reverse-Engineering$ ./a.out
 These strings are not the same!
 ```
 
@@ -395,7 +395,7 @@ int main(int argc, char *argv[])
 
 ***Terminal:***
 ```bash
-dilldylanpickle@archlinux:~/Cracking-the-Low-Level-Coding-Interview$ ./a.out
+dilldylanpickle@archlinux:~/Crash-Course-on-x86-64-Reverse-Engineering$ ./a.out
 Concatenate this string!
 ```
 
@@ -438,7 +438,7 @@ int main(int argc, char *argv[])
 
 ***Terminal:***
 ```bash
-dilldylanpickle@archlinux:~/Cracking-the-Low-Level-Coding-Interview$ ./a.out
+dilldylanpickle@archlinux:~/Crash-Course-on-x86-64-Reverse-Engineering$ ./a.out
 !gnirts siht esreveR
 ```
 
@@ -470,7 +470,7 @@ int main() {
 
 ***Terminal:***
 ```bash
-dilldylanpickle@archlinux:~/Cracking-the-Low-Level-Coding-Interview$ ./a.out
+dilldylanpickle@archlinux:~/Crash-Course-on-x86-64-Reverse-Engineering$ ./a.out
 The size of the struct is 16 bytes
 ```
 
@@ -505,7 +505,7 @@ int main() {
 
 ***Terminal:***
 ```bash
-dilldylanpickle@archlinux:~/Cracking-the-Low-Level-Coding-Interview$ ./a.out
+dilldylanpickle@archlinux:~/Crash-Course-on-x86-64-Reverse-Engineering$ ./a.out
 Name of Whataburger burger: Patty melt
 Number of beef patties: 2
 Number of cheese slices: 2
