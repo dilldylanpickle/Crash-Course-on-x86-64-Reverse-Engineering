@@ -7,7 +7,7 @@ Learning reverse engineering is pretty hard in 2023 if you don't know where to s
 > P.S. don't memorize things but try to understand things :)
 
 ## Table of Contents
-- [C-ing is Believing: Pointer Edition](#c-ing-is-believing-pointer-edition)
+- [C-ing is Believing: Pointers Edition](#c-ing-is-believing-pointers-edition)
   - [Pointer Fundamental Concepts](#pointer-fundamental-concepts)
     - [Pointer Basics](#pointer-basics)
     - [The “&” address-of operator](#the--address-of-operator)
@@ -42,7 +42,7 @@ Learning reverse engineering is pretty hard in 2023 if you don't know where to s
         - [Releasing a Stack Frame](#releasing-a-stack-frame)
         - [Popping Off The Stack](#popping-off-the-stack)
 
-# C-ing is Believing: Pointer Edition
+# C-ing is Believing: Pointers Edition
 Are you considering job roles like software reverse engineer, embedded software developer, or vulnerability researcher? Well, chances are they'll expect you to be comfortable in C programming. Nobody wants to use extra memory, so let's talk about pointers!
 
 ![Alt Text](https://github.com/dilldylanpickle/dilldylanpickle.github.io/raw/main/GIFs/who-knew-this-guy.gif)
