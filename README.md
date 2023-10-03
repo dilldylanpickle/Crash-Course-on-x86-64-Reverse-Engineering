@@ -7,7 +7,7 @@ Learning reverse engineering is pretty hard in 2023 if you don't know where to s
 > P.S. don't memorize things but try to understand things :)
 
 ## Table of Contents
-- [Whiteboard C Programming](#whiteboard-c-programming)
+- [C-ing is Believing: Pointer Edition](#c-ing-is-believing-pointer-edition)
   - [Pointer Fundamental Concepts](#pointer-fundamental-concepts)
     - [Pointer Basics](#pointer-basics)
     - [The “&” address-of operator](#the--address-of-operator)
@@ -29,7 +29,7 @@ Learning reverse engineering is pretty hard in 2023 if you don't know where to s
         - [Reverse strings using pointers](#reverse-strings-using-pointers)
   - [Pointers and Structures](#pointers-and-structures)
     - [Using pointers to access struct members](#using-pointers-to-access-struct-members)
-- [Remembering Memory: Technical Phone Screening Edition](#remembering-memory-technical-phone-screening-edition)
+- [A Trip Down Memory Lane: Technical Phone Screening Edition](#a-trip-down-memory-lane-technical-phone-screening-edition)
   - [The Stack](#the-stack)
     - [Push Instruction](#push-instruction)
     - [Pop Instruction](#pop-instruction)
@@ -42,7 +42,7 @@ Learning reverse engineering is pretty hard in 2023 if you don't know where to s
         - [Releasing a Stack Frame](#releasing-a-stack-frame)
         - [Popping Off The Stack](#popping-off-the-stack)
 
-# Whiteboard C Programming
+# C-ing is Believing: Pointer Edition
 Are you considering job roles like software reverse engineer, embedded software developer, or vulnerability researcher? Well, chances are they'll expect you to be comfortable in C programming. Nobody wants to use extra memory, so let's talk about pointers!
 
 ![Alt Text](https://github.com/dilldylanpickle/dilldylanpickle.github.io/raw/main/GIFs/who-knew-this-guy.gif)
@@ -513,7 +513,7 @@ Number of cheese slices: 2
 
 ---
 
-# Remembering Memory: Technical Phone Screening Edition
+# A Trip Down Memory Lane: Technical Phone Screening Edition
 You wanna know what could be worse than a technical coding interview? A technical phone screen interview! In my experience, they gotta make sure you ain't capping on your resume. If you put "x86-64 assembly" or "C/C++" on your resume, be prepared to talk the talk before you walk the walk!
 
 ![Alt Text](https://github.com/dilldylanpickle/dilldylanpickle.github.io/raw/main/GIFs/phone-interview.gif)
@@ -656,7 +656,7 @@ At this point, the main() function has completed cleaning up its stack frame. Th
 ret
 ```
 
-This instruction is an alisa for the following sequence:
+This instruction is an alisas for the following sequence:
 ```asm
 pop rip
 ```
