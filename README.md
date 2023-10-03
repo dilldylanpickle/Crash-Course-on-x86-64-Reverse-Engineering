@@ -448,7 +448,7 @@ dilldylanpickle@archlinux:~/Crash-Course-on-x86-64-Reverse-Engineering$ ./a.out
 
 I think it's an L that arrays in C can only contain similar data elements. I think struct data structures are pushin P because they can hold different data types.
 
-Here is an example of my inner conscious telling you I'm hungry:
+Here is an example of pointing to a struct:
 ```c
 struct cheeseburger
 {
@@ -477,7 +477,7 @@ The size of the struct is 16 bytes
 ##### Using pointers to access struct members
 We know that each member in an array data structure holds an address right? You can use the `->` operator to access a member of a structure through a pointer!
 
-Here is how we can dereference struct members using pointers:
+Here is an example of my inner conscious telling you I'm hungry::
 ```c
 struct cheeseburger
 {
