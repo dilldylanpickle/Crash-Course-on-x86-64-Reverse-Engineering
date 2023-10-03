@@ -1,6 +1,6 @@
 # Crash Course on x86-64 Reverse Engineering
 
-I started learning C programming and x86-64 assembly in 2021. Two years is not that long but its a long time to forget something you've read in a manpage. In this repository, I'm going to review some low-level concepts and help refresh your memory.
+I started learning C programming and x86-64 assembly in 2021. Two years is not that long but its a long time to forget something you've read in a manpage. In this repository, I'm going to review some low-level concepts and help refresh your memory!
 
 ![Alt Text](https://github.com/dilldylanpickle/dilldylanpickle.github.io/raw/main/GIFs/we-have-tecnology.gif)
 
