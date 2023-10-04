@@ -867,7 +867,7 @@ We can split this instruction into component parts:
 ```
 Opcode:       mov
 Destination:  rax
-Source:   0x30
+Source:     0x30
 ```
 
 We read this instruction from left to right because the source operand always comes first. This crash course will follow the intel syntax because AT&T syntax is very ugly and shouldn't exist.
