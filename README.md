@@ -2,7 +2,7 @@
 
 Learning reverse engineering is pretty hard in 2023 if you don't know where to start. I started learning C programming and x86-64 assembly in 2021. Over the years, I learned that going through a textbook isn't always the best way to learn things. A hands-on technical approach is the best way to learn reverse engineering. You will learn more compiling C code and disassembling it yourself.
 
-Instead of watching YouTube videos on x86-64 architecture and C programming, try recreating an existing C standard library function like strcpy().
+Instead of watching YouTube videos on x86-64 architecture and C programming, try recreating an existing C standard library function like strcpy():
 
 ```c
 void *strcpy(char *src, char *dst)
@@ -28,7 +28,7 @@ int main(int argc, char *argv[])
 }
 ```
 
-Then, disassemble the executable and get a feel for the assembly code
+Then, disassemble the executable and get a feel for the assembly code:
 ```asm
 08048446 <strcpy>:
  8048446:       55                      push   ebp
@@ -83,6 +83,8 @@ Then, disassemble the executable and get a feel for the assembly code
  80484ca:       8d 61 fc                lea    esp,[ecx-0x4]
  80484cd:       c3                      ret
 ```
+
+If you currently doing exactly what Patrick Star is doing (GIF below), take a look at this repository! It may help or you may end up buying a new computer :)
 
 ![Alt Text](https://github.com/dilldylanpickle/dilldylanpickle.github.io/raw/main/GIFs/we-have-tecnology.gif)
 
