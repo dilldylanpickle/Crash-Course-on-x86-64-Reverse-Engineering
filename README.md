@@ -599,6 +599,14 @@ Number of cheese slices: 2
 
 ---
 
+# Assemblers Assemble: From the Function Prologue to the Epilogue
+
+test push
+
+![Alt Text](https://github.com/dilldylanpickle/dilldylanpickle.github.io/raw/main/GIFs/team-spongebob.gif)
+
+---
+
 # A Trip Down Memory Lane: Remembering the Memories
 You wanna know what could be worse than a technical coding interview? A technical phone screen interview! In my experience, they gotta make sure you ain't capping on your resume. If you put "x86-64 assembly" or "C/C++" on your resume, be prepared to talk the talk before you walk the walk!
 
