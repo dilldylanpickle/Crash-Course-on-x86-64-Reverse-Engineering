@@ -616,7 +616,7 @@ Here is a very simplified representation on how source code becomes machine code
 ```
 ![Alt Text](https://github.com/dilldylanpickle/dilldylanpickle.github.io/raw/main/GIFs/team-spongebob.gif)
 
-> For simplicity, steps like preprocessing and linking were not included but will be mentioned in the future :) 
+> For simplicity, steps like preprocessing and linking were not included but will be mentioned in the future :)
 
 ## Data Representation
 
