@@ -601,8 +601,9 @@ Number of cheese slices: 2
 
 # Assemblers Assemble: From the Function Prologue to the Epilogue
 
-As programmers, we write code in high-level and mid-level languages such as C or C++. However, central processing units (CPUs) understand machine code. A compiler can translate our high-level source code into lower-level code to create executable programs.
+As programmers, we write code in high-level and mid-level languages such as C or C++. However, central processing units (CPUs) understand machine code.
 
+Here is a simplified representation on how source code becomes machine code:
 ```
   Source Code     Compilation       Assembly Code       Machine Code
   +---------+   +--------------+   +--------------+   +--------------+
