@@ -84,7 +84,7 @@ Then, disassemble the executable and get a feel for the assembly code:
  80484cd:       c3                      ret
 ```
 
-If you currently doing exactly what Patrick Star is doing (GIF below), take a look at this repository! It may help or you may end up buying a new computer :)
+Hopefully, you can get an idea of what you might be doing. If you currently doing exactly what Patrick Star is doing (GIF below), don't worry because these concepts will be learned overtime! Don't feel like you need to be able to write compilers before you are allowed to use tools like IDA or Ghidra. You will find yourself rotating between C and Assembly in terms of self learning! Feel free to jump around this repository if you already feel comfortable with C programming for example. It may help or you may end up buying a new computer :)
 
 ![Alt Text](https://github.com/dilldylanpickle/dilldylanpickle.github.io/raw/main/GIFs/we-have-tecnology.gif)
 
