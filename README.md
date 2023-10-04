@@ -705,13 +705,65 @@ We already know 2^6 is 64 so we just need to add the 2^3 value:
 64  +   8 = 72
 ```
 
-It's pretty cool when we group together multiple bits, we can represent more values! Is there a computer unit larger than a bit? Well, a byte is eight bits put together.This means we can represent over 256 different values!
+It's pretty cool when we group together multiple bits, we can represent more values! Is there a computer unit larger than a bit? Well, a byte is eight bits put together. This means we can represent over 256 different values! You can also think of 2^8.
 
 Bytes:
 ```
-0 or 255
+  0    1    2    3    4    5    6    7
+  8    9   10   11   12   13   14   15
+                                   ...
+240  241  242  243  244  245  246  247
+248  249  250  251  252  253  254  255
 ```
 
+The next memory measure unit is a word, which is two bytes put together! You can also think of 2^16.
+
+Words:
+```
+0 to 65535
+```
+
+Two words put together gives us a double word! You can also think of 2^32.
+
+Double Words:
+```
+0 to 4294967295
+```
+
+Since the x86-64 architecture is a 64-bit CPU, we can represent 2^64 unique values:
+```
+0 to 18,446,744,073,709,551,616
+```
+
+> This means a 64-bit system can represent over 18.4 quintillion unique values!
+
+---
+
+#### Signed values, two's complement, and endianness
+
+We just covered how we can represent numbers using bits. The only problem is we didn't talk about one important thing. You're probably wondering how can we represent signed numbers, also known as negative numbers. To represent negative numbers, two's complement is used. Two's complement will mean the most significant bit, the leftmost bit, will be 1. 
+
+Imagine a computer with 8-bit binary numbers, where each digit is a 'bit' (0 or 1). We know how to represent a positive number like 3.
+
+```
+0000 0011
+```
+
+We can represent negative 3 by doing the following calculations:
+
+First, invert all the bits:
+```
+0000 0011  ->  1111 1100
+```
+
+Then, add 1:
+```
+1111 1100  +  0000 0001  =  1111 1101
+```
+
+So, -3 is represented as 1111 1101 in two's complement.
+
+Two's complement makes it easier for computers to perform arithmetic operations,as subtraction becomes the same as addition. It's a clever way to represent both positive and negative numbers using only 0s and 1s.
 
 ---
 
