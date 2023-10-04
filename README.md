@@ -863,7 +863,7 @@ Here is an example of an instruction:
 mov   rax, 0x69
 ```
 
-This means the value `0x69` gets stored into the register `rax`. We will talk more about registers in a bit.
+This means the value `0x69` gets stored into the register `rax`. We will talk more about registers in a "bit".
 
 > No pun intended :)
 
