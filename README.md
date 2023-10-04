@@ -141,7 +141,7 @@ Hopefully, you can get an idea of what you might be doing. If you currently doin
         - [Releasing a stack frame](#releasing-a-stack-frame)
         - [Popping off the stack](#popping-off-the-stack)
         - [Return Instruction](#return-instruction)
-- [A Trip Down Memory Lane: Remembering the Stack Layout](#a-trip-down-memory-lane-remembering-the-stack-layout)
+- [A Trip Down Memory Lane: Remembering the Virtual Memory](#a-trip-down-memory-lane-remembering-the-virtual-memory)
 
 # C-ing is Believing: Pointers Edition
 Are you considering job roles like software reverse engineer, embedded software developer, or vulnerability researcher? Well, chances are they'll expect you to be comfortable in C programming. Nobody wants to use extra memory, so let's talk about pointers!
@@ -1137,7 +1137,7 @@ pop rip
 
 
 
-# A Trip Down Memory Lane: Remembering the Stack Layout
+# A Trip Down Memory Lane: Remembering the Virtual Memory
 You wanna know what could be worse than a technical coding interview? A technical phone screen interview! In my experience, they gotta make sure you ain't capping on your resume. If you put "x86-64 assembly" or "C/C++" on your resume, be prepared to talk the talk before you walk the walk!
 
 ![Alt Text](https://github.com/dilldylanpickle/dilldylanpickle.github.io/raw/main/GIFs/phone-interview.gif)
