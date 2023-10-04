@@ -859,7 +859,7 @@ Assembly language is a low-level programming language that is more human-readabl
 Assembly is made up of many, individually simple statements called instructions. 
 
 Here is an example of an instruction:
-```
+```asm
 mov   rax, 0x69
 ```
 
@@ -868,7 +868,7 @@ This means the value `0x69` gets stored into the register `rax`. We will talk mo
 > No pun intended :)
 
 We can split this instruction into component parts:
-```
+```asm
 Opcode:       mov
 Destination:  rax
 Source:       0x69
@@ -876,7 +876,49 @@ Source:       0x69
 
 We read this instruction from left to right because the source operand always comes first. This crash course will follow the intel syntax because AT&T syntax is very ugly and shouldn't exist.
 
+---
+
 ## Registers
+
+A register is a small storage area within the processor that is able to store data. In the context of assembly language, they often serve a similar purpose as variables in the C language.
+
+Registers in the x86-64 architecture are 64 bits “wide”, but can be accessed in several different sizes with various aliases. 
+
+```asm
+$rax - References full 64 bit register or 8 bytes
+$eax - References lower 32 bits of $rax or 4 bytes
+$ax - References lower 16 bits of $rax or 2 bytes
+$ah - References higher 8 bits of $ax or 1 byte
+$al - References lower 8 bits of $ax or 1 byte
+```
+
+---
+
+### General purpose registers
+
+A general purpose register is used to store temporary data within the processor.
+
+General purpose registers in x86_64 are addressed as follows, using rax as an example:
+
+```asm
+$rax
+0x0000000000000000
+
+$eax
+0x00000000
+
+$ax
+0x0000
+
+$ah
+0x00
+
+$al
+0x00
+
+```
+
+> You can reference the higher 8-bit register with ah, bh, ch, etc. Also, you can reference the lower 8-bit registers with al, bl, cl, etc.
 
 ## Instructions
 
