@@ -121,7 +121,7 @@ Hopefully, you can get an idea of what you might be doing. If you currently doin
     - [Decimal (Base 10)](#decimal-base-10)
     - [Binary (Base 2)](#binary-base-2)
     - [Hexadecimal (Base 16)](#hexadecimal-base-16)
-  - [Representing ASCII characters](#representing-ascii-characters)_
+  - [Representing ASCII characters](#representing-ascii-characters)
 - [A Trip Down Memory Lane: Remembering the Memories](#a-trip-down-memory-lane-remembering-the-memories)
   - [The Stack](#the-stack)
     - [Push Instruction](#push-instruction)
