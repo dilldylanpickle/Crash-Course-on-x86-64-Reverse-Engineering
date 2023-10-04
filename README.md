@@ -113,6 +113,15 @@ Hopefully, you can get an idea of what you might be doing. If you currently doin
         - [Reverse strings using pointers](#reverse-strings-using-pointers)
   - [Pointers and Structures](#pointers-and-structures)
     - [Using pointers to access struct members](#using-pointers-to-access-struct-members)
+- [Assembers Assemble: From the Function Prologue to the Epilogue](#assemblers-assemble-from-the-function-prologue-to-the-epilogue)
+  - [Data Representation](#data-representation)
+    - [Bits, bytes, words, double words, and quad words](#bits-bytes-words-double-words-and-quad-words)
+    - [Signed values, two's complement, and endianness](#signed-values-twos-complement-and-endianness)
+  - [Number Systems](#number-systems)
+    - [Decimal (Base 10)](#decimal-base-10)
+    - [Binary (Base 2)](#binary-base-2)
+    - [Hexadecimal (Base 16)](#hexadecimal-base-16)
+  - [Representing ASCII characters](#representing-ascii-characters)_
 - [A Trip Down Memory Lane: Remembering the Memories](#a-trip-down-memory-lane-remembering-the-memories)
   - [The Stack](#the-stack)
     - [Push Instruction](#push-instruction)
@@ -820,7 +829,7 @@ Hexadecimal (Base 16):
 
 ---
 
-### Representing Integers
+### Representing ASCII characters
 
 ## Assembly Essentials
 
