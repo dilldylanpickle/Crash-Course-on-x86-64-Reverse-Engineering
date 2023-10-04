@@ -601,9 +601,30 @@ Number of cheese slices: 2
 
 # Assemblers Assemble: From the Function Prologue to the Epilogue
 
-test push
+As programmers, we write code in high-level and mid-level languages such as C or C++. However, central processing units (CPUs) understand machine code. A compiler can translate our high-level source code into lower-level code to create executable programs.
+
+```
+  Source Code     Compilation       Assembly Code       Machine Code
+  +---------+   +--------------+   +--------------+   +--------------+
+  |         |   |              |   |              |   |              |
+  |  High-  |   |   Compiler   |   |   Assembler  |   |   Machine    |
+  |  Level  | → |   (C, C++,   | → |              | → |    Code      |
+  |  Code   |   |   etc.)      |   |              |   |              |
+  |         |   |              |   |              |   |              |
+  +---------+   +--------------+   +--------------+   +--------------+
+```
 
 ![Alt Text](https://github.com/dilldylanpickle/dilldylanpickle.github.io/raw/main/GIFs/team-spongebob.gif)
+
+## Data Representation
+
+### 
+
+## Assembly Essentials
+
+## Registers
+
+## Instructions
 
 ---
 
