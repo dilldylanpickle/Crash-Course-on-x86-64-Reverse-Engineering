@@ -5,7 +5,7 @@ Learning reverse engineering is pretty hard in 2023 if you don't know where to s
 Instead of watching YouTube videos on x86-64 architecture and C programming, try recreating an existing C standard library function like strcpy().
 
 ```c
-void *strcpy(char *str, char *dst)
+void *strcpy(char *src, char *dst)
 {
   while (*str != '\0') {
     *dst = *str;
@@ -18,11 +18,11 @@ void *strcpy(char *str, char *dst)
 
 int main(int argc, char *argv[])
 {
-  char *str = "Copy this string :)";
+  char *src = "Copy this string :)";
   char dst[32];
 
-  strcpy(str, dst);
-  printf("%s", dst);
+  strcpy(src, dst);
+  printf("%s\n", dst);
 
   return 0;
 }
@@ -33,7 +33,7 @@ Then, disassemble the executable and get a feel for the assembly code
 08048446 <strcpy>:
  8048446:       55                      push   ebp
  8048447:       89 e5                   mov    ebp,esp
- 8048449:       e8 87 00 00 00          call   80484d5 <__x86.get_pc_thunk.ax>
+ 8048449:       e8 80 00 00 00          call   80484ce <__x86.get_pc_thunk.ax>
  804844e:       05 b2 1b 00 00          add    eax,0x1bb2
  8048453:       eb 13                   jmp    8048468 <strcpy+0x22>
  8048455:       8b 45 08                mov    eax,DWORD PTR [ebp+0x8]
@@ -70,20 +70,18 @@ Then, disassemble the executable and get a feel for the assembly code
  80484a5:       ff 75 f4                push   DWORD PTR [ebp-0xc]
  80484a8:       e8 99 ff ff ff          call   8048446 <strcpy>
  80484ad:       83 c4 08                add    esp,0x8
- 80484b0:       83 ec 08                sub    esp,0x8
+ 80484b0:       83 ec 0c                sub    esp,0xc
  80484b3:       8d 45 d4                lea    eax,[ebp-0x2c]
  80484b6:       50                      push   eax
- 80484b7:       8d 83 74 e5 ff ff       lea    eax,[ebx-0x1a8c]
- 80484bd:       50                      push   eax
- 80484be:       e8 3d fe ff ff          call   8048300 <printf@plt>
- 80484c3:       83 c4 10                add    esp,0x10
- 80484c6:       b8 00 00 00 00          mov    eax,0x0
- 80484cb:       8d 65 f8                lea    esp,[ebp-0x8]
- 80484ce:       59                      pop    ecx
- 80484cf:       5b                      pop    ebx
- 80484d0:       5d                      pop    ebp
- 80484d1:       8d 61 fc                lea    esp,[ecx-0x4]
- 80484d4:       c3                      ret
+ 80484b7:       e8 44 fe ff ff          call   8048300 <puts@plt>
+ 80484bc:       83 c4 10                add    esp,0x10
+ 80484bf:       b8 00 00 00 00          mov    eax,0x0
+ 80484c4:       8d 65 f8                lea    esp,[ebp-0x8]
+ 80484c7:       59                      pop    ecx
+ 80484c8:       5b                      pop    ebx
+ 80484c9:       5d                      pop    ebp
+ 80484ca:       8d 61 fc                lea    esp,[ecx-0x4]
+ 80484cd:       c3                      ret
 ```
 
 ![Alt Text](https://github.com/dilldylanpickle/dilldylanpickle.github.io/raw/main/GIFs/we-have-tecnology.gif)
