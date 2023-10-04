@@ -902,23 +902,23 @@ General purpose registers in x86_64 are addressed as follows, using `rax` as an 
 
 ```asm
 $rax
-0x6969696969696969
+0xdeadbeefdeadbeef
 
 $eax
-0x69696969
+0xdeadbeef
 
 $ax
-0x6969
+0xdead
 
 $ah
-0x69
+0xde
 
 $al
-0x69
+0xad
 
 ```
 
-> You can reference the higher 8-bit register with ah, bh, ch, etc. Also, you can reference the lower 8-bit registers with al, bl, cl, etc.
+> You can reference the higher 8-bit register with ah, bh, ch, etc. Also, you can reference the 8-bit registers with r8, r9, r13, etc.
 
 ---
 
