@@ -898,23 +898,23 @@ $al - References lower 8 bits of $ax or 1 byte
 
 A general purpose register is used to store temporary data within the processor.
 
-General purpose registers in x86_64 are addressed as follows, using rax as an example:
+General purpose registers in x86_64 are addressed as follows, using `rax` as an example:
 
 ```asm
 $rax
-0x0000000000000000
+0x6969696969696969
 
 $eax
-0x00000000
+0x69696969
 
 $ax
-0x0000
+0x6969
 
 $ah
-0x00
+0x69
 
 $al
-0x00
+0x69
 
 ```
 
