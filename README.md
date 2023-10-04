@@ -125,7 +125,7 @@ Hopefully, you can get an idea of what you might be doing. If you currently doin
 - [Assemblers Assemble: From the Function Prologue to the Epilogue](#assemblers-assemble-from-the-function-prologue-to-the-epilogue)
   - [Assembly Essentials](#assembly-essentials)
     - [Registers](#registers)
-- [A Trip Down Memory Lane: Remembering the Stack](#a-trip-down-memory-lane-remembering-the-stack)
+- [A Trip Down Memory Lane: Remembering the Stack Layout](#a-trip-down-memory-lane-remembering-the-stack-layout)
   - [The Stack](#the-stack)
     - [Stack frames](#stack-frames)
       - [Function prologue](#function-prologue)
@@ -863,7 +863,7 @@ Assembly language is a low-level programming language that is more human-readabl
 
 ---
 
-# A Trip Down Memory Lane: Remembering the Stack
+# A Trip Down Memory Lane: Remembering the Stack Layout
 You wanna know what could be worse than a technical coding interview? A technical phone screen interview! In my experience, they gotta make sure you ain't capping on your resume. If you put "x86-64 assembly" or "C/C++" on your resume, be prepared to talk the talk before you walk the walk!
 
 ![Alt Text](https://github.com/dilldylanpickle/dilldylanpickle.github.io/raw/main/GIFs/phone-interview.gif)
