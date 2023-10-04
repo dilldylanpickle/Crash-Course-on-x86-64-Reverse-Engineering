@@ -706,7 +706,7 @@ leave
 
 This instruction is an alias for the following sequence:
 ```asm
-mov   rsp,rbp
+mov   rsp, rbp
 push  rbp
 ```
 
