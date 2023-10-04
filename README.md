@@ -29,7 +29,7 @@ Learning reverse engineering is pretty hard in 2023 if you don't know where to s
         - [Reverse strings using pointers](#reverse-strings-using-pointers)
   - [Pointers and Structures](#pointers-and-structures)
     - [Using pointers to access struct members](#using-pointers-to-access-struct-members)
-- [A Trip Down Memory Lane: Technical Phone Screening Edition](#a-trip-down-memory-lane-technical-phone-screening-edition)
+- [A Trip Down Memory Lane: Remembering the Memory Layout](#a-trip-down-memory-lane-remembering-the-memory-layout)
   - [The Stack](#the-stack)
     - [Push Instruction](#push-instruction)
     - [Pop Instruction](#pop-instruction)
@@ -513,7 +513,7 @@ Number of cheese slices: 2
 
 ---
 
-# A Trip Down Memory Lane: Technical Phone Screening Edition
+# A Trip Down Memory Lane: Remembering the Memory Layout
 You wanna know what could be worse than a technical coding interview? A technical phone screen interview! In my experience, they gotta make sure you ain't capping on your resume. If you put "x86-64 assembly" or "C/C++" on your resume, be prepared to talk the talk before you walk the walk!
 
 ![Alt Text](https://github.com/dilldylanpickle/dilldylanpickle.github.io/raw/main/GIFs/phone-interview.gif)
