@@ -603,19 +603,20 @@ Number of cheese slices: 2
 
 As programmers, we write code in high-level and mid-level languages such as C or C++. However, central processing units (CPUs) understand machine code.
 
-Here is a simplified representation on how source code becomes machine code:
+Here is a very simplified representation on how source code becomes machine code:
 ```
-  Source Code     Compilation       Assembly Code       Machine Code
-  +---------+   +--------------+   +--------------+   +--------------+
-  |         |   |              |   |              |   |              |
-  |  High-  |   |   Compiler   |   |   Assembler  |   |   Machine    |
-  |  Level  | → |   (C, C++,   | → |              | → |    Code      |
-  |  Code   |   |   etc.)      |   |              |   |              |
-  |         |   |              |   |              |   |              |
-  +---------+   +--------------+   +--------------+   +--------------+
+  Source Code     Compilation                       Machine Code
+  +---------+   +--------------+                  +--------------+
+  |         |   |              |                  |              |
+  |  High-  |   |   Compiler   |                  |   Machine    |
+  |  Level  | → |   (C, C++,   | → Translation →  |    Code      |
+  |  Code   |   |   etc.)      |                  |              |
+  |         |   |              |                  |              |
+  +---------+   +--------------+                  +--------------+
 ```
-
 ![Alt Text](https://github.com/dilldylanpickle/dilldylanpickle.github.io/raw/main/GIFs/team-spongebob.gif)
+
+> For simplicity, steps like preprocessing and linking were not included but will be mentioned in the future :) 
 
 ## Data Representation
 
