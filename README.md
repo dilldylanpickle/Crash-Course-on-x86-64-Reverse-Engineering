@@ -113,7 +113,7 @@ Hopefully, you can get an idea of what you might be doing. If you currently doin
         - [Reverse strings using pointers](#reverse-strings-using-pointers)
   - [Pointers and Structures](#pointers-and-structures)
     - [Using pointers to access struct members](#using-pointers-to-access-struct-members)
-- [Assembers Assemble: From the Function Prologue to the Epilogue](#assemblers-assemble-from-the-function-prologue-to-the-epilogue)
+- [A Byte to Eat: The Delightful Data Dinner](#a-byte-to-eat-the-delightful-data)
   - [Data Representation](#data-representation)
     - [Bits, bytes, words, double words, and quad words](#bits-bytes-words-double-words-and-quad-words)
     - [Signed values, two's complement, and endianness](#signed-values-twos-complement-and-endianness)
@@ -608,29 +608,9 @@ Number of cheese slices: 2
 
 ---
 
-# Assemblers Assemble: From the Function Prologue to the Epilogue
+# A Byte to Eat: The Delightful Data
 
-As programmers, we write code in high-level and mid-level languages such as C or C++. However, central processing units (CPUs) understand machine code.
-
-Here is a very simplified representation on how source code becomes machine code:
-```
-  Source Code     Compilation                       Machine Code
-  +---------+   +--------------+                  +--------------+
-  |         |   |              |                  |              |
-  |  High-  |   |   Compiler   |                  |   Machine    |
-  |  Level  | → |   (C, C++,   | → Translation →  |    Code      |
-  |  Code   |   |   etc.)      |                  |              |
-  |         |   |              |                  |              |
-  +---------+   +--------------+                  +--------------+
-```
-
-> For simplicity, steps like preprocessing and linking were not included but will be mentioned in the future :)
-
-![Alt Text](https://github.com/dilldylanpickle/dilldylanpickle.github.io/raw/main/GIFs/team-spongebob.gif)
-
-> The most powerful superhero team in all of fiction!
-
----
+Bytes are fun!
 
 ## Data Representation
 
@@ -830,6 +810,32 @@ Hexadecimal (Base 16):
 ---
 
 ### Representing ASCII characters
+
+---
+
+# Assemblers Assemble: From the Function Prologue to the Epilogue
+
+As programmers, we write code in high-level and mid-level languages such as C or C++. However, central processing units (CPUs) understand machine code.
+
+Here is a very simplified representation on how source code becomes machine code:
+```
+  Source Code     Compilation                       Machine Code
+  +---------+   +--------------+                  +--------------+
+  |         |   |              |                  |              |
+  |  High-  |   |   Compiler   |                  |   Machine    |
+  |  Level  | → |   (C, C++,   | → Translation →  |    Code      |
+  |  Code   |   |   etc.)      |                  |              |
+  |         |   |              |                  |              |
+  +---------+   +--------------+                  +--------------+
+```
+
+> For simplicity, steps like preprocessing and linking were not included but will be mentioned in the future :)
+
+![Alt Text](https://github.com/dilldylanpickle/dilldylanpickle.github.io/raw/main/GIFs/team-spongebob.gif)
+
+> The most powerful superhero team in all of fiction!
+
+---
 
 ## Assembly Essentials
 
