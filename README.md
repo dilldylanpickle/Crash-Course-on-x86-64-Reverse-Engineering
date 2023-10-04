@@ -761,13 +761,18 @@ Then, add 1:
 1111 1100  +  0000 0001  =  1111 1101
 ```
 
-So, -3 is represented as 1111 1101 in two's complement.
+So, -3 is represented as follows:
+```
+1111 1101
+```
 
 Two's complement makes it easier for computers to perform arithmetic operations,as subtraction becomes the same as addition. It's a clever way to represent both positive and negative numbers using only 0s and 1s.
 
 ---
 
 ### Number Systems
+
+There are differen't ways to represent numbers in the context of computers. Let's talk about different ways we can represent unique values.
 
 ---
 
