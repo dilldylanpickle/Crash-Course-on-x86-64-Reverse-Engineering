@@ -124,16 +124,15 @@ Hopefully, you can get an idea of what you might be doing. If you currently doin
   - [Representing ASCII characters](#representing-ascii-characters)
 - [A Trip Down Memory Lane: Remembering the Memories](#a-trip-down-memory-lane-remembering-the-memories)
   - [The Stack](#the-stack)
-    - [Push Instruction](#push-instruction)
-    - [Pop Instruction](#pop-instruction)
-    - [Stack Frames](#stack-frames)
-      - [Function Prologue](#function-prologue)
-        - [Stack Pointer (RSP)](#stack-pointer-rsp)
-        - [Base Pointer (RBP)](#base-pointer-ebp)
-        - [Allocating a Stack Frame](#allocating-a-stack-frame)
-      - [Function Epilogue](#function-epilogue)
-        - [Releasing a Stack Frame](#releasing-a-stack-frame)
-        - [Popping Off The Stack](#popping-off-the-stack)
+    - [Stack frames](#stack-frames)
+      - [Function prologue](#function-prologue)
+        - [Stack pointer (RSP)](#stack-pointer-rsp)
+        - [Base pointer (RBP)](#base-pointer-ebp)
+        - [Allocating a stack frame](#allocating-a-stack-frame)
+      - [Function epilogue](#function-epilogue)
+        - [Releasing a stack frame](#releasing-a-stack-frame)
+        - [Popping off the stack](#popping-off-the-stack)
+        - [Return Instruction](#return-instruction)
 
 # C-ing is Believing: Pointers Edition
 Are you considering job roles like software reverse engineer, embedded software developer, or vulnerability researcher? Well, chances are they'll expect you to be comfortable in C programming. Nobody wants to use extra memory, so let's talk about pointers!
@@ -876,7 +875,7 @@ The stack is simply an area in RAM that stores function arguments, local variabl
 
 ---
 
-#### Stack Frames
+#### Stack frames
 
 The stack is typically structured as a linear sequence of memory allocations known as stack frames. Each time a function is called, the stack will automatically allocate a new stack frame.
 
@@ -884,7 +883,7 @@ As the function executes, it will use the given stack frame to store and operate
 
 ---
 
-##### Function Prologue
+##### Function prologue
 
 The first few assembly instructions found at the start of any function are known as the function prologue.
 
@@ -897,7 +896,7 @@ The function prologue is inserted by the compiler to 'allocate' a stack frame fo
 
 ---
 
-###### Stack Pointer (RSP)
+###### Stack pointer (RSP)
 
 The first instruction of the function prologue is a push. This is a special instruction used to save data to the top of the stack.
 
@@ -914,7 +913,7 @@ mov   qword [rsp], rbp   ; 2. store rbp to stack
 
 ---
 
-###### Base Pointer (EBP)
+###### Base pointer (EBP)
 
 The x86 register rbp is dedicated to holding the base pointer of the current stack frame. The base pointer is simply a bookend used in assembly to tell where the current stack frame ends.
 
@@ -932,7 +931,7 @@ mov   rbp, rsp		; set a new base pointer
 
 ---
 
-###### Allocating a Stack Frame
+###### Allocating a stack frame
 
 Allocating memory on the stack is incredibly fast because it can be done in a single instruction. To allocate a new stack frame, the program simply subtracts from the stack pointer.
 
@@ -946,7 +945,7 @@ As the last instruction of the main() function prologue, stepping over this sub 
 
 ---
 
-#### Function Epilogue
+#### Function epilogue
 
 At the end of every function, the compiler will insert a few instructions which make up the function epilogue.
 
@@ -960,7 +959,7 @@ Opposite to the function prologue, the role of the epilogue is to release the cu
 
 ---
 
-##### Releasing a Stack Frame
+##### Releasing a stack frame
 
 The leave instruction is used almost exclusively by function epilogues to release the current stack frame.
 
@@ -978,7 +977,7 @@ Remember, rbp points at the “bottom” of the current stack frame. By setting 
 
 ---
 
-##### Popping Off The Stack
+##### Popping off the stack
 
 Where the push instruction is normally used to add an element to the top of the stack, the pop instruction will remove the top most element, placing it into the given operand.
 
@@ -996,7 +995,7 @@ In this case, the function epilogue is restoring the base pointer to its previou
 
 ---
 
-##### Return Instruction
+##### Return instruction
 
 At this point, the main() function has completed cleaning up its stack frame. The last step is to return program execution to the calling function using the ret instruction.
 
