@@ -608,7 +608,7 @@ Number of cheese slices: 2
 
 ---
 
-# A Byte to Eat: The Delightful Data
+# A Byte to Eat: The Delightful Data Dinner
 
 Bytes are fun!
 
@@ -777,6 +777,8 @@ Decimal (Base 10):
 3    8
 4    9
 ```
+
+---
 
 #### Binary (Base 2):
 
