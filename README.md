@@ -625,6 +625,94 @@ Here is a very simplified representation on how source code becomes machine code
 
 ## Data Representation
 
+Knowing how a computer can process data is very important in learning reverse engineering. Let's talk about some ways computers represent data!
+
+### Bits, bytes, words, double words, and quad words 
+
+One of the smallest ways a computer can process data is by using bits. A binary digit, also known as bit, can represent either a one or zero.
+
+Bits:
+```
+0 or 1
+```
+
+Notice how we can only represent two unique values: 0 and 1.
+
+If we have 2 bits, we can represent 4 unique values:
+```
+00 01 10 11
+```
+
+In total, you can represent 4 numbers in total: 0, 1, 2, and 3.
+```
+00 is the same as 0
+01 is the same as 1
+10 is the same as 2
+11 is the same as 3
+```
+
+If we have 3 bits, we can represent 8 unique values:
+```
+000 001 010 011 100 101 110 111
+```
+
+In total, you can represent 8 numbers in total: 0, 1, 2, 3, 4, 5, 6, and 7.
+```
+000 is the same as 0
+001 is the same as 1
+010 is the same as 2
+011 is the same as 3
+100 is the same as 4
+101 is the same as 5
+110 is the same as 6
+111 is the same as 7
+```
+
+Do you see a pattern here? We can calculate all the possible values by calculating powers of 2!
+
+For example:
+```
+With 1 bit (2^1), you can represent 2 values: 0 and 1.
+With 2 bits (2^2), you can represent 4 values: 00, 01, 10, and 11.
+With 3 bits (2^3), you can represent 8 values: 000, 001, 010, 011, 100, 101, 110, and 111.
+```
+
+There is a much easier way of identifying a decimal representation just from looking at bits. You can represent each bit as a power of 2.
+
+For example, let's say we have 6 bits:
+```
+6th bit   5th bit   4th bit   3rd bit   2nd bit   1st bit
+      1         0         0         0         0         0
+```
+
+Another way you can examine this is by looking at each bit as a power of 2:
+```
+2^6   2^5   2^4   2^3   2^2   2^1
+  1     0     0     0     0     0
+```
+
+Since we can see the 2^6 bit is 1, we know 100000 is the same thing as 64
+
+Here is another example:
+```
+2^6   2^5   2^4   2^3   2^2   2^1
+  1     0     0     1     0     0
+```
+
+We already know 2^6 is 64 so we just need to add the 2^3 value:
+```
+2^6   2^3
+64  +   8 = 72
+```
+
+It's pretty cool when we group together multiple bits, we can represent more values! Is there a computer unit larger than a bit? Well, a byte is eight bits put together.This means we can represent over 256 different values!
+
+Bytes:
+```
+0 or 255
+```
+
+
 ---
 
 ### Number Systems
@@ -674,6 +762,8 @@ Hexadecimal (Base 16):
 > The `0x` prefix is used to indicate hexadecimal representation 
 
 ---
+
+### Representing Integers
 
 ## Assembly Essentials
 
