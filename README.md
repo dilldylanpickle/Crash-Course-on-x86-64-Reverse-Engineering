@@ -131,7 +131,32 @@ Hopefully, you can get an idea of what you might be doing. If you currently doin
         - [mov instruction](#mov-instruction)
         - [lea instruction](#lea-instruction)
         - [xchg instruction](#xchg-instruction)
+      - [Arithmetic operations]
+        - [add instruction]
+        - [sub instruction]
+        - [mul and imul instruction]
+        - [div and idiv instruction]
+        - [inc and dec instruction]
+      - [Bitwise operataions]
+        - [and instruction]
+        - [or instruction]
+        - [xor instruction]
+        - [not instruction] 
+      -  [Control flow and branching]
+        - [cmp instruction]
+        - [Unconditional jumps]
+          - [jmp instruction]
+        - [Conditional jumps]
+          - [je instruction]
+          - [jne instruction]
+          - [jl instruction]
+          - [jg instruction]
+      - [Loops]
+        - [loop instruction]
+        - [rep instruction]
   - [The Stack](#the-stack)
+    - [Push instruction]
+    - [Pop instruction]
     - [Stack frames](#stack-frames)
       - [Function prologue](#function-prologue)
         - [Stack pointer (RSP)](#stack-pointer-rsp)
