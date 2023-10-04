@@ -209,7 +209,9 @@ dilldylanpickle@archlinux:~/Crash-Course-on-x86-64-Reverse-Engineering$ ./a.out
 Remember how C allows us to manipulate the data in a computer's memory? Let me show you why pointers are crucial, especially when working with functions.
 
 #### Pointers as function arguments (pass by reference)
-When I say pass by reference, I'm basically saying  "Hey function! Please take the address of this value please?" 
+When I say pass by reference, I'm basically saying  "Hey function! Please take the address of this value please?"
+
+> The reason we use pointers is because it is far more efficient to pass a memory address to a function rather than making a complete copy of a buffer and moving it.
 
 Here is an example of passing the address of a variable rather than a variable itself:
 ```c
