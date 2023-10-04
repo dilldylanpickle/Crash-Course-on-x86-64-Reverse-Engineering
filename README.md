@@ -633,7 +633,7 @@ Here is a very simplified representation on how source code becomes machine code
 
 #### Decimal (Base 10):
 
-Computer systems use various numbers systems to represent data. The one you are most familiar with is decimal. Base 10, also know as decimal numbers, means it uses ten digits to represent all numbers.
+Computer systems use various numbers systems to represent data. The one you are most familiar with is probably decimal. Base 10, also know as decimal numbers, means it uses ten digits to represent all numbers.
 
 Decimal (Base 10):
 ```
@@ -643,8 +643,6 @@ Decimal (Base 10):
 3    8
 4    9
 ```
-
-> 0 is counted as a digit to represent numbers in base 10
 
 #### Binary (Base 2):
 
