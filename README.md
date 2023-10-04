@@ -614,9 +614,26 @@ Here is a very simplified representation on how source code becomes machine code
   |         |   |              |                  |              |
   +---------+   +--------------+                  +--------------+
 ```
-![Alt Text](https://github.com/dilldylanpickle/dilldylanpickle.github.io/raw/main/GIFs/team-spongebob.gif)
 
 > For simplicity, steps like preprocessing and linking were not included but will be mentioned in the future :)
+
+![Alt Text](https://github.com/dilldylanpickle/dilldylanpickle.github.io/raw/main/GIFs/team-spongebob.gif)
+
+> The most powerful superhero team in all of fiction!
+
+Assembly language is a low-level programming language that is more human-readable than machine code. This makes it so humans don't have to count 1s and 0s.
+
+```
+          Assembly Code                    Machine Code
+  +-------------------------+       +------------------------+
+  |                         |       |                        |
+  |   MOV AX, 42            |       |   1011 1100 00101010   |
+  |   ADD BX, AX            |  <->  |   0000 0000 00001000   |
+  |   JMP 0x1000            |       |   1110 1010 00000001   |
+  |                         |       |                        |
+  +-------------------------+       +------------------------+
+
+```
 
 ## Data Representation
 
