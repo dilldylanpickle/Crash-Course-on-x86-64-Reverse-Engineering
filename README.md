@@ -621,6 +621,59 @@ Here is a very simplified representation on how source code becomes machine code
 
 > The most powerful superhero team in all of fiction!
 
+---
+
+## Data Representation
+
+---
+
+### Number Systems
+
+---
+
+#### Decimal (Base 10):
+
+Computer systems use various numbers systems to represent data. The one you are most familiar with is decimal. Base 10, also know as decimal numbers, means it uses ten digits to represent all numbers.
+
+Decimal (Base 10):
+```
+0    5
+1    6
+2    7
+3    8
+4    9
+```
+
+> 0 is counted as a digit to represent numbers in base 10
+
+#### Binary (Base 2):
+
+The most unfamiliar number system would be binary. Base 2, also known as binary numbers, means it uses 2 digits to represent all numbers.
+
+Binary (Base 2):
+```
+0 1
+```
+
+---
+
+#### Hexadecimal (Base 16):
+
+A more human-friendly representation of binary data would be pretty helpful right? Base 10, also known as hexadecimal numbers, means it uses 16 different symbols to represent all numbers.
+
+Hexadecimal (Base 16):
+```
+0   5   0xA   0xF
+1   6   0xB
+2   7   0xC
+3   8   0xD
+4   9   0xE
+```
+
+---
+
+## Assembly Essentials
+
 Assembly language is a low-level programming language that is more human-readable than machine code. This makes it so humans don't have to count 1s and 0s.
 
 ```
@@ -634,12 +687,6 @@ Assembly language is a low-level programming language that is more human-readabl
   +-------------------------+       +------------------------+
 
 ```
-
-## Data Representation
-
-### 
-
-## Assembly Essentials
 
 ## Registers
 
