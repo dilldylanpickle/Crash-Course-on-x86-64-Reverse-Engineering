@@ -930,11 +930,20 @@ An instruction represents a single operation for the CPU to perform. The main ty
 
 ### Data Movement
 
+In x86 assembly language and other assembly languages, various instructions are used for data movement between registers and memory. 
+
+Some of the common instructions for data movement include the following:
+```asm
+mov   rax, 0x69
+lea   rdi, [edi*2]
+xchg  rax, rbx
+```
+
 ---
 
 #### mov instruction
 
-The mov instruction copies the value of its second argument into the first argument.
+The `mov`` instruction copies the value of its second argument into the first argument.
 
 Here the operation mov is moving the “immediate” 0xdeadbeef into the register rax:
 ```asm
@@ -951,6 +960,30 @@ mov rax, [0xdeadbeef + rbx*4]
 > When brackets are used, you can think of it as the dereference operator in C.
 
 ---
+
+### lea instruction
+
+The `lea`  instruction, also know as load effective address, is used to put the address of a source operand into the destination operand.
+
+For example, the following lea instruction takes the address and places it in the `rdi` register:
+```
+lea rdi, [edi*2]
+```
+
+> It's important to understand the `lea` instruction doesn't actually access the memory location. It just calculates the effective address and places it in the destination register :)
+
+---
+
+### xchg instruction
+
+The `xchg` instruction, also know as the exchange instruction, swaps the values of two operands.
+
+For example, the following xchg instruction swaps the values of `rax and `rbx`:
+```asm
+xchg  rax, rbx
+```
+
+> Think of the xchg instruction as a handshake between two registers. They simply swap values with each other :)
 
 ### The Stack
 
