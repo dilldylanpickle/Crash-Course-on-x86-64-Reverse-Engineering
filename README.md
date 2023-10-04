@@ -928,6 +928,30 @@ An instruction represents a single operation for the CPU to perform. The main ty
 
 ---
 
+### Data Movement
+
+---
+
+#### mov instruction
+
+The mov instruction copies the value of its second argument into the first argument.
+
+Here the operation mov is moving the “immediate” 0xdeadbeef into the register rax:
+```asm
+mov rax, 0xdeadbeef
+```
+
+> What does immediate value mean? The instant value so no dereference required :)
+
+Here the operation mov is moving the data at the address of [0xdeadbeef + rbx*4] into the register rax:
+```asm
+mov rax, [0xdeadbeef + rbx*4]
+```
+
+> When brackets are used, you can think of it as the dereference operator in C.
+
+---
+
 ### The Stack
 
 The stack is simply an area in RAM that stores function arguments, local variables, etc. The stack is a “Last in First Out” data structure. The stack grows down to the lower memory address.
