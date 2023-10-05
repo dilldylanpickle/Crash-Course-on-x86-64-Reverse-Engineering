@@ -1039,17 +1039,80 @@ dec
 
 #### add instruction
 
+The `add` instruction adds the second operand to the first operand and stores the result in the first operand.
+
+Here is an example of adding values using `rax` and `rbx`:
+```asm
+mov rax, 0x69
+add rbx, rax
+```
+
+> The value of rbx is 0x69 nice!
+
 ---
 
 #### sub instruction
+
+The `sub` instruction subtracts the second operand from the first operand and stores the result in the first operand.
+
+Here is an example of subtracting values using `rax`:
+```asm
+mov rax, 0x100
+sub rax, 0x097
+```
+
+> The value of rax is 0x69 nice!
 
 ---
 
 #### mul and imul instruction
 
+The `mul` instruction multiplies the `rax` register by the operand, and the result is stored in `rdx:rax`
+
+Here is an example of multiplying an unsigned value in `rax`:
+```asm
+mov rax, 0x09
+mov rbx, 0x09
+mul rbx
+```
+
+> The value of rax is 0x69 nice!
+
+The difference is the `imul` instruction allows you to multiply signed values.
+
+Here is an example of multiplying a signed value in `rax`:
+```asm
+mov   rax, 0xF
+mov   rbx, -0x7
+imul  rbx
+```
+> The value of rax is -0x69 nice!
+
 ---
 
 #### div and idiv instruction
+
+The `div` instruction divides the unsigned value in the `rdx:rax` pair by the operand, storing the quotient in `rax` and the remainder in `rdx`.
+
+Here is an example of dividing an unsigned value in `rbx`:
+```asm
+mov rax, 0x69
+mov rbx, 0x1
+div rbx
+```
+
+> The value of rax is 0x69 nice!
+
+The `idiv` instruction divides the signed value in the `rdx:rax` pair by the operand, storing the quotient in `rax` and the remainder in `rdx`
+
+Here is an example of dividing an signed value in `rbx`:
+```asm
+mov   rax, -0x69D1
+mov   rbx, -0x3E9
+idiv  rbx
+```
+
+> The value of rax is 0x69 nice!
 
 ---
 
