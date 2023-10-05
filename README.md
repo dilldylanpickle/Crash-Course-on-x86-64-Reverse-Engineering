@@ -1118,6 +1118,26 @@ idiv  rbx
 
 #### inc and dec instruction
 
+The `inc` instruction increments the operand by 1. This would be a similar concept to using `i++` in a C program.
+
+Here is an example of incrementing the `rax` register:
+```asm
+mov rax, 0x69
+inc rax
+```
+
+> The value of rax is 0x69 nice!
+
+The `dec` instruction decrements the operand by 1. This would be a similar concept to using `i--` in a C program.
+
+Here is an example of decrementing the `rax` register:
+```asm
+mov rax, 0x6A
+dec rax
+```
+
+> The value of rax is 0x69 nice!``
+
 ---
 
 ### The Stack
