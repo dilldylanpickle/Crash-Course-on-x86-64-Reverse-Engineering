@@ -961,13 +961,13 @@ An instruction represents a single operation for the CPU to perform. The main ty
 
 ### Data Movement
 
-In x86-64 assembly language and other assembly languages, various instructions are used for data movement between registers and memory. 
+In the x86-64 assembly language, data movement instructions are used to transfer data between registers and memory.
 
 Some of the common instructions for data movement include the following:
 ```asm
-mov   rax, 0x69
-lea   rdi, [edi*2]
-xchg  rax, rbx
+mov
+lea
+xchg
 ```
 
 ---
@@ -1019,6 +1019,21 @@ xchg  rax, rbx
 ---
 
 ### Arithmetic operations
+
+Arithmetic operations in assembly language are used to perform mathematical calculations on data in registers and memory.
+
+
+Here are some arithmetic instructions you will probably see:
+```asm
+add
+sub
+mul
+imul
+div
+idiv
+inc
+dec
+```
 
 ---
 
