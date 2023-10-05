@@ -974,7 +974,7 @@ xchg  rax, rbx
 
 #### mov instruction
 
-The `mov`` instruction copies the value of its second argument into the first argument.
+The `mov` instruction copies the value of its second argument into the first argument.
 
 Here the operation mov is moving the “immediate” 0xdeadbeef into the register rax:
 ```asm
