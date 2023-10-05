@@ -143,7 +143,7 @@ Hopefully, you can get an idea of what you might be doing. If you currently doin
         - [xor instruction](#xor-instruction)
         - [not instruction](#not-instruction)
       -  [Control flow and branching]
-        - [cmp instruction]
+          - [cmp instruction]
         - [Unconditional jumps]
           - [jmp instruction]
         - [Conditional jumps]
@@ -1202,6 +1202,44 @@ not rax
 ```
 
 > The value of rax is 0x69 nice!
+
+---
+
+### Control flow and branching
+
+---
+
+#### cmp instruction
+
+#### flag registers
+
+---
+
+### Unconditional jumps
+
+---
+
+#### jmp instruction
+
+---
+
+### Conditional jumps
+
+---
+
+#### je instruction
+
+---
+
+#### jne instruction
+
+---
+
+#### jl instruction
+
+---
+
+#### jg instruction
 
 ---
 
