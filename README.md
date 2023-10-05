@@ -997,7 +997,7 @@ mov rax, [0xdeadbeef + rbx*4]
 The `lea`  instruction, also know as load effective address, is used to put the address of a source operand into the destination operand.
 
 For example, the following lea instruction takes the address and places it in the `rdi` register:
-```
+```asm
 lea rdi, [edi*2]
 ```
 
