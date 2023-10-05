@@ -142,15 +142,15 @@ Hopefully, you can get an idea of what you might be doing. If you currently doin
         - [or instruction](#or-instruction)
         - [xor instruction](#xor-instruction)
         - [not instruction](#not-instruction)
-      -  [Control flow and branching]
-          - [cmp instruction]
-        - [Unconditional jumps]
-          - [jmp instruction]
-        - [Conditional jumps]
-          - [je instruction]
-          - [jne instruction]
-          - [jl instruction]
-          - [jg instruction]
+      -  [Control flow and branching](#control-flow-and-branching)
+          - [cmp instruction](#cmp-instruction)
+        - [Unconditional jumps](#unconditional-jumps)
+          - [jmp instruction](#jmp-instruction)
+        - [Conditional jumps](#conditional-jumps)
+          - [je instruction](#je-instruction)
+          - [jne instruction](#jne-instruction)
+          - [jl instruction](#jl-instruction)
+          - [jg instruction](#jg-instruction)
       - [Loops]
         - [loop instruction]
         - [rep instruction]
