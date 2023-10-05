@@ -166,6 +166,14 @@ Hopefully, you can get an idea of what you might be doing. If you currently doin
         - [Releasing a stack frame](#releasing-a-stack-frame)
         - [Popping off the stack](#popping-off-the-stack)
         - [Return Instruction](#return-instruction)
+  - [Calling conventions]
+    - [System V]
+    - [Function arguments and parameter passing]
+      - Stack based parameter passing
+      - Register based parameter passing
+    - [Stack Cleanup]
+    - [Return Values]
+    - [Preserved Registers]
 - [A Trip Down Memory Lane: Remembering the Virtual Memory](#a-trip-down-memory-lane-remembering-the-virtual-memory)
 
 # C-ing is Believing: Pointers Edition
@@ -1210,6 +1218,8 @@ not rax
 ---
 
 #### cmp instruction
+
+---
 
 #### flag registers
 
