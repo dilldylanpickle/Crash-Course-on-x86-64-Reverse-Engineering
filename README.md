@@ -131,12 +131,12 @@ Hopefully, you can get an idea of what you might be doing. If you currently doin
         - [mov instruction](#mov-instruction)
         - [lea instruction](#lea-instruction)
         - [xchg instruction](#xchg-instruction)
-      - [Arithmetic operations]
-        - [add instruction]
-        - [sub instruction]
-        - [mul and imul instruction]
-        - [div and idiv instruction]
-        - [inc and dec instruction]
+      - [Arithmetic operations](#arithmetic-operations)
+        - [add instruction](#add-instruction)
+        - [sub instruction](#sub-instruction)
+        - [mul and imul instruction](#mul-and-imul-instruction)
+        - [div and idiv instruction](#div-and-idiv-instruction)
+        - [inc and dec instruction](#inc-and-dec-instruction)
       - [Bitwise operataions]
         - [and instruction]
         - [or instruction]
@@ -961,7 +961,7 @@ An instruction represents a single operation for the CPU to perform. The main ty
 
 ### Data Movement
 
-In x86 assembly language and other assembly languages, various instructions are used for data movement between registers and memory. 
+In x86-64 assembly language and other assembly languages, various instructions are used for data movement between registers and memory. 
 
 Some of the common instructions for data movement include the following:
 ```asm
@@ -1015,6 +1015,32 @@ xchg  rax, rbx
 ```
 
 > Think of the xchg instruction as a handshake between two registers. They simply swap values with each other :)
+
+---
+
+### Arithmetic operations
+
+---
+
+#### add instruction
+
+---
+
+#### sub instruction
+
+---
+
+#### mul and imul instruction
+
+---
+
+#### div and idiv instruction
+
+---
+
+#### inc and dec instruction
+
+---
 
 ### The Stack
 
