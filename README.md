@@ -1136,7 +1136,72 @@ mov rax, 0x6A
 dec rax
 ```
 
-> The value of rax is 0x69 nice!``
+> The value of rax is 0x69 nice!
+
+---
+
+### Bitwise operations
+
+Bitwise operations in assembly language are used to perform operations on individual bits of registers and memory locations. These operations are particularly useful when dealing with flag registers, masks, or when manipulating specific bits in a byte or word.
+
+---
+
+#### and instruction
+
+The `and`` instruction performs a bitwise AND between the two operands and stores the result in the first operand.
+
+Here is an example using `rax` and `rbx`:
+```asm
+mov rax, 0xFFFF
+mov rbx, 0x69
+and rax, rbx
+```
+
+> The value of rax is 0x69 nice!
+
+---
+
+#### or instruction
+
+The `or` instruction performs a bitwise OR between the two operands and stores the result in the first operand.
+
+Here is an example using `rax` and `rbx`:
+```asm
+mov rax, 0x00
+mov rbx, 0x69
+or rax, rbx
+```
+
+> The value of rax is 0x69 nice!
+
+---
+
+#### xor instruction
+
+The xor instruction performs a bitwise XOR (exclusive OR) between the two operands and stores the result in the first operand.
+
+Here is an example using `rax` and `rbx`:
+```asm
+mov rax, 0xFF
+xor rbx, 0x96
+xor rax, rbx
+```
+
+> The value of rax is 0x69 nice!
+
+---
+
+#### not instruction
+
+The `not` instruction performs a bitwise NOT (negate) on the operand, flipping every bit.
+
+Here is an example using `rax`:
+```asm
+mov rax, 0x0000000000000096
+not rax
+```
+
+> The value of rax is 0x69 nice!`
 
 ---
 
