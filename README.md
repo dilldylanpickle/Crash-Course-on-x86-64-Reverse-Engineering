@@ -137,11 +137,11 @@ Hopefully, you can get an idea of what you might be doing. If you currently doin
         - [mul and imul instruction](#mul-and-imul-instruction)
         - [div and idiv instruction](#div-and-idiv-instruction)
         - [inc and dec instruction](#inc-and-dec-instruction)
-      - [Bitwise operataions]
-        - [and instruction]
-        - [or instruction]
-        - [xor instruction]
-        - [not instruction] 
+      - [Bitwise operations](#bitwise-operations)
+        - [and instruction](#and-instruction)
+        - [or instruction](#or-instruction)
+        - [xor instruction](#xor-instruction)
+        - [not instruction](#not-instruction)
       -  [Control flow and branching]
         - [cmp instruction]
         - [Unconditional jumps]
@@ -1201,7 +1201,7 @@ mov rax, 0x0000000000000096
 not rax
 ```
 
-> The value of rax is 0x69 nice!`
+> The value of rax is 0x69 nice!
 
 ---
 
