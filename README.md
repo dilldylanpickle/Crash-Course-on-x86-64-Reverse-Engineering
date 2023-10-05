@@ -168,14 +168,27 @@ Hopefully, you can get an idea of what you might be doing. If you currently doin
         - [Releasing a stack frame](#releasing-a-stack-frame)
         - [Popping off the stack](#popping-off-the-stack)
         - [Return Instruction](#return-instruction)
-  - [Calling conventions]
-    - [System V]
-    - [Function arguments and parameter passing]
-      - Stack based parameter passing
-      - Register based parameter passing
-    - [Stack Cleanup]
-    - [Return Values]
-    - [Preserved Registers]
+  - [Calling Conventions]
+    - [Understanding caller vs. callee]
+      - [Caller responsibilities]
+      - [Callee responsibilities]
+    - [Parameter passing]
+      - [Stack-based parameter passing]
+      - [Register-based parameter passing]
+    - [Return values]
+      - [Using registers for return values]
+      - [Memory location returns]
+    - [Preserved registers (caller-saved vs. callee-saved)]
+      - [Caller-saved registers]
+      - [Callee-saved registers]
+    - [Common calling conventions]
+      - [Linux system V application binary interface]
+      - [Microsoft x64 calling conventions]
+      - [Stdcall, cdecl, and fastcalls (32-bit conventions)]
+    - [Stack cleanup]
+      - [Caller clears the stack]
+      - [Callee clears the stack]
+
 - [A Trip Down Memory Lane: Remembering the Virtual Memory](#a-trip-down-memory-lane-remembering-the-virtual-memory)
 
 # C-ing is Believing: Pointers Edition
