@@ -188,7 +188,6 @@ Hopefully, you can get an idea of what you might be doing. If you currently doin
     - [Stack cleanup]
       - [Caller clears the stack]
       - [Callee clears the stack]
-
 - [A Trip Down Memory Lane: Remembering the Virtual Memory](#a-trip-down-memory-lane-remembering-the-virtual-memory)
 
 # C-ing is Believing: Pointers Edition
