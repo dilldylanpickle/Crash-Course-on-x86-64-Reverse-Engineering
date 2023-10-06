@@ -1453,8 +1453,9 @@ One important thing is understanding the difference between the function caller 
 
 Before the caller can make a function call, there are a few things it needs to do first:
 
-> 1. yes
-> 2. no
+> 1. Setting up parameters: The caller must pass the parameters via registers or the stack. 
+> 2. Call instruction: The caller may use the `call` instruction to invoke the callee.
+> 3. Stack cleanup (possible): Depending on the calling convention, the caller may be responsible for cleaning up the stack after the callee returns a value.
 
 ---
 
@@ -1491,6 +1492,12 @@ Before the caller can make a function call, there are a few things it needs to d
 ---
 
 ##### Caller-saved registers
+
+After a call, the caller may add to the stack pointer to clean up the arguments:
+```asm
+call function_name
+add esp, 0x8        ; cleans up 2 arguments
+```
 
 ---
 
