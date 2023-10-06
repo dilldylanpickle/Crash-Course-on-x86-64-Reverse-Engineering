@@ -1453,8 +1453,8 @@ One important thing is understanding the difference between the function caller 
 
 Before the caller can make a function call, there are a few things it needs to do first:
 
-1. yes
-2. no
+> 1. yes
+> 2. no
 
 ---
 
