@@ -1451,6 +1451,11 @@ One important thing is understanding the difference between the function caller 
 
 ##### Caller responsibilities
 
+Before the caller can make a function call, there are a few things it needs to do first:
+
+1. yes
+2. no
+
 ---
 
 ##### Callee responsibilities
