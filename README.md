@@ -1288,6 +1288,11 @@ push rax
 
 The `pop` instruction pops a value or memory address from teh stack and increments the stack pointer to point to the new top.
 
+Here is a what you would see in assembly:
+```asm
+pop rax
+```
+
 > Remember, the stack grows towards the lower memory address. This means the stack will go higher in memory as it shrinks :)
 
 ---
