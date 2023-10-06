@@ -1436,9 +1436,16 @@ pop rip
 
 ### Calling Conventions
 
+A calling convention defines how functions get their arguments from the caller, how they return their results, and how the stack is maintained. Different calling conventions exist for various operating systems and architectures.
+
 ---
 
 #### Understanding caller vs. callee
+
+One important thing is understanding the difference between the function caller and callee.
+
+* The caller is the code that calls a function
+* The callee is the function that is being called
 
 ---
 
