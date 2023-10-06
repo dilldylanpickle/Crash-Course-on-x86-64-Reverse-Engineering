@@ -1553,6 +1553,7 @@ Cyber security experts may need to reverse software to identify vulnerabilities 
 
 This is where the ethical line becomes very blurry. Some individuals who are studying music production in college cannot afford $1,000 VST3 plugins. It is cheaper to reverse the plugins and write keygens rather than to purchase the music software.
 > 6. Malware development & criminal activities:
+
 Reverse engineering can be employed for illegal activities like engaging in cyber attacks.
 # A Trip Down Memory Lane: Remembering the Virtual Memory
 You wanna know what could be worse than a technical coding interview? A technical phone screen interview! In my experience, they gotta make sure you ain't capping on your resume. If you put "x86-64 assembly" or "C/C++" on your resume, be prepared to talk the talk before you walk the walk!
