@@ -1533,6 +1533,16 @@ add esp, 0x8        ; cleans up 2 arguments
 
 ---
 
+### A Simple Introduction to Reverse Engineering
+If you are reading this part of the crash course, you are most ready to start reversing! Let me show you how I first started learning reverse engineering! However, every reverse engineer has their own reason to reverse!
+
+Here is a list of reasons people reverse engineer from least sketchy to most sketchy:
+> 1. Educational purposes: Some people who start reversing may want to get better at their debugging skills.
+> 2. Software porting & Abandoned projects: Sometimes, reverse engineering is useful to ensure compatibility between different operating systems and architectures. Not all developers are willing to release their source code. This usually forces people to reverse their protocols in order to keep a community alive!
+> 3. Game modding & hacking: The gaming community will reverse engineer software in order to develop more features, maps, etc. Some reverse engineers will need to statically and dynamically analyze video games in order to bypass its anti-cheat software.
+> 4. Vulnerability & security research: Cyber security experts may need to reverse software to identify vulnerabilities and weaknesses, which can be reported to software vendors for patching!
+> 5. Piracy & broke ass college students: This is where the ethical line becomes very blurry. Some individuals who are studying music production in college cannot afford $1,000 VST3 plugins. It is cheaper to reverse the plugins and write keygens rather than to purchase the music software.
+
 # A Trip Down Memory Lane: Remembering the Virtual Memory
 You wanna know what could be worse than a technical coding interview? A technical phone screen interview! In my experience, they gotta make sure you ain't capping on your resume. If you put "x86-64 assembly" or "C/C++" on your resume, be prepared to talk the talk before you walk the walk!
 
