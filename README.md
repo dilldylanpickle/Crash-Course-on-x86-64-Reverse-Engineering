@@ -1538,14 +1538,19 @@ If you are reading this part of the crash course, you are most ready to start re
 
 Here is a list of reasons people reverse engineer from least sketchy to most sketchy:
 > 1. Educational purposes:
+
 Some people who start reversing may want to get better at their debugging skills.
 > 2. Software porting & Abandoned projects:
+
 Sometimes, reverse engineering is useful to ensure compatibility between different operating systems and architectures. Not all developers are willing to release their source code. This usually forces people to reverse their protocols in order to keep a community alive!
 > 3. Game modding & hacking:
+
 The gaming community will reverse engineer software in order to develop more features, maps, etc. Some reverse engineers will need to statically and dynamically analyze video games in order to bypass its anti-cheat software.
 > 4. Vulnerability & security research:
+
 Cyber security experts may need to reverse software to identify vulnerabilities and weaknesses, which can be reported to software vendors for patching!
 > 5. Piracy & broke ass college students:
+
 This is where the ethical line becomes very blurry. Some individuals who are studying music production in college cannot afford $1,000 VST3 plugins. It is cheaper to reverse the plugins and write keygens rather than to purchase the music software.
 
 # A Trip Down Memory Lane: Remembering the Virtual Memory
