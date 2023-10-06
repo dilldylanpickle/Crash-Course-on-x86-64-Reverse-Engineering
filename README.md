@@ -1539,7 +1539,7 @@ If you are reading this part of the crash course, you are most ready to start re
 Here is a list of reasons people reverse engineer from least sketchy to most sketchy:
 > 1. Educational purposes:
 
-Some people who start reversing may want to get better at their debugging skills.
+Some people who start reversing may want to get better at their debugging skills. They may decide to start experimenting with code they've written in their free time.
 > 2. Software porting & Abandoned projects:
 
 Sometimes, reverse engineering is useful to ensure compatibility between different operating systems and architectures. Not all developers are willing to release their source code. This usually forces people to reverse their protocols in order to keep a community alive!
