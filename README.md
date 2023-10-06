@@ -157,8 +157,8 @@ Hopefully, you can get an idea of what you might be doing. If you currently doin
         - [loop instruction]
         - [rep instruction]
   - [The Stack](#the-stack)
-    - [Push instruction]
-    - [Pop instruction]
+    - [Push instruction](#push-instruction)
+    - [Pop instruction](#pop-instruction)
     - [Stack frames](#stack-frames)
       - [Function prologue](#function-prologue)
         - [Stack pointer (RSP)](#stack-pointer-rsp)
@@ -1273,6 +1273,25 @@ The stack is simply an area in RAM that stores function arguments, local variabl
 
 ---
 
+#### Push instruction
+
+The `push` instruction pushes a value to the stack and decrements the stack pointer to point to the new top.
+
+Here is a what you would see in assembly:
+```asm
+push rax
+```
+
+---
+
+#### Pop instruction
+
+The `pop` instruction pops a value or memory address from teh stack and increments the stack pointer to point to the new top.
+
+> Remember, the stack grows towards the lower memory address. This means the stack will go higher in memory as it shrinks :)
+
+---
+
 #### Stack frames
 
 The stack is typically structured as a linear sequence of memory allocations known as stack frames. Each time a function is called, the stack will automatically allocate a new stack frame.
@@ -1308,6 +1327,8 @@ You can interpret the push instruction as two separation operations (push is an 
 sub   rsp, 0x8           ; 1. allocate 8 bytes
 mov   qword [rsp], rbp   ; 2. store rbp to stack
 ```
+
+This form exposes the use of rsp, a special register known as the stack pointer. Whatever memory address is held within rsp is interpreted by the CPU as the top of the stack.
 
 ---
 
