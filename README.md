@@ -1432,12 +1432,87 @@ This instruction is an alisas for the following sequence:
 pop rip
 ```
 
+---
 
+### Calling Conventions
 
+---
 
+#### Understanding caller vs. callee
 
+---
 
+##### Caller responsibilities
 
+---
+
+##### Callee responsibilities
+
+---
+
+#### Parameter passing
+
+---
+
+##### Stack-based parameter passing
+
+---
+
+##### Register-based parameter passing
+
+---
+
+#### Return values
+
+---
+
+##### Using registers for return values
+
+---
+
+##### Memory location returns
+
+---
+
+#### Preserved registers (caller-saved vs. callee-saved)
+
+---
+
+##### Caller-saved registers
+
+---
+
+##### Callee-saved registers
+
+---
+
+#### Common calling conventions
+
+---
+
+##### Linux system V application binary interface
+
+---
+
+##### Microsoft x64 calling conventions
+
+---
+
+##### Stdcall, cdecl, and fastcalls (32-bit conventions)
+
+---
+
+#### Stack cleanup
+
+---
+
+##### Caller clears the stack
+
+---
+
+##### Callee clears the stack
+
+---
 
 # A Trip Down Memory Lane: Remembering the Virtual Memory
 You wanna know what could be worse than a technical coding interview? A technical phone screen interview! In my experience, they gotta make sure you ain't capping on your resume. If you put "x86-64 assembly" or "C/C++" on your resume, be prepared to talk the talk before you walk the walk!
