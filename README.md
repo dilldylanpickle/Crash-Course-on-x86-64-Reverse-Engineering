@@ -1677,9 +1677,188 @@ main:
 
 ### Integers, arithmetic operations, and bitwise operations
 
+```c
+#include <stdio.h>
+
+int main()
+{
+    int i;
+    i = 69;
+
+    return 0;
+}
+```
+
+```asm
+main:
+        push    rbp
+        mov     rbp, rsp
+        mov     DWORD PTR [rbp-4], 69
+        mov     eax, 0
+        pop     rbp
+        ret
+```
+
 ---
 
-#### Addition, subtraction, multiplication, division
+#### Addition, subtraction, multiplication, division, and modulus
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int i, j, k, sum;
+
+    i = 23;
+    j = 23;
+    k = 23;
+
+    sum = i + j + k;
+
+    return 0;
+}
+```
+
+```asm
+main:
+        push    rbp
+        mov     rbp, rsp
+        mov     DWORD PTR [rbp-4], 23
+        mov     DWORD PTR [rbp-8], 23
+        mov     DWORD PTR [rbp-12], 23
+        mov     edx, DWORD PTR [rbp-4]
+        mov     eax, DWORD PTR [rbp-8]
+        add     edx, eax
+        mov     eax, DWORD PTR [rbp-12]
+        add     eax, edx
+        mov     DWORD PTR [rbp-16], eax
+        mov     eax, 0
+        pop     rbp
+        ret
+```
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int i, j, difference;
+
+    i = 70;
+    j = 1;
+
+    difference = i - j;
+
+    return 0;
+}
+```
+
+```asm
+main:
+        push    rbp
+        mov     rbp, rsp
+        mov     DWORD PTR [rbp-4], 70
+        mov     DWORD PTR [rbp-8], 1
+        mov     eax, DWORD PTR [rbp-4]
+        sub     eax, DWORD PTR [rbp-8]
+        mov     DWORD PTR [rbp-12], eax
+        mov     eax, 0
+        pop     rbp
+        ret
+```
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int i, j, product;
+
+    i = 23;
+    j = 3;
+
+    product = i * j;
+
+    return 0;
+}
+```
+
+```asm
+main:
+        push    rbp
+        mov     rbp, rsp
+        mov     DWORD PTR [rbp-4], 23
+        mov     DWORD PTR [rbp-8], 3
+        mov     eax, DWORD PTR [rbp-4]
+        imul    eax, DWORD PTR [rbp-8]
+        mov     DWORD PTR [rbp-12], eax
+        mov     eax, 0
+        pop     rbp
+        ret
+```
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int i, j, quotient;
+
+    i = 138;
+    j = 2;
+
+    quotient = i / j;
+
+    return 0;
+}
+```
+
+```asm
+main:
+        push    rbp
+        mov     rbp, rsp
+        mov     DWORD PTR [rbp-4], 138
+        mov     DWORD PTR [rbp-8], 2
+        mov     eax, DWORD PTR [rbp-4]
+        cdq
+        idiv    DWORD PTR [rbp-8]
+        mov     DWORD PTR [rbp-12], eax
+        mov     eax, 0
+        pop     rbp
+        ret
+```
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int i, j, modulus ;
+
+    i = 483;
+    j = 7;
+
+    modulus  = i % j;
+
+    return 0;
+}
+```
+
+```asm
+main:
+        push    rbp
+        mov     rbp, rsp
+        mov     DWORD PTR [rbp-4], 483
+        mov     DWORD PTR [rbp-8], 7
+        mov     eax, DWORD PTR [rbp-4]
+        cdq
+        idiv    DWORD PTR [rbp-8]
+        mov     DWORD PTR [rbp-12], edx
+        mov     eax, 0
+        pop     rbp
+        ret
+```
 
 ---
 
