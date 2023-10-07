@@ -182,7 +182,7 @@ Hopefully, you can get an idea of what you might be doing. If you currently doin
       - [Caller clears the stack]
       - [Callee clears the stack]
 - [A Simple Introduction to Reversing: CTRL+Z won't work in the real world]
-  - [C to x86-64 Assembly](#c-to-x86-64-assembly
+  - [C to x86-64 Assembly](#c-to-x86-64-assembly)
     - [Main Function](#main-function)
       - [int argc, char *argv[]](#int-argc-char-argv)
     - [Integers, arithmetic operations, and bitwise operations](#integers-arithmetic-operations-and-bitwise-operations)
