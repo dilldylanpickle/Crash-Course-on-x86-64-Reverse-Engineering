@@ -221,7 +221,6 @@ Hopefully, you can get an idea of what you might be doing. If you currently doin
         - [Local Variables, allocations, and deallocations]
       - [Heap operations]
         - [Dynamic memory allocation with malloc/free]
-
 - [A Trip Down Memory Lane: Remembering the Virtual Memory](#a-trip-down-memory-lane-remembering-the-virtual-memory)
   - [Memory Basics in Linux]
     - [What is virtual memory]
