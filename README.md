@@ -196,7 +196,7 @@ Hopefully, you can get an idea of what you might be doing. If you currently doin
       - [Addition, subtraction, multiplication, division](#addition-subtraction-multiplication-division-and-modulus)
       - [And, or, xor, not, bit shifts](#and-instruction)
     - [Pointers](#pointers)
-      - [Pointer dereferencing and addressing]
+      - [Pointer addressing and dereferencing](#pointer-addressing-and-dereferencing)
     - [Strings](#strings)
       - [String initialization](#string-initialization)
       - [Character pointers and string literals](#character-pointers-and-string-literals)
