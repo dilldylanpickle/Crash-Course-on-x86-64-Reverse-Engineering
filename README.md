@@ -1623,6 +1623,10 @@ Reverse engineering can be employed for illegal activities like engaging in cybe
 
 ## C to x86-64 Assembly
 
+Now that you are familiar with C code, you can start cross referencing C and assembly code. One way you can do this on Linux is by using `objdump -D <binary file> | less`. You can also use more advanced tools like IDA and Ghidra.
+
+For simplicity purposes, I will be using [goldbolt.org][https://godbolt.org/] to disassemble our C code to x86-64 assembly.
+
 ---
 
 ### Integers, arithmetic operations, and bitwise operations
