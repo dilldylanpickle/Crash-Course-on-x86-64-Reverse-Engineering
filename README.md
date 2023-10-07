@@ -1991,6 +1991,50 @@ main:
 
 #### Character pointers and string literals
 
+```c
+#include <stdio.h>
+
+int main()
+{
+    char *str = "69 nice!";
+
+    return 0;
+}
+```
+
+```asm
+.LC0:
+        .string "69 nice!"
+main:
+        push    rbp
+        mov     rbp, rsp
+        mov     QWORD PTR [rbp-8], OFFSET FLAT:.LC0
+        mov     eax, 0
+        pop     rbp
+        ret
+```
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    char str = 'E';
+
+    return 0;
+}
+```
+
+```asm
+main:
+        push    rbp
+        mov     rbp, rsp
+        mov     BYTE PTR [rbp-1], 69
+        mov     eax, 0
+        pop     rbp
+        ret
+```
+
 ---
 
 ### Control flow
