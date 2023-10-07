@@ -1598,7 +1598,7 @@ add esp, 0x8        ; cleans up 2 arguments
 
 ---
 
-### A Simple Introduction to Reverse Engineering
+# A Simple Introduction to Reverse Engineering
 If you are reading this part of the crash course, you are most ready to start reversing! Let me show you how I first started learning reverse engineering! However, every reverse engineer has their own reason to reverse!
 
 Here is a list of reasons people reverse engineer from least sketchy to most sketchy:
@@ -1620,6 +1620,132 @@ This is where the ethical line becomes very blurry. Some individuals who are stu
 > 6. Malware development & criminal activities:
 
 Reverse engineering can be employed for illegal activities like engaging in cyber attacks. Distribution of malware will require a reverse engineer to understand how to bypass security mechanisms on operating systems like Windows or Linux.
+
+## C to x86-64 Assembly
+
+---
+
+### Integers, arithmetic operations, and bitwise operations
+
+---
+
+#### Addition, subtraction, multiplication, division
+
+---
+
+#### And, or, xor, not, bit shifts
+
+---
+
+### Pointers
+
+---
+
+#### Pointer dereferencing and addressing
+
+---
+
+#### Pointer Comparisons
+
+---
+
+### Strings
+
+---
+
+#### String initialization
+
+---
+
+### Control flow
+
+---
+
+#### Single and two-way branching
+
+---
+
+##### If statements
+
+---
+
+##### If-else statements
+
+---
+
+#### Loops
+
+---
+
+##### While
+
+---
+
+##### For
+
+---
+
+##### Do-while
+
+---
+
+#### Function calls
+
+---
+
+##### Calling conventions
+
+---
+
+##### Recursion Patterns
+
+---
+
+### Data Structures
+
+---
+
+#### Arrays
+
+---
+
+##### Array initialization, indexing, and iterations
+
+---
+
+#### Structs
+
+---
+
+##### Memory layout, access patterns, nested structs
+
+---
+
+#### Union
+
+---
+
+##### Memory overlap and access patterns
+
+---
+
+### Memory Management
+
+---
+
+#### Stack operations
+
+---
+
+##### Local Variables, allocations, and deallocations
+
+---
+
+#### Heap operations
+
+---
+
+##### Dynamic memory allocation with malloc/free
 
 ---
 
