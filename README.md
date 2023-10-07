@@ -2283,6 +2283,62 @@ main:
 
 ##### Recursion Patterns
 
+```c
+#include <stdio.h>
+
+int func_factorial(int i)
+{
+    if (i > 1) {
+        return i * func_factorial(i - 1);
+    } else { 
+        return 1;
+    }
+}
+
+int  main()
+{
+    int i, product;
+    i = 5;
+
+    product = func_factorial(i);
+
+    return 0;
+}
+```
+
+```asm
+func_factorial:
+        push    rbp
+        mov     rbp, rsp
+        sub     rsp, 16
+        mov     DWORD PTR [rbp-4], edi
+        cmp     DWORD PTR [rbp-4], 1
+        jle     .L2
+        mov     eax, DWORD PTR [rbp-4]
+        sub     eax, 1
+        mov     edi, eax
+        call    func_factorial
+        imul    eax, DWORD PTR [rbp-4]
+        jmp     .L3
+.L2:
+        mov     eax, 1
+.L3:
+        leave
+        ret
+main:
+        push    rbp
+        mov     rbp, rsp
+        sub     rsp, 16
+        mov     DWORD PTR [rbp-4], 5
+        mov     eax, DWORD PTR [rbp-4]
+        mov     edi, eax
+        call    func_factorial
+        mov     DWORD PTR [rbp-8], eax
+        mov     eax, 0
+        leave
+        ret
+```
+
 ---
 
 ### Data Structures
