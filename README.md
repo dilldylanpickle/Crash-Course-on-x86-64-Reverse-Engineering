@@ -1870,7 +1870,66 @@ main:
 
 ---
 
-#### Pointer dereferencing and addressing
+#### Pointer addressing and dereferencing
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int i;
+    i = 69;
+    
+    int *ptr;
+    ptr= &i;
+
+    return 0;
+}
+```
+
+```asm
+main:
+        push    rbp
+        mov     rbp, rsp
+        mov     DWORD PTR [rbp-12], 69
+        lea     rax, [rbp-12]
+        mov     QWORD PTR [rbp-8], rax
+        mov     eax, 0
+        pop     rbp
+        ret
+```
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int i, j;
+    i = 69;
+
+    int *ptr;
+    ptr= &i;
+
+    j = *ptr;
+
+    return 0;
+}
+```
+
+```asm
+main:
+        push    rbp
+        mov     rbp, rsp
+        mov     DWORD PTR [rbp-16], 69
+        lea     rax, [rbp-16]
+        mov     QWORD PTR [rbp-8], rax
+        mov     rax, QWORD PTR [rbp-8]
+        mov     eax, DWORD PTR [rax]
+        mov     DWORD PTR [rbp-12], eax
+        mov     eax, 0
+        pop     rbp
+        ret
+```
 
 ---
 
