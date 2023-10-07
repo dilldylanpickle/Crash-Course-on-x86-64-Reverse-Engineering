@@ -189,7 +189,7 @@ Hopefully, you can get an idea of what you might be doing. If you currently doin
       - [Caller clears the stack]
       - [Callee clears the stack]
 - [A Trip Down Memory Lane: Remembering the Virtual Memory](#a-trip-down-memory-lane-remembering-the-virtual-memory)
-  - [Memory Basic in Linux]
+  - [Memory Basics in Linux]
     - [What is virtual memory]
       - [Benefits of virtual memory]
     - [Physical vs. virtual memory]
@@ -1591,5 +1591,22 @@ Reverse engineering can be employed for illegal activities like engaging in cybe
 ---
 
 # A Trip Down Memory Lane: Remembering the Virtual Memory
+
+I'm going to use an analogy to explain virtual memory in computers. 
+
+Here are the following computer parts you should consider:
+> CPU
+
+> RAM
+
+> Storage (Hard drive, SSD, etc)
+
+> Programs (.exe, .elf, .o, etc)
+
+> Processes
+
+> Virtual memory
+
+Imagine you are SpongeBob SquarePants working at the Krusty Krab,
 
 ---
