@@ -190,6 +190,8 @@ Hopefully, you can get an idea of what you might be doing. If you currently doin
       - [Callee clears the stack]
 - [A Simple Introduction to Reversing: CTRL+Z won't work in the real world]
   - [C to x86-64 Assembly]
+    - [Main Function]
+      - [int argc, char *argv[]]
     - [Integers, arithmetic operations, and bitwise operations]
       - [Addition, subtraction, multiplication, division]
       - [And, or, xor, not, bit shifts]
@@ -1627,6 +1629,50 @@ Now that you are familiar with C code, you can start cross referencing C and ass
 
 For simplicity purposes, I will be using https://godbolt.org/ to disassemble our C code to x86-64 assembly.
 
+---
+
+### Main Function
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    return 0;
+}
+```
+
+```asm
+main:
+        push    rbp
+        mov     rbp, rsp
+        mov     eax, 0
+        pop     rbp
+        ret
+```
+---
+
+#### int argc, char *argv[]
+
+```c
+#include <stdio.h>
+
+int main(int argc, char *argv[])
+{
+    return 0;
+}
+```
+
+```asm
+main:
+        push    rbp
+        mov     rbp, rsp
+        mov     DWORD PTR [rbp-4], edi
+        mov     QWORD PTR [rbp-16], rsi
+        mov     eax, 0
+        pop     rbp
+        ret
+```
 ---
 
 ### Integers, arithmetic operations, and bitwise operations
