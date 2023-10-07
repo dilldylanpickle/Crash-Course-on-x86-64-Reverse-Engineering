@@ -189,30 +189,30 @@ Hopefully, you can get an idea of what you might be doing. If you currently doin
       - [Caller clears the stack]
       - [Callee clears the stack]
 - [A Simple Introduction to Reversing: CTRL+Z won't work in the real world]
-  - [C to x86-64 Assembly]
-    - [Main Function]
-      - [int argc, char *argv[]]
-    - [Integers, arithmetic operations, and bitwise operations]
-      - [Addition, subtraction, multiplication, division]
-      - [And, or, xor, not, bit shifts]
-    - [Pointers]
+  - [C to x86-64 Assembly](#c-to-x86-64-assembly
+    - [Main Function](#main-function)
+      - [int argc, char *argv[]](#int-argc-char-argv)
+    - [Integers, arithmetic operations, and bitwise operations](#integers-arithmetic-operations-and-bitwise-operations)
+      - [Addition, subtraction, multiplication, division](#addition-subtraction-multiplication-division-and-modulus)
+      - [And, or, xor, not, bit shifts](#and-instruction)
+    - [Pointers](#pointers)
       - [Pointer dereferencing and addressing]
-    - [Strings]
-      - [String initialization]
-      - [Character pointers]
-    - [Control flow]
-      - [Single and two-way branching]
-        - [If statements]
-        - [If-else statements]
-      - [Loops]
-        - [While]
-        - [For]
-        - [Do-while]
-      - [Function calls]
-        - [Recursion Patterns]
-    - [Data Structures]
-      - [Arrays]
-        - [Array initialization, indexing, and iterations]
+    - [Strings](#strings)
+      - [String initialization](#string-initialization)
+      - [Character pointers and string literals](#character-pointers-and-string-literals)
+    - [Control flow](#control-flow)
+      - [Single and two-way branching](#single-and-two-way-branching)
+        - [If statements](#if-statements)
+        - [If-else statements](#if-else-statements)
+      - [Loops](#loops)
+        - [While](#while)
+        - [For](#for)
+        - [Do-while](#do-while)
+      - [Function calls](#function-calls)
+        - [Recursion Patterns](#recursion-patterns)
+    - [Data Structures](#data-structures)
+      - [Arrays](#arrays)
+        - [Array initialization, indexing, and iterations](#array-initialization-indexing-and-iterations)
       - [Structs]
         - [Memory layout, access patterns, nested structs]
       - [Union]
@@ -2351,6 +2351,106 @@ main:
 
 ##### Array initialization, indexing, and iterations
 
+```c
+#include <stdio.h>
+
+int  main()
+{
+    int array[] = {69, 420, 9, 10, 21};
+    return 0;
+}
+```
+
+```asm
+main:
+        push    rbp
+        mov     rbp, rsp
+        mov     DWORD PTR [rbp-32], 69
+        mov     DWORD PTR [rbp-28], 420
+        mov     DWORD PTR [rbp-24], 9
+        mov     DWORD PTR [rbp-20], 10
+        mov     DWORD PTR [rbp-16], 21
+        mov     eax, 0
+        pop     rbp
+        ret
+```
+
+```c
+#include <stdio.h>
+
+int  main()
+{
+    int i;
+    int array[] = {69, 420, 9, 10, 21};
+
+    int *ptr = &array[0];
+
+    return 0;
+}
+```
+
+```asm
+main:
+        push    rbp
+        mov     rbp, rsp
+        mov     DWORD PTR [rbp-32], 69
+        mov     DWORD PTR [rbp-28], 420
+        mov     DWORD PTR [rbp-24], 9
+        mov     DWORD PTR [rbp-20], 10
+        mov     DWORD PTR [rbp-16], 21
+        lea     rax, [rbp-32]
+        mov     QWORD PTR [rbp-8], rax
+        mov     eax, 0
+        pop     rbp
+        ret
+```
+
+```c
+#include <stdio.h>
+
+int  main()
+{
+    int i;
+    int array[] = {69, 420, 9, 10, 21};
+
+    for (i = 0; i < sizeof(array) / sizeof(int); i++) {
+        printf("%d", array[i]);
+    }
+    return 0;
+}
+```
+
+```asm
+.LC0:
+        .string "%d"
+main:
+        push    rbp
+        mov     rbp, rsp
+        sub     rsp, 32
+        mov     DWORD PTR [rbp-32], 69
+        mov     DWORD PTR [rbp-28], 420
+        mov     DWORD PTR [rbp-24], 9
+        mov     DWORD PTR [rbp-20], 10
+        mov     DWORD PTR [rbp-16], 21
+        mov     DWORD PTR [rbp-4], 0
+        jmp     .L2
+.L3:
+        mov     eax, DWORD PTR [rbp-4]
+        cdqe
+        mov     eax, DWORD PTR [rbp-32+rax*4]
+        mov     esi, eax
+        mov     edi, OFFSET FLAT:.LC0
+        mov     eax, 0
+        call    printf
+        add     DWORD PTR [rbp-4], 1
+.L2:
+        mov     eax, DWORD PTR [rbp-4]
+        cmp     eax, 4
+        jbe     .L3
+        mov     eax, 0
+        leave
+        ret
+```
 ---
 
 #### Structs
