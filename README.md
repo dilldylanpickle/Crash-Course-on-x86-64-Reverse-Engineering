@@ -1940,21 +1940,16 @@ main:
 
 int main()
 {
-    char str = "\0";
+    char str;
 
     return 0;
 }
 ```
 
 ```asm
-.LC0:
-        .string ""
-        .string ""
 main:
         push    rbp
         mov     rbp, rsp
-        mov     eax, OFFSET FLAT:.LC0
-        mov     BYTE PTR [rbp-1], al
         mov     eax, 0
         pop     rbp
         ret
