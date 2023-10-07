@@ -1594,19 +1594,6 @@ Reverse engineering can be employed for illegal activities like engaging in cybe
 
 I'm going to use an analogy to explain virtual memory in computers. 
 
-Here are the following computer parts you should consider:
-> CPU
-
-> RAM
-
-> Storage (Hard drive, SSD, etc)
-
-> Virtual memory
-
-> Operating System
-
-> Programs
-
 Imagine SpongeBob SquarePants working at the Krusty Krab! SpongeBob SquarePants, our fry cook, represents the CPU. SpongeBob prepares all the orders, much like a CPU processes data.
 
 Now, SpongeBob has a grill where he prepares all the Krabby Patties. This grill represents the RAM. The grill can only hold so many patties at once. If the grill is full, SpongeBob doesn't have any physical room for the patties!
