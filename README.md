@@ -181,7 +181,7 @@ Hopefully, you can get an idea of what you might be doing. If you currently doin
     - [Stack cleanup]
       - [Caller clears the stack]
       - [Callee clears the stack]
-- [A Simple Introduction to Reversing: CTRL+Z won't work in the real world]
+- [A Simple Introduction to Reversing: CTRL+Z won't work in the real world](#a-simple-introduction-to-reversing-ctrlz-wont-work-in-the-real-world)
   - [C to x86-64 Assembly](#c-to-x86-64-assembly)
     - [Main Function](#main-function)
       - [int argc, char *argv[]](#int-argc-char-argv)
@@ -1592,7 +1592,7 @@ add esp, 0x8        ; cleans up 2 arguments
 
 ---
 
-# A Simple Introduction to Reverse Engineering
+# A Simple Introduction to Reversing: CTRL+Z won't work in the real world]
 If you are reading this part of the crash course, you are most ready to start reversing! Let me show you how I first started learning reverse engineering! However, every reverse engineer has their own reason to reverse!
 
 Here is a list of reasons people reverse engineer from least sketchy to most sketchy:
