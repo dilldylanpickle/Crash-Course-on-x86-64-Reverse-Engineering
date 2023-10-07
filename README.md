@@ -209,7 +209,6 @@ Hopefully, you can get an idea of what you might be doing. If you currently doin
         - [For]
         - [Do-while]
       - [Function calls]
-        - [Calling conventions]
         - [Recursion Patterns]
     - [Data Structures]
       - [Arrays]
@@ -2042,9 +2041,85 @@ main:
 
 ##### If statements
 
+```c
+#include <stdio.h>
+
+int main()
+{
+    int i;
+    i = 69;
+
+    if (i == 69) {
+        puts("nice!");
+    }
+
+    return 0;
+}
+```
+
+```asm
+.LC0:
+        .string "nice!"
+main:
+        push    rbp
+        mov     rbp, rsp
+        sub     rsp, 16
+        mov     DWORD PTR [rbp-4], 69
+        cmp     DWORD PTR [rbp-4], 69
+        jne     .L2
+        mov     edi, OFFSET FLAT:.LC0
+        call    puts
+.L2:
+        mov     eax, 0
+        leave
+        ret
+```
+
 ---
 
 ##### If-else statements
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int i;
+    i = 69;
+
+    if (i == 69) {
+        puts("nice!");
+    } else {
+        puts("not nice :(");
+    }
+
+    return 0;
+}
+```
+
+```asm
+.LC0:
+        .string "nice!"
+.LC1:
+        .string "not nice :("
+main:
+        push    rbp
+        mov     rbp, rsp
+        sub     rsp, 16
+        mov     DWORD PTR [rbp-4], 69
+        cmp     DWORD PTR [rbp-4], 69
+        jne     .L2
+        mov     edi, OFFSET FLAT:.LC0
+        call    puts
+        jmp     .L3
+.L2:
+        mov     edi, OFFSET FLAT:.LC1
+        call    puts
+.L3:
+        mov     eax, 0
+        leave
+        ret
+```
 
 ---
 
@@ -2054,21 +2129,155 @@ main:
 
 ##### While
 
+```c
+#include <stdio.h>
+
+int main()
+{
+    int i;
+    i = 0;
+
+    while (i != 69) {
+        i++;
+    }
+}
+```
+
+```asm
+main:
+        push    rbp
+        mov     rbp, rsp
+        mov     DWORD PTR [rbp-4], 0
+        jmp     .L2
+.L3:
+        add     DWORD PTR [rbp-4], 1
+.L2:
+        cmp     DWORD PTR [rbp-4], 69
+        jne     .L3
+        mov     eax, 0
+        pop     rbp
+        ret
+```
+
 ---
 
 ##### For
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int i;
+
+    for(i = 0; i < 69; i++) {
+    }
+}
+```
+
+```asm
+main:
+        push    rbp
+        mov     rbp, rsp
+        mov     DWORD PTR [rbp-4], 0
+        jmp     .L2
+.L3:
+        add     DWORD PTR [rbp-4], 1
+.L2:
+        cmp     DWORD PTR [rbp-4], 68
+        jle     .L3
+        mov     eax, 0
+        pop     rbp
+        ret
+```
 
 ---
 
 ##### Do-while
 
+```c
+#include <stdio.h>
+
+int main()
+{
+    int i;
+    i = 0;
+
+    do {
+        i += 23;
+    } while (i < 69);
+}
+```
+
+```asm
+main:
+        push    rbp
+        mov     rbp, rsp
+        mov     DWORD PTR [rbp-4], 0
+.L2:
+        add     DWORD PTR [rbp-4], 23
+        cmp     DWORD PTR [rbp-4], 68
+        jle     .L2
+        mov     eax, 0
+        pop     rbp
+        ret
+```
+
 ---
 
 #### Function calls
 
----
+```c
+#include <stdio.h>
 
-##### Calling conventions
+int func_add(int a, int b)
+{
+    int sum;
+
+    sum = a + b;
+
+    return sum;
+}
+
+int main()
+{
+    int a, b, sum;
+    a = 23;
+    b = 46;
+
+    sum = func_add(a, b);
+}
+```
+
+```asm
+func_add:
+        push    rbp
+        mov     rbp, rsp
+        mov     DWORD PTR [rbp-20], edi
+        mov     DWORD PTR [rbp-24], esi
+        mov     edx, DWORD PTR [rbp-20]
+        mov     eax, DWORD PTR [rbp-24]
+        add     eax, edx
+        mov     DWORD PTR [rbp-4], eax
+        mov     eax, DWORD PTR [rbp-4]
+        pop     rbp
+        ret
+main:
+        push    rbp
+        mov     rbp, rsp
+        sub     rsp, 16
+        mov     DWORD PTR [rbp-4], 23
+        mov     DWORD PTR [rbp-8], 46
+        mov     edx, DWORD PTR [rbp-8]
+        mov     eax, DWORD PTR [rbp-4]
+        mov     esi, edx
+        mov     edi, eax
+        call    func_add
+        mov     DWORD PTR [rbp-12], eax
+        mov     eax, 0
+        leave
+        ret
+```
 
 ---
 
