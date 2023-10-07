@@ -2490,7 +2490,7 @@ Imagine SpongeBob SquarePants working at the Krusty Krab! SpongeBob SquarePants,
 
 Now, SpongeBob has a grill where he prepares all the Krabby Patties. This grill represents the RAM. The grill can only hold so many patties at once. If the grill is full, SpongeBob doesn't have any physical room for the patties!
 
-This is where Mr. Krabs decided to hire Patrick Star. Patrick Star will represent the virtual memory. Patrick is only a helper fry cook. He doesn't really prepare the patties but he does help around the kitchen. One issue SpongeBob faces is brining frozen patties from the freezer to the grill. The freezer represents the computer's hard drive.
+This is where Mr. Krabs decided to hire Patrick Star. Patrick Star will represent the virtual memory. Patrick is only a helper fry cook. He's not as fast or efficient as SpongeBob but Patrick helps handle overflow and manage the workspace. One issue SpongeBob faces is bringing frozen patties from the freezer to the grill. Patrick takes a bit longer to retrieve a patty from the freezer compared to SpongeBob grabbing one directly from the grill. The freezer represents the computer's hard drive.
 
 If Squidward Tentacles, the operating system, hands SpongeBob a new order, SpongeBob will have Patrick keep the patties in the storage room. This will let SpongeBob make space on the actual grill for new orders.
 
