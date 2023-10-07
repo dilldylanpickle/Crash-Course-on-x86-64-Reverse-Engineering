@@ -188,7 +188,7 @@ Hopefully, you can get an idea of what you might be doing. If you currently doin
     - [Stack cleanup]
       - [Caller clears the stack]
       - [Callee clears the stack]
-- [A Simple Introduction to Reverse Engineering: CTRL+Z won't work in the real world]
+- [A Simple Introduction to Reversing: CTRL+Z won't work in the real world]
   - [C to x86-64 Assembly]
     - [Integers, arithmetic operations, and bitwise operations]
       - [Addition, subtraction, multiplication, division]
