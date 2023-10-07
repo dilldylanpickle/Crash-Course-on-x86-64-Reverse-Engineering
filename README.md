@@ -197,9 +197,9 @@ Hopefully, you can get an idea of what you might be doing. If you currently doin
       - [And, or, xor, not, bit shifts]
     - [Pointers]
       - [Pointer dereferencing and addressing]
-      - [Pointer Comparisons]
     - [Strings]
       - [String initialization]
+      - [Character pointers]
     - [Control flow]
       - [Single and two-way branching]
         - [If statements]
@@ -1933,15 +1933,63 @@ main:
 
 ---
 
-#### Pointer Comparisons
-
----
-
 ### Strings
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    char str = "\0";
+
+    return 0;
+}
+```
+
+```asm
+.LC0:
+        .string ""
+        .string ""
+main:
+        push    rbp
+        mov     rbp, rsp
+        mov     eax, OFFSET FLAT:.LC0
+        mov     BYTE PTR [rbp-1], al
+        mov     eax, 0
+        pop     rbp
+        ret
+```
 
 ---
 
 #### String initialization
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    char str[] = "69 nice!";
+
+    return 0;
+}
+```
+
+```asm
+main:
+        push    rbp
+        mov     rbp, rsp
+        movabs  rax, 2406438880369719606
+        mov     QWORD PTR [rbp-9], rax
+        mov     BYTE PTR [rbp-1], 0
+        mov     eax, 0
+        pop     rbp
+        ret
+```
+
+---
+
+#### Character pointers and string literals
 
 ---
 
