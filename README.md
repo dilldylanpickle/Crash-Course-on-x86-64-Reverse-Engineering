@@ -1628,4 +1628,15 @@ The mediator that provides tasks and orders to SpongeBob so they can be processe
 The demanding tasks and processes to be execution to satisfy their hunger!
 
 Obviously, this analogy cannot cover the entire fundamentals of virtual memory so let's go more into detail!
+
+## Memory Basics in Linux
+
+---
+
+### What is virtual memory
+
+---
+
+#### Benefits of virtual memory
+
 ---
