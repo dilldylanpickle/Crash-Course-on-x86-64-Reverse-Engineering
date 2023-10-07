@@ -1601,12 +1601,44 @@ Here are the following computer parts you should consider:
 
 > Storage (Hard drive, SSD, etc)
 
-> Programs (.exe, .elf, .o, etc)
-
-> Processes
-
 > Virtual memory
 
-Imagine you are SpongeBob SquarePants working at the Krusty Krab,
+> Operating System
 
+> Programs
+
+Imagine SpongeBob SquarePants working at the Krusty Krab! SpongeBob SquarePants, our fry cook, represents the CPU. SpongeBob prepares all the orders, much like a CPU processes data.
+
+Now, SpongeBob has a grill where he prepares all the Krabby Patties. This grill represents the RAM. The grill can only hold so many patties at once. If the grill is full, SpongeBob doesn't have any physical room for the patties!
+
+This is where Mr. Krabs decided to hire Patrick Star. Patrick Star will represent the virtual memory. Patrick is only a helper fry cook. He doesn't really prepare the patties but he does help around the kitchen. One issue SpongeBob faces is brining frozen patties from the freezer to the grill. The freezer represents the computer's hard drive.
+
+If Squidward Tentacles, the operating system, hands SpongeBob a new order, SpongeBob will have Patrick keep the patties in the storage room. This will let SpongeBob make space on the actual grill for new orders.
+
+When a customer, a computer program, demands a freshly new patty to be made, SpongeBob will have Patrick take a frozen patty from the freezer and place it on the grill.
+
+This system allows the Krusty Krab to handle more orders than the grill can physically accommodate. Hiring Patrick Star allows the Krusty Krab to manage more orders than it physically can at once, much like how virtual memory allows a computer to handle more tasks than its RAM can hold.
+
+Here is a breakdown of the analogy:
+
+> SpongeBob SquarePants (CPU):
+
+The fry cook that processes all the orders.
+> Grill (RAM):
+
+A limited space where active patty cooking processing happens.
+> Freezer (Hard drive):
+
+A room where data is stored that's not active use but can be accesses when needed.
+> Patrick Star (Virtual memory):
+
+A fry cook assistant that facilitates the movement between active and passive storage (grill and freezer).
+> SquidWard Tentacles (Operating system):
+
+The mediator that provides tasks and orders to SpongeBob so they can be processed.
+> Customers (Computer programs):
+
+The demanding tasks and processes to be execution to satisfy their hunger!
+
+Obviously, this analogy cannot cover the entire fundamentals of virtual memory so let's go more into detail!
 ---
