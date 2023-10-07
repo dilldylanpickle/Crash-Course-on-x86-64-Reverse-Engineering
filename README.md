@@ -189,6 +189,16 @@ Hopefully, you can get an idea of what you might be doing. If you currently doin
       - [Caller clears the stack]
       - [Callee clears the stack]
 - [A Trip Down Memory Lane: Remembering the Virtual Memory](#a-trip-down-memory-lane-remembering-the-virtual-memory)
+  - [Memory Basic in Linux]
+    - [What is virtual memory]
+      - [Benefits of virtual memory]
+    - [Physical vs. virtual memory]
+      - [Comparison and contrast]
+      - [The bridge between physical and virtual memory]
+  [Page Tables and Address Translation]
+    - [Purpose of page tables]
+      - [Translating virtual to physical addresses]
+      
 
 # C-ing is Believing: Pointers Edition
 Are you considering job roles like software reverse engineer, embedded software developer, or vulnerability researcher? Well, chances are they'll expect you to be comfortable in C programming. Nobody wants to use extra memory, so let's talk about pointers!
@@ -1556,12 +1566,8 @@ This is where the ethical line becomes very blurry. Some individuals who are stu
 
 Reverse engineering can be employed for illegal activities like engaging in cyber attacks. Distribution of malware will require a reverse engineer to understand how to bypass security mechanisms on operating systems like Windows or Linux.
 
+---
 
 # A Trip Down Memory Lane: Remembering the Virtual Memory
-You wanna know what could be worse than a technical coding interview? A technical phone screen interview! In my experience, they gotta make sure you ain't capping on your resume. If you put "x86-64 assembly" or "C/C++" on your resume, be prepared to talk the talk before you walk the walk!
-
-![Alt Text](https://github.com/dilldylanpickle/dilldylanpickle.github.io/raw/main/GIFs/phone-interview.gif)
-
-> Things get real if the company uses a zoom link and your phone camera turns on LMAO
 
 ---
