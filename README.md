@@ -1592,7 +1592,7 @@ add esp, 0x8        ; cleans up 2 arguments
 
 ---
 
-# A Simple Introduction to Reversing: CTRL+Z won't work in the real world]
+# A Simple Introduction to Reversing: CTRL+Z won't work in the real world
 If you are reading this part of the crash course, you are most ready to start reversing! Let me show you how I first started learning reverse engineering! However, every reverse engineer has their own reason to reverse!
 
 Here is a list of reasons people reverse engineer from least sketchy to most sketchy:
