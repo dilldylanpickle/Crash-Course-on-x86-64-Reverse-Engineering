@@ -108,6 +108,10 @@ Hopefully, you can get an idea of what you might be doing. If you currently doin
         - [Reverse strings using pointers](#reverse-strings-using-pointers)
   - [Pointers and Structures](#pointers-and-structures)
     - [Using pointers to access struct members](#using-pointers-to-access-struct-members)
+  - [Pointers and linked list]
+    - [Creating and traversing a linked list using pointers]
+    - [Inserting an element using pointers]
+    - [Deleting an element using pointers]
 - [A Byte to Eat: The Delightful Data Dinner](#a-byte-to-eat-the-delightful-data)
   - [Data Representation](#data-representation)
     - [Bits, bytes, words, double words, and quad words](#bits-bytes-words-double-words-and-quad-words)
@@ -679,6 +683,90 @@ int main() {
     return 0;
 }
 ```
+
+### Pointers and linked list
+
+If arrays are the humble apartments of data storage, linked lists are the luxury condos!
+
+Imagine you're in a train. Each compartment of the train is a `node`. Every compartment has two main parts: a seat where a passenger sits (`data`) and a door that leads to the next compartment (`next`).
+
+In a linked list:
+
+* Seat/Data: This is where the passenger (or value) resides.
+* Door/Next: This is your way to move to the next compartment or node. If there's no door, it means you're at the end of the train (NULL).
+
+A linked list contains a node which is basically a struct:
+```c
+struct Node {
+    int data;
+    struct Node* next;
+};
+```
+
+---
+
+#### Creating and traversing a linked list using pointers
+
+To traverse a linked list, you'd typically use a pointer and walk from one node to the next until you hit a NULL:
+
+```c
+void traverseList(struct Node* node) {
+    while (node != NULL) {
+        printf("%d -> ", node->data);
+        node = node->next;
+    }
+    printf("NULL\n");
+}
+```
+
+---
+
+#### Inserting an element using pointers
+
+Want to insert a new element? No need to shift like in arrays! Just play with the pointers!
+
+```c
+void insertAtBeginning(struct Node** head, int newData) {
+    struct Node* newNode = (struct Node*) malloc(sizeof(struct Node));
+    
+    newNode->data = newData;
+    newNode->next = *head;
+    
+    *head = newNode;
+}
+```
+
+---
+
+#### Deleting an element using pointers
+
+Deleting an element is all about redirecting the pointers!
+
+```c
+void deleteNode(struct Node** head, int key) {
+    struct Node* temp = *head, *prev;
+
+    if (temp != NULL && temp->data == key) {
+        *head = temp->next;
+        free(temp);
+        return;
+    }
+
+    while (temp != NULL && temp->data != key) {
+        prev = temp;
+        temp = temp->next;
+    }
+
+    if (temp == NULL) return;
+
+    prev->next = temp->next;
+    free(temp);
+}
+```
+
+> Remember, linked lists are dynamic, so it's important to free up memory when you remove an element! We will talk about dynamic memory allocation in a second!
+
+---
 
 ***Terminal:***
 ```bash
