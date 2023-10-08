@@ -2548,6 +2548,8 @@ Obviously, this analogy cannot cover the entire fundamentals of virtual memory s
 
 ## Memory Basics in Linux
 
+Understanding memory is fundamental to reversing on any Linux-based system. Let's dive in to explore the art and science of memory management.
+
 ---
 
 ### What is virtual memory
@@ -2567,10 +2569,10 @@ Virtual memory is a feature that allows a computer system to provide an applicat
 
 #### Benefits of virtual memory
 
-* Isolation: Every process gets its own private memory space.
-* Efficiency: Use memory resourcefully; bring in pages only when needed.
-* Protection: Processes can't interfere with each other's memory.
-* Overcommitment: Run more processes than physical RAM can hold.
+* Extended Memory: Provides more memory than physically available.
+* Isolation: Allows each process to run in its isolated memory space.
+* Protection: Prevents processes from interfering with each other.
+* Swapping: Moves inactive processes to disk, making room for active ones.
 
 > Tip: Overrelying on virtual memory (especially disk swaps) can slow down the system. It's called "thrashing".
 
@@ -2578,27 +2580,35 @@ Virtual memory is a feature that allows a computer system to provide an applicat
 
 ### Physical vs. virtual memory
 
+Physical memory is the tangible RAM in our systems, while virtual memory is a fabricated memory space benefiting from both RAM and disk storage.
+
 ---
 
 #### Comparison and contrast
 
 * Physical Memory: It refers to the actual RAM installed in a system. Direct and faster access but limited in size.
 
-* Virtual Memory: An extended form of memory, which uses both RAM and swap space. It's larger but slower than physical RAM.
+* Virtual Memory: An extended form of memory, which uses both RAM and swap space. It's larger but slower than physical RAM. It also adds a layer of protection unlike physical memory.
 
 ---
 
 #### The bridge between physical and virtual memory
 
+The operating system, using page tables, forms the bridge, translating virtual addresses into physical addresses.
+
 ---
 
 ## Page Tables and Address Translation
+
+When you hear the word, "Page tables and address translation", ask yourself this question:
+
+How do systems remember where everything is stored?
 
 ---
 
 ### Purpose of page tables
 
-Page tables manage the relation between virtual and physical memory addresses. They store the mapping so the system knows where each virtual page is located in physical memory.
+Page tables are like the GPS of our memory system. They guide the system about where each memory segment resides.
 
 ---
 
@@ -2618,31 +2628,44 @@ The MMU uses the page table to translate the virtual addresses into physical mem
 
 ### Multi-level page tables
 
-Utilized in systems with large amounts of memory to prevent page tables from becoming too large and unwieldy.
+For systems with large memory, simple page tables aren't enough. Enter multi-level page tables, the multi-layered solution. Utilized in systems with large amounts of memory to prevent page tables from becoming too large and unwieldy.
 
 ---
 
 #### Benefits and implementation
 
+* Efficiency: Multi-level tables consume less space.
+* Scalability: Designed to manage vast amounts of memory seamlessly.
+
 ---
 
 ## Memory protection and page flags
+
+Safety first! Ensuring data integrity and preventing unwanted access :)
 
 ---
 
 ### Role of the memory management unit
 
+The guardian of memory space, facilitating translations and setting access controls.
+
 ---
 
 #### Address translation and access checks
+
+Making sure each memory access is valid and allowed.
 
 ---
 
 ### Page protection flags
 
+Flags that provide metadata about memory pages, like their accessibility status.
+
 ---
 
 #### Read/write, user/supervisor, present/absent
+
+Differing permission levels ensuring that every byte of memory is treated appropriately.
 
 ---
 
