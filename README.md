@@ -108,10 +108,10 @@ Hopefully, you can get an idea of what you might be doing. If you currently doin
         - [Reverse strings using pointers](#reverse-strings-using-pointers)
   - [Pointers and Structures](#pointers-and-structures)
     - [Using pointers to access struct members](#using-pointers-to-access-struct-members)
-  - [Pointers and linked list]
-    - [Creating and traversing a linked list using pointers]
-    - [Inserting an element using pointers]
-    - [Deleting an element using pointers]
+  - [Pointers and linked list](#pointers-and-linked-list)
+    - [Creating and traversing a linked list using pointers](#creating-and-traversing-a-linked-list-using-pointers)
+    - [Inserting an element using pointers](#inserting-an-element-using-pointers)
+    - [Deleting an element using pointers](#deleting-an-element-using-pointers)
 - [A Byte to Eat: The Delightful Data Dinner](#a-byte-to-eat-the-delightful-data)
   - [Data Representation](#data-representation)
     - [Bits, bytes, words, double words, and quad words](#bits-bytes-words-double-words-and-quad-words)
