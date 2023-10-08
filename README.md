@@ -2552,8 +2552,154 @@ Obviously, this analogy cannot cover the entire fundamentals of virtual memory s
 
 ### What is virtual memory
 
+Virtual memory is a feature that allows a computer system to provide an application with a memory address space which might exceed the physical RAM. This space is a combination of the system's actual RAM and a portion of the system's storage devices, typically called the swap space.
+
+```
+      RAM          +          DISK          =     VIRTUAL MEMORY
++--------------+   +--------------------+   =   +-------------------+
+|   Fast but   |   |     Slower but     |   =   |   Best of both!   |
+|   Limited    | + |      Abundant      |   =   |   (Illusionary    |
+|   Capacity   |   |                    |   =   |   Unlimitedness)  |
++--------------+   +--------------------+   =   +-------------------+
+```
+
 ---
 
 #### Benefits of virtual memory
 
+* Isolation: Every process gets its own private memory space.
+* Efficiency: Use memory resourcefully; bring in pages only when needed.
+* Protection: Processes can't interfere with each other's memory.
+* Overcommitment: Run more processes than physical RAM can hold.
+
+> Tip: Overrelying on virtual memory (especially disk swaps) can slow down the system. It's called "thrashing".
+
 ---
+
+### Physical vs. virtual memory
+
+---
+
+#### Comparison and contrast
+
+* Physical Memory: It refers to the actual RAM installed in a system. Direct and faster access but limited in size.
+
+* Virtual Memory: An extended form of memory, which uses both RAM and swap space. It's larger but slower than physical RAM.
+
+---
+
+#### The bridge between physical and virtual memory
+
+---
+
+## Page Tables and Address Translation
+
+---
+
+### Purpose of page tables
+
+Page tables manage the relation between virtual and physical memory addresses. They store the mapping so the system knows where each virtual page is located in physical memory.
+
+---
+
+#### Translating virtual to physical addresses
+
+The MMU uses the page table to translate the virtual addresses into physical memory addresses when a process requests data.
+
+---
+
+### Page directories, page table entires, and page frame numbers
+
+* Page Directories: Pointers to page tables.
+* Page Table Entries (PTEs): Contains the mapping to the actual physical location.
+* Page Frame Numbers (PFNs): Represent actual frames in physical memory.
+
+---
+
+### Multi-level page tables
+
+Utilized in systems with large amounts of memory to prevent page tables from becoming too large and unwieldy.
+
+---
+
+#### Benefits and implementation
+
+---
+
+## Memory protection and page flags
+
+---
+
+### Role of the memory management unit
+
+---
+
+#### Address translation and access checks
+
+---
+
+### Page protection flags
+
+---
+
+#### Read/write, user/supervisor, present/absent
+
+---
+
+## Paging in modern operating systems
+
+---
+
+### Demand paging and lazy paging
+
+---
+
+#### What is demand paging
+
+---
+
+#### Benefits and drawbacks
+
+---
+
+### Page replacement algorithms
+
+---
+
+#### FIFO, LRU, and optimal
+
+---
+
+## Advanced memory concepts
+
+---
+
+### Segmentation
+
+---
+
+#### Purpose and benefits
+
+---
+
+### Memory-mapped files
+
+---
+
+#### What are memory-mapped files
+
+---
+
+#### Usage and benefits
+
+---
+
+### Virtual memory in modern architectures
+
+---
+
+#### Extended page tables in virtualization
+
+---
+
+#### Address space layout randomization
