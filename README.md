@@ -146,6 +146,7 @@ Hopefully, you can get an idea of what you might be doing. If you currently doin
           - [jne instruction](#jne-instruction)
           - [jl instruction](#jl-instruction)
           - [jg instruction](#jg-instruction)
+          - [jno instruction](#jno-instruction)
       - [Loops]
         - [loop instruction]
         - [rep instruction]
@@ -1255,41 +1256,128 @@ not rax
 
 ### Control flow and branching
 
+Almost all programming languages have the ability to change the order in which statements are evaluated, and assembly is no exception. Control flow instructions provide a way for the program to make decisions and loop through instructions.
+
 ---
 
 #### cmp instruction
+
+The `cmp`` instruction compares two operands by subtracting them (without saving the result) and setting the flags accordingly.
+
+Here is an example using `rax` and `rbx`:
+```asm
+mov rax, 0x6900
+mov rbx, 0x6891
+cmp rax, rbx
+```
+
+> If rax is equal to rbx, the zero flag will be set. If rax is greater than rbx, the carry flag will be clear.
 
 ---
 
 #### flag registers
 
+Flags are a set of 1-bit registers that store the results of operations. For example, if the result of an operation is zero, the zero flag (ZF) will be set.
+
+Common flags include:
+
+* Zero Flag (ZF)
+* Carry Flag (CF)
+* Overflow Flag (OF)
+* Sign Flag (SF)
+
+When you perform a `cmp` operation, it'll set or clear these flags based on the outcome of the subtraction.
+
 ---
 
 ### Unconditional jumps
+
+An unconditional jump instruction will transfer the program sequence to the described memory address
 
 ---
 
 #### jmp instruction
 
+The `jmp` instruction provides a way to unconditionally jump to another location in your code.
+
+For example, to `jmp` to a label called `destination:
+
 ---
 
 ### Conditional jumps
+
+Conditional jumps are based on the results of the flags set by the `cmp instruction or arithmetic operations.
 
 ---
 
 #### je instruction
 
+The `je` (jump if equal) instruction jumps to the given label if the zero flag is set.
+
+Example:
+```asm
+cmp rax, 0x69
+je is_equal
+```
+
+> If rax is equal to 0x69, the code will jump to the is_equal label.
+
 ---
 
 #### jne instruction
+
+The `jne` (jump if not equal) instruction jumps to the given label if the zero flag is cleared.
+
+Example:
+```asm
+cmp rax, 0x69
+jne not_equal
+```
+
+> If rax is not equal to 0x69, the code will jump to the not_equal label.
 
 ---
 
 #### jl instruction
 
+The `jl` (jump if less) instruction jumps to the given label if the result is negative (SF ≠ OF).
+
+Example:
+```asm
+cmp rax, 0x69
+jl is_less
+```
+
+> If rax is less than 0x69, the code will jump to the is_less label.
+
 ---
 
 #### jg instruction
+
+The jg (jump if greater) instruction jumps to the given label if the result is positive and not zero (ZF = 0 and SF = OF).
+
+Example:
+```asm
+cmp rax, 0x69
+jg is_greater
+```
+
+> If rax is greater than 0x69, the code will jump to the is_greater label.
+
+---
+
+#### jno instruction
+
+The jno (jump if not overflow) instruction jumps to the label if the Overflow Flag (OF) is clear.
+
+Example:
+```asm
+add rax, 0x69
+jno no_overflow
+
+```
+
+> If adding 0x69 to rax doesn't cause an overflow, the code will jump to the no_overflow label.
 
 ---
 
