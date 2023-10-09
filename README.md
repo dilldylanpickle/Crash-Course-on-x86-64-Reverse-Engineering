@@ -2636,6 +2636,8 @@ main:
 
 # Trust the Process: Drop the Virtual Addy
 
+Processes are a little weird to understand especially when learning about virtual memory. For example, two processes can use the same virtual memory address because it gets backed up by different physical memory. Processes see themselves as loners and do not battle each other.
+
 ---
 
 ## Process Memory
@@ -2647,6 +2649,32 @@ main:
 ---
 
 ## Address Space Layout of a Process in Memory
+
+```bash
+(gdb) info proc mappings
+process 267
+Mapped address spaces:
+
+          Start Addr           End Addr       Size     Offset objfile
+      0x555555400000     0x555555401000     0x1000        0x0 /home/dilldylanpickle/GitHub-Projects/Crash-Course-on-x86-64-Reverse-Engineering/memory-layout
+      0x555555600000     0x555555601000     0x1000        0x0 /home/dilldylanpickle/GitHub-Projects/Crash-Course-on-x86-64-Reverse-Engineering/memory-layout
+      0x555555601000     0x555555602000     0x1000     0x1000 /home/dilldylanpickle/GitHub-Projects/Crash-Course-on-x86-64-Reverse-Engineering/memory-layout
+      0x555555602000     0x555555623000    0x21000        0x0 [heap]
+      0x7ffff79e2000     0x7ffff7bc9000   0x1e7000        0x0 /lib/x86_64-linux-gnu/libc-2.27.so
+      0x7ffff7bc9000     0x7ffff7dc9000   0x200000   0x1e7000 /lib/x86_64-linux-gnu/libc-2.27.so
+      0x7ffff7dc9000     0x7ffff7dcd000     0x4000   0x1e7000 /lib/x86_64-linux-gnu/libc-2.27.so
+      0x7ffff7dcd000     0x7ffff7dcf000     0x2000   0x1eb000 /lib/x86_64-linux-gnu/libc-2.27.so
+      0x7ffff7dcf000     0x7ffff7dd3000     0x4000        0x0 
+      0x7ffff7dd3000     0x7ffff7dfc000    0x29000        0x0 /lib/x86_64-linux-gnu/ld-2.27.so
+      0x7ffff7fe8000     0x7ffff7fea000     0x2000        0x0 
+      0x7ffff7ff7000     0x7ffff7ffb000     0x4000        0x0 [vvar]
+      0x7ffff7ffb000     0x7ffff7ffc000     0x1000        0x0 [vdso]
+      0x7ffff7ffc000     0x7ffff7ffd000     0x1000    0x29000 /lib/x86_64-linux-gnu/ld-2.27.so
+      0x7ffff7ffd000     0x7ffff7ffe000     0x1000    0x2a000 /lib/x86_64-linux-gnu/ld-2.27.so
+      0x7ffff7ffe000     0x7ffff7fff000     0x1000        0x0 
+      0x7ffffffde000     0x7ffffffff000    0x21000        0x0 [stack]
+(gdb)
+```
 
 ---
 
