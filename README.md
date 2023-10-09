@@ -2635,9 +2635,9 @@ main:
 
 ---
 
-# Trust the Process: Drop the Virtual Addy
-
+# Trust the Process: Drop the Virtual Add
 Processes are a little weird to understand especially when learning about virtual memory. For example, two processes can use the same virtual memory address because it gets backed up by different physical memory. Processes see themselves as loners and do not battle each other.
+
 ---
 
 ### Virtual Memory
