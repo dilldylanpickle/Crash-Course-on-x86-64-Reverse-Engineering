@@ -1,6 +1,6 @@
 # Crash Course on x86-64 Reverse Engineering
 
-Learning reverse engineering is pretty hard in 2023 if you don't know where to start. I started learning C programming and x86-64 assembly in 2021. Over the years, I learned that going through a textbook isn't always the best way to learn things. A hands-on technical approach is the best way to learn reverse engineering. You will learn more compiling C code and disassembling it yourself.
+Learning reverse engineering is pretty hard in 2023 if you don't know where to start. When I first attended college, I wanted to produce music for a living. Two years in my college career, I started learning C programming and x86-64 assembly in 2021. These concepts looked like egyptian hieroglyphs at first lol.  Over the years, I learned that going through a textbook isn't always the best way to learn things. A hands-on technical approach is the best way to learn reverse engineering. You will learn more compiling C code and disassembling it yourself.
 
 Instead of watching YouTube videos on x86-64 architecture and C programming, try recreating an existing C standard library function like strcpy():
 
