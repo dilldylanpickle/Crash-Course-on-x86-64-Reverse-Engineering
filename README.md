@@ -112,6 +112,9 @@ Hopefully, you can get an idea of what you might be doing. If you currently doin
     - [Creating and traversing a linked list using pointers](#creating-and-traversing-a-linked-list-using-pointers)
     - [Inserting an element using pointers](#inserting-an-element-using-pointers)
     - [Deleting an element using pointers](#deleting-an-element-using-pointers)
+  - [Pointers and Dynamic Memory Allocation]
+    - [malloc()]
+    - [free()]
 - [A Byte to Eat: The Delightful Data Dinner](#a-byte-to-eat-the-delightful-data)
   - [Data Representation](#data-representation)
     - [Bits, bytes, words, double words, and quad words](#bits-bytes-words-double-words-and-quad-words)
