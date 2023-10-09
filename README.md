@@ -223,6 +223,12 @@ Hopefully, you can get an idea of what you might be doing. If you currently doin
         - [Local Variables, allocations, and deallocations]
       - [Heap operations]
         - [Dynamic memory allocation with malloc/free]
+- [Trust the Process: Drop the Virtual Addy]
+  - [Process Memory]
+    - [Virtual Addresses]
+  - [Address Space Layout of Process]
+  - [Memory Layout of a C Program]
+    - [info proc mappings]
 
 # C-ing is Believing: Pointers Edition
 Are you considering job roles like software reverse engineer, embedded software developer, or vulnerability researcher? Well, chances are they'll expect you to be comfortable in C programming. Nobody wants to use extra memory, so let's talk about pointers!
@@ -2625,3 +2631,29 @@ main:
 ---
 
 ##### Dynamic memory allocation with malloc/free
+
+---
+
+# Trust the Process: Drop the Virtual Addy
+
+---
+
+## Process Memory
+
+---
+
+### Virtual Address
+
+---
+
+## Address Space Layout of a Process in Memory
+
+---
+
+## Memory Layout of a C Program
+
+![Alt Text](https://github.com/dilldylanpickle/dilldylanpickle.github.io/raw/main/GIFs/C-memory-layout.png)
+
+---
+
+### info proc mappings
