@@ -223,7 +223,7 @@ Hopefully, you can get an idea of what you might be doing. If you currently doin
         - [Local Variables, allocations, and deallocations]
       - [Heap operations]
         - [Dynamic memory allocation with malloc/free]
-- [Trust the Process: Drop the Virtual Addy](#trust-the-process-drop-the-virtual-addy
+- [Trust the Process: Drop the Virtual Addy](#trust-the-process-drop-the-virtual-addy)
   - [Virtual Memory](#virtual-memory)
     - [Paging](#paging)
       - [Page faults](#page-faults)
@@ -2635,7 +2635,8 @@ main:
 
 ---
 
-# Trust the Process: Drop the Virtual Add
+# Trust the Process: Drop the Virtual Addy
+
 Processes are a little weird to understand especially when learning about virtual memory. For example, two processes can use the same virtual memory address because it gets backed up by different physical memory. Processes see themselves as loners and do not battle each other.
 
 ---
