@@ -2651,31 +2651,43 @@ Processes are a little weird to understand especially when learning about virtua
 ## Address Space Layout of a Process in Memory
 
 ```bash
-(gdb) info proc mappings
-process 267
-Mapped address spaces:
-
-          Start Addr           End Addr       Size     Offset objfile
-      0x555555400000     0x555555401000     0x1000        0x0 /home/dilldylanpickle/GitHub-Projects/Crash-Course-on-x86-64-Reverse-Engineering/memory-layout
-      0x555555600000     0x555555601000     0x1000        0x0 /home/dilldylanpickle/GitHub-Projects/Crash-Course-on-x86-64-Reverse-Engineering/memory-layout
-      0x555555601000     0x555555602000     0x1000     0x1000 /home/dilldylanpickle/GitHub-Projects/Crash-Course-on-x86-64-Reverse-Engineering/memory-layout
-      0x555555602000     0x555555623000    0x21000        0x0 [heap]
-      0x7ffff79e2000     0x7ffff7bc9000   0x1e7000        0x0 /lib/x86_64-linux-gnu/libc-2.27.so
-      0x7ffff7bc9000     0x7ffff7dc9000   0x200000   0x1e7000 /lib/x86_64-linux-gnu/libc-2.27.so
-      0x7ffff7dc9000     0x7ffff7dcd000     0x4000   0x1e7000 /lib/x86_64-linux-gnu/libc-2.27.so
-      0x7ffff7dcd000     0x7ffff7dcf000     0x2000   0x1eb000 /lib/x86_64-linux-gnu/libc-2.27.so
-      0x7ffff7dcf000     0x7ffff7dd3000     0x4000        0x0 
-      0x7ffff7dd3000     0x7ffff7dfc000    0x29000        0x0 /lib/x86_64-linux-gnu/ld-2.27.so
-      0x7ffff7fe8000     0x7ffff7fea000     0x2000        0x0 
-      0x7ffff7ff7000     0x7ffff7ffb000     0x4000        0x0 [vvar]
-      0x7ffff7ffb000     0x7ffff7ffc000     0x1000        0x0 [vdso]
-      0x7ffff7ffc000     0x7ffff7ffd000     0x1000    0x29000 /lib/x86_64-linux-gnu/ld-2.27.so
-      0x7ffff7ffd000     0x7ffff7ffe000     0x1000    0x2a000 /lib/x86_64-linux-gnu/ld-2.27.so
-      0x7ffff7ffe000     0x7ffff7fff000     0x1000        0x0 
-      0x7ffffffde000     0x7ffffffff000    0x21000        0x0 [stack]
-(gdb)
+dilldylanpickle@linux:~$ cat /proc/319/maps
+555555400000-555555401000 r-xp 00000000 08:10 62968                      /home/dilldylanpickle/GitHub-Projects/Crash-Course-on-x86-64-Reverse-Engineering/memory-layout
+555555600000-555555601000 r--p 00000000 08:10 62968                      /home/dilldylanpickle/GitHub-Projects/Crash-Course-on-x86-64-Reverse-Engineering/memory-layout
+555555601000-555555602000 rw-p 00001000 08:10 62968                      /home/dilldylanpickle/GitHub-Projects/Crash-Course-on-x86-64-Reverse-Engineering/memory-layout
+555555602000-555555623000 rw-p 00000000 00:00 0                          [heap]
+7ffff79e2000-7ffff7bc9000 r-xp 00000000 08:10 2471                       /lib/x86_64-linux-gnu/libc-2.27.so
+7ffff7bc9000-7ffff7dc9000 ---p 001e7000 08:10 2471                       /lib/x86_64-linux-gnu/libc-2.27.so
+7ffff7dc9000-7ffff7dcd000 r--p 001e7000 08:10 2471                       /lib/x86_64-linux-gnu/libc-2.27.so
+7ffff7dcd000-7ffff7dcf000 rw-p 001eb000 08:10 2471                       /lib/x86_64-linux-gnu/libc-2.27.so
+7ffff7dcf000-7ffff7dd3000 rw-p 00000000 00:00 0
+7ffff7dd3000-7ffff7dfc000 r-xp 00000000 08:10 2447                       /lib/x86_64-linux-gnu/ld-2.27.so
+7ffff7fe8000-7ffff7fea000 rw-p 00000000 00:00 0
+7ffff7ff7000-7ffff7ffb000 r--p 00000000 00:00 0                          [vvar]
+7ffff7ffb000-7ffff7ffc000 r-xp 00000000 00:00 0                          [vdso]
+7ffff7ffc000-7ffff7ffd000 r--p 00029000 08:10 2447                       /lib/x86_64-linux-gnu/ld-2.27.so
+7ffff7ffd000-7ffff7ffe000 rw-p 0002a000 08:10 2447                       /lib/x86_64-linux-gnu/ld-2.27.so
+7ffff7ffe000-7ffff7fff000 rw-p 00000000 00:00 0
+7ffffffde000-7ffffffff000 rw-p 00000000 00:00 0                          [stack]
 ```
 
+* 555555400000-555555401000: The executable code of a program.
+* 555555600000-555555601000: A read-only section of the program.
+* 555555601000-555555602000: A writable section of the program.
+* 555555602000-555555623000: The heap, used for dynamic memory allocation.
+* 7ffff79e2000-7ffff7bc9000: The executable code of the C library (libc).
+* 7ffff7bc9000-7ffff7dc9000: The data section of libc.
+* 7ffff7dc9000-7ffff7dcd000: Read-only libc code and data.
+* 7ffff7dcd000-7ffff7dcf000: A writable section of libc, typically used for dynamic data storage.
+* 7ffff7dcf000-7ffff7dd3000: An empty memory range.
+* 7ffff7dd3000-7ffff7dfc000: The executable code of the dynamic linker (ld).
+* 7ffff7fe8000-7ffff7fea000: An empty memory range.
+* 7ffff7ff7000-7ffff7ffb000: The vvar region, related to the process's virtual memory and used by the kernel.
+* 7ffff7ffb000-7ffff7ffc000: The vdso (virtual dynamic shared object) is a memory region that provides an interface between the user-space application and the kernel.
+* 7ffff7ffc000-7ffff7ffd000: This section is a read-only part of the dynamic linker (ld) containing code and data.
+* 7ffff7ffd000-7ffff7ffe000: A writable section of the dynamic linker (ld), typically used for dynamic data storage.
+* 7ffff7ffe000-7ffff7fff000: An empty memory range.
+* 7ffffffde000-7ffffffff000: The stack memory region and where the program's runtime data is stored.
 ---
 
 ## Memory Layout of a C Program
