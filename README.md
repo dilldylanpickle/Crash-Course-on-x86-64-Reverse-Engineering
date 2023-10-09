@@ -223,11 +223,12 @@ Hopefully, you can get an idea of what you might be doing. If you currently doin
         - [Local Variables, allocations, and deallocations]
       - [Heap operations]
         - [Dynamic memory allocation with malloc/free]
-- [Trust the Process: Drop the Virtual Addy]
-  - [Process Memory]
-    - [Virtual Addresses]
-  - [Address Space Layout of Process]
-  - [Memory Layout of a C Program]
+- [Trust the Process: Drop the Virtual Addy](#trust-the-process-drop-the-virtual-addy
+  - [Virtual Memory](#virtual-memory)
+    - [Paging](#paging)
+      - [Page faults](#page-faults)
+  - [Address Space Layout of Process](#address-space-layout-of-a-process-in-memory)
+  - [Memory Layout of a C Program](#memory-layout-access-patterns-nested-structs)
     - [info proc mappings]
 
 # C-ing is Believing: Pointers Edition
@@ -2637,14 +2638,9 @@ main:
 # Trust the Process: Drop the Virtual Addy
 
 Processes are a little weird to understand especially when learning about virtual memory. For example, two processes can use the same virtual memory address because it gets backed up by different physical memory. Processes see themselves as loners and do not battle each other.
-
 ---
 
-## Process Memory
-
----
-
-### Virtual Address
+### Virtual Memory
 
 Virtual memory allows a computer to use more memory than what is physically installed. It uses a combination of the computer's RAM and secondary storage (usually a hard drive) to create an address space that can be considerably larger than the actual RAM.
 
