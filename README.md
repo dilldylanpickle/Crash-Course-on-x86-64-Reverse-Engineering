@@ -7,7 +7,29 @@ Instead of watching YouTube videos on x86-64 architecture and C programming, try
 ```c
 #include <stdio.h>
 
-void *my_strcpy(char *src, char *dst)
+int my_strlen(char *str)
+{
+  int length = 0;
+  while (*str != '\0') {
+    length++;
+    str++;
+  }
+
+  return length;
+}
+
+void my_strcat(char *dst, char *src)
+{
+  dst = dst + my_strlen(dst);
+
+  while (*src != '\0') {
+    *dst = *src;
+    dst++;
+    src++;
+  }
+}
+
+void my_strcpy(char *src, char *dst)
 {
   while (*src != '\0') {
     *dst = *src;
@@ -18,13 +40,32 @@ void *my_strcpy(char *src, char *dst)
   *dst = '\0';
 }
 
+int my_strcmp(char *src, char *dst)
+{
+  while (*src != '\0' && *dst != '\0') {
+    if (*src != *dst) {
+      return 1;
+    }
+    src++;
+    dst++;
+  }
+  return 0;
+}
+
 int main(int argc, char *argv[])
 {
-  char *src = "Copy this string :)";
+  char src[] = "string ";
   char dst[32];
 
   my_strcpy(src, dst);
-  printf("%s\n", dst);
+  my_strcat(dst, "concatenate");
+
+  int ret = my_strcmp("string concatenate", dst);
+  if (ret == 0) {
+    printf("Strings are the same!\n");
+  } else {
+    printf("Strings are different!\n");
+  }
 
   return 0;
 }
@@ -32,46 +73,145 @@ int main(int argc, char *argv[])
 
 Then, disassemble the executable and get a feel for the assembly code:
 ```asm
+my_strlen:
+        push    rbp
+        mov     rbp, rsp
+        mov     QWORD PTR [rbp-24], rdi
+        mov     DWORD PTR [rbp-4], 0
+        jmp     .L2
+.L3:
+        add     DWORD PTR [rbp-4], 1
+        add     QWORD PTR [rbp-24], 1
+.L2:
+        mov     rax, QWORD PTR [rbp-24]
+        movzx   eax, BYTE PTR [rax]
+        test    al, al
+        jne     .L3
+        mov     eax, DWORD PTR [rbp-4]
+        pop     rbp
+        ret
+my_strcat:
+        push    rbp
+        mov     rbp, rsp
+        sub     rsp, 16
+        mov     QWORD PTR [rbp-8], rdi
+        mov     QWORD PTR [rbp-16], rsi
+        mov     rax, QWORD PTR [rbp-8]
+        mov     rdi, rax
+        call    my_strlen
+        cdqe
+        add     QWORD PTR [rbp-8], rax
+        jmp     .L6
+.L7:
+        mov     rax, QWORD PTR [rbp-16]
+        movzx   edx, BYTE PTR [rax]
+        mov     rax, QWORD PTR [rbp-8]
+        mov     BYTE PTR [rax], dl
+        add     QWORD PTR [rbp-8], 1
+        add     QWORD PTR [rbp-16], 1
+.L6:
+        mov     rax, QWORD PTR [rbp-16]
+        movzx   eax, BYTE PTR [rax]
+        test    al, al
+        jne     .L7
+        nop
+        nop
+        leave
+        ret
 my_strcpy:
         push    rbp
         mov     rbp, rsp
         mov     QWORD PTR [rbp-8], rdi
         mov     QWORD PTR [rbp-16], rsi
-        jmp     .L2
-.L3:
+        jmp     .L9
+.L10:
         mov     rax, QWORD PTR [rbp-8]
         movzx   edx, BYTE PTR [rax]
         mov     rax, QWORD PTR [rbp-16]
         mov     BYTE PTR [rax], dl
         add     QWORD PTR [rbp-8], 1
         add     QWORD PTR [rbp-16], 1
-.L2:
+.L9:
         mov     rax, QWORD PTR [rbp-8]
         movzx   eax, BYTE PTR [rax]
         test    al, al
-        jne     .L3
+        jne     .L10
         mov     rax, QWORD PTR [rbp-16]
         mov     BYTE PTR [rax], 0
         nop
         pop     rbp
         ret
+my_strcmp:
+        push    rbp
+        mov     rbp, rsp
+        mov     QWORD PTR [rbp-8], rdi
+        mov     QWORD PTR [rbp-16], rsi
+        jmp     .L12
+.L16:
+        mov     rax, QWORD PTR [rbp-8]
+        movzx   edx, BYTE PTR [rax]
+        mov     rax, QWORD PTR [rbp-16]
+        movzx   eax, BYTE PTR [rax]
+        cmp     dl, al
+        je      .L13
+        mov     eax, 1
+        jmp     .L14
+.L13:
+        add     QWORD PTR [rbp-8], 1
+        add     QWORD PTR [rbp-16], 1
+.L12:
+        mov     rax, QWORD PTR [rbp-8]
+        movzx   eax, BYTE PTR [rax]
+        test    al, al
+        je      .L15
+        mov     rax, QWORD PTR [rbp-16]
+        movzx   eax, BYTE PTR [rax]
+        test    al, al
+        jne     .L16
+.L15:
+        mov     eax, 0
+.L14:
+        pop     rbp
+        ret
 .LC0:
-        .string "Copy this string :)"
+        .string "concatenate"
+.LC1:
+        .string "string concatenate"
+.LC2:
+        .string "Strings are the same!"
+.LC3:
+        .string "Strings are different!"
 main:
         push    rbp
         mov     rbp, rsp
         sub     rsp, 64
         mov     DWORD PTR [rbp-52], edi
         mov     QWORD PTR [rbp-64], rsi
-        mov     QWORD PTR [rbp-8], OFFSET FLAT:.LC0
+        movabs  rax, 9120923167913075
+        mov     QWORD PTR [rbp-12], rax
         lea     rdx, [rbp-48]
-        mov     rax, QWORD PTR [rbp-8]
+        lea     rax, [rbp-12]
         mov     rsi, rdx
         mov     rdi, rax
         call    my_strcpy
         lea     rax, [rbp-48]
+        mov     esi, OFFSET FLAT:.LC0
         mov     rdi, rax
+        call    my_strcat
+        lea     rax, [rbp-48]
+        mov     rsi, rax
+        mov     edi, OFFSET FLAT:.LC1
+        call    my_strcmp
+        mov     DWORD PTR [rbp-4], eax
+        cmp     DWORD PTR [rbp-4], 0
+        jne     .L18
+        mov     edi, OFFSET FLAT:.LC2
         call    puts
+        jmp     .L19
+.L18:
+        mov     edi, OFFSET FLAT:.LC3
+        call    puts
+.L19:
         mov     eax, 0
         leave
         ret
